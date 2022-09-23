@@ -1,13 +1,13 @@
-function attachSignin(element, onSuccessCallback) {
-    auth2.attachClickHandler(element, {},
-        function (googleUser) {
-            onSuccessCallback(googleUser.getAuthResponse().id_token);
-        },
-        function (error) {
-            //alert(JSON.stringify(error, undefined, 2));
-        }
-    );
-}
+// function attachSignin(element, onSuccessCallback) {
+//     auth2.attachClickHandler(element, {},
+//         function (googleUser) {
+//             onSuccessCallback(googleUser.getAuthResponse().id_token);
+//         },
+//         function (error) {
+//             //alert(JSON.stringify(error, undefined, 2));
+//         }
+//     );
+// }
 
 
 function setupGoogleAuth(googleAppKey, attachElementID, onSuccessCallback) {

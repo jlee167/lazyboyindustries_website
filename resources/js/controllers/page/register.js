@@ -1,5 +1,5 @@
 import * as UserAPI from "../../data/net/http/user/user";
-import * as OAuthUI from "../../libs/oAuth/ui_setup";
+import * as OAuthUI from "../../libs/oauth/view-setup";
 
 
 const validator = require('validator');
