@@ -1,7 +1,7 @@
-import UnknownException from '../../exceptions/generic/UnknownException';
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
-import UserNotAuthor from '../../exceptions/http/forum/AuthFailure';
-import EmailNotVerified from './../../exceptions/http/auth/EmailNotVerified';
+import UnknownException from '../../../../exceptions/generic/UnknownException';
+import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
+import UserNotAuthor from '../../../../exceptions/http/forum/AuthFailure';
+import EmailNotVerified from '../../../../exceptions/http/auth/EmailNotVerified';
 
 
 

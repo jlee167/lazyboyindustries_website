@@ -1,6 +1,6 @@
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
-import UnknownException from '../../exceptions/generic/UnknownException';
-import { PAGENATION_CAPACITY } from "../../configs/peers/settings";
+import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
+import UnknownException from '../../../../exceptions/generic/UnknownException';
+import { PAGENATION_CAPACITY } from "../../../../configs/peers/settings";
 
 /**
  * Get the list of current user's guardians

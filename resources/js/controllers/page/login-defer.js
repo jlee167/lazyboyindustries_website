@@ -1,5 +1,5 @@
 import * as OAuthUI from "../../libs/oAuth/ui_setup";
-import {authWithOauth, authWithUsername} from "../../api/auth/auth";
+import {authWithOauth, authWithUsername} from "../../data/net/http/auth/auth";
 
 
 /* --------------------------------- Vue App -------------------------------- */

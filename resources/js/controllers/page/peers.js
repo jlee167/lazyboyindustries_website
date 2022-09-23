@@ -1,4 +1,4 @@
-import * as PeerAPI from "../../api/social/peer";
+import * as PeerAPI from "../../data/net/http/social/peer";
 
 
 window.peerApp = new Vue({

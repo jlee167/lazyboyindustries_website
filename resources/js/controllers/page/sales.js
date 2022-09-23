@@ -1,4 +1,4 @@
-import { getProduct as getProductAPI} from "../../api/commerce/commerce";
+import { getProduct as getProductAPI} from "../../data/net/http/commerce/commerce";
 import AuthFailure from "../../exceptions/http/auth/AuthFailure";
 
 /* URL parts */

@@ -1,9 +1,9 @@
 /* ----------------------------- Login / Logout ----------------------------- */
-import UnknownException from '../../exceptions/generic/UnknownException';
-import InvalidCredentials from '../../exceptions/http/auth/InvalidCredentials';
-import LogoutFailure from '../../exceptions/http/auth/LogoutFailure';
-import UserSearchException from '../../exceptions/http/user/UserSearchException';
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
+import UnknownException from '../../../../exceptions/generic/UnknownException';
+import InvalidCredentials from '../../../../exceptions/http/auth/InvalidCredentials';
+import LogoutFailure from '../../../../exceptions/http/auth/LogoutFailure';
+import UserSearchException from '../../../../exceptions/http/user/UserSearchException';
+import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
 
 
 /**
