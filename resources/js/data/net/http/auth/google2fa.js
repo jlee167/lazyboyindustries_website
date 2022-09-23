@@ -1,4 +1,4 @@
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
+import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
 
 
 /**
