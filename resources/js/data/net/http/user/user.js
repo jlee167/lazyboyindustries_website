@@ -1,5 +1,5 @@
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
-import UnknownException from '../../exceptions/generic/UnknownException';
+import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
+import UnknownException from '../../../../exceptions/generic/UnknownException';
 
 
 /**

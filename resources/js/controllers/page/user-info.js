@@ -1,4 +1,4 @@
-import * as Google2FaAPI from '../../api/auth/google2fa';
+import * as Google2FaAPI from '../../data/net/http/auth/google2fa';
 import User from './../../models/user/User';
 import UserDTO from './../../models/user/UserDTO';
 

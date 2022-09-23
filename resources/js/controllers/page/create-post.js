@@ -1,4 +1,4 @@
-import {createPost} from "../../api/forum/forum";
+import {createPost} from "../../data/net/http/forum/forum";
 
 /* Vue application for page */
 window.app = new Vue({

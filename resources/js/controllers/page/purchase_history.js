@@ -1,5 +1,5 @@
 import PurchaseRecord from '../../models/commerce/PurchaseRecord';
-import {postReview as postReviewAPI, getRecords as getRecordsAPI} from "../../api/commerce/commerce";
+import {postReview as postReviewAPI, getRecords as getRecordsAPI} from "../../data/net/http/commerce/commerce";
 import PurchaseRecordDTO from '../../models/commerce/PurchaseRecordDTO';
 
 

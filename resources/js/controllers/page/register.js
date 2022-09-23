@@ -1,4 +1,4 @@
-import * as UserAPI from "../../api/user/user";
+import * as UserAPI from "../../data/net/http/user/user";
 import * as OAuthUI from "../../libs/oAuth/ui_setup";
 
 

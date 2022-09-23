@@ -1,4 +1,4 @@
-import * as forumAPI from "../../api/forum/forum";
+import * as forumAPI from "../../data/net/http/forum/forum";
 import ForumPost from "../../models/forum/ForumPost";
 import ForumPostDTO from '../../models/forum/ForumPostDTO';
 import EmailNotVerified from './../../exceptions/http/auth/EmailNotVerified';
