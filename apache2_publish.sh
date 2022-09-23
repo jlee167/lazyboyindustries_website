@@ -8,6 +8,7 @@ DEST=/var/www/lazyweb
 SRC=./*
 
 #composer update
+composer clearcache
 composer install
 npm install --loglevel=error
 npm run dev --loglevel=error
