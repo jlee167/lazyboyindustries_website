@@ -1,4 +1,4 @@
-import * as VerifyEmailAPI from "../../api/auth/verify-email";
+import * as VerifyEmailAPI from "../../data/net/http/auth/verify-email";
 
 
 /* Request server to send a new email verification link */
