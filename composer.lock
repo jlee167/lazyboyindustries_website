@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e17802257f66a9b663c4d4078fdefefc",
+    "content-hash": "8dcc81715655917f39f17d646f118894",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3125,16 +3125,16 @@
         },
         {
             "name": "pragmarx/google2fa-laravel",
-            "version": "v1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/google2fa-laravel.git",
-                "reference": "d6505cb7a3d72b0ab969beb39c8c6348f8dc1ef6"
+                "reference": "f9014fd7ea36a1f7fffa233109cf59b209469647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/google2fa-laravel/zipball/d6505cb7a3d72b0ab969beb39c8c6348f8dc1ef6",
-                "reference": "d6505cb7a3d72b0ab969beb39c8c6348f8dc1ef6",
+                "url": "https://api.github.com/repos/antonioribeiro/google2fa-laravel/zipball/f9014fd7ea36a1f7fffa233109cf59b209469647",
+                "reference": "f9014fd7ea36a1f7fffa233109cf59b209469647",
                 "shasum": ""
             },
             "require": {
@@ -3194,9 +3194,9 @@
             ],
             "support": {
                 "issues": "https://github.com/antonioribeiro/google2fa-laravel/issues",
-                "source": "https://github.com/antonioribeiro/google2fa-laravel/tree/v1.4.0"
+                "source": "https://github.com/antonioribeiro/google2fa-laravel/tree/v1.4.1"
             },
-            "time": "2020-09-20T20:53:37+00:00"
+            "time": "2020-09-20T21:01:48+00:00"
         },
         {
             "name": "pragmarx/google2fa-qrcode",
@@ -9201,8 +9201,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0"
+        "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }
