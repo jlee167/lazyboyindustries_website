@@ -1,0 +1,660 @@
+GET /ping
+{
+    Param:
+
+    Description:
+        Signin and get user session token
+
+    Response_Success(201):
+        - Ping Message      : String
+
+
+    Response_Error:
+        None. (503 Error will pop up for client)
+}
+
+
+
+
+/**************************************************************
+
+Membership Management CRUD
+
+# Common parameters:
+        Member (Both new/existing) personal information
+        Members' emergency correspondence information
+
+**************************************************************/
+
+
+GET /member/user
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+    Description:
+        Retrieves account information.
+        Some information will be left blank depending on the client's access rights.
+
+    Response_Success(201):
+        - Firstname         : String
+        - Lastname          : String
+        - Faceshot URL      : String
+        - AuthProvider      : Enum String
+        - Email             : String
+        - Username          : String
+        - Stream ID         : String
+        - Status            : Enum String
+        - Response          : Enum String
+        - Privacy           : Enum String
+        - Proxy Enabled     : Bool
+        - Credit            : Int
+
+    Response_Error(400):
+        - Error Message     : String
+}
+
+
+
+
+POST /member/user
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+    Description:
+        Creates new user account
+
+    Response_Success(201):
+        - Firstname         : String
+        - Lastname          : String
+        - Faceshot URL      : String
+        - AuthProvider      : Enum String
+        - Email             : String
+        - Username          : String
+        - Stream ID         : String
+        - Status            : Enum String
+        - Response          : Enum String
+        - Privacy           : Enum String
+        - Proxy Enabled     : Bool
+
+    Response_Error(400):
+        - Error Message     : String
+}
+
+
+
+
+PUT /member/user
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+    Description:
+        Updates new user account
+
+    Response_Success(201):
+        - Firstname         : String
+        - Lastname          : String
+        - Faceshot URL      : String
+        - AuthProvider      : Enum String
+        - Email             : String
+        - Username          : String
+        - Stream ID         : String
+        - Status            : Enum String
+        - Response          : Enum String
+        - Privacy           : Enum String
+        - Proxy Enabled     : Bool
+        - Credit            : Int
+
+    Response_Error(400):
+        - Error Message     : String
+}
+
+
+
+
+DELETE /member/user
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Password          : String (Hashed)
+
+    Description:
+        Deletes account and terminates session.
+        Information will still remain on database for some time.
+
+    Response_Success(201):
+        - Deletion Date     : DateTime
+
+    Response_Error(400):
+        - Error Message     : String
+}
+
+
+
+
+/**************************************************************
+
+Protector Relationship Management CRUD
+
+# Common parameters:
+        Member (Both new/existing) personal information
+        Members' emergency correspondence information
+
+**************************************************************/
+
+
+POST /member/friend
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Friend UID        : String
+        - Date              : Timestamp
+
+    Description:
+        Register or accept a new friend request
+
+    Response:
+        Response_Success(201):
+            - Friend List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+GET /member/friend
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+    Description:
+        Get all friends of the user
+
+    Response:
+        Response_Success(201):
+            - Friend List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+DELETE /member/friend
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Friend UID        : String
+        - Date              : Timestamp
+
+    Description:
+        Remove a friend from group
+
+    Response:
+        Response_Success(201):
+            - Friend List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+
+
+POST /member/guardian
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Guardian UID      : String
+        - Privacy-level     : Int
+        - Date              : Timestamp
+
+    Description:
+        Register or accept a new guardian request
+
+    Response:
+        Response_Success(201):
+            - Guardian & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+PUT /member/guardian
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Guardian UID      : String
+        - Privacy-level     : Int
+        - Date              : Timestamp
+
+    Description:
+        Update relationship with a guardian
+
+    Response:
+        Response_Success(201):
+            - Guardian & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+GET /member/guardian
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+    Description:
+        Get all guardians of the user
+
+    Response:
+        Response_Success(201):
+            - Guardian & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+DELETE /member/guardian
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Guardian UID      : String
+        - Date              : Timestamp
+
+    Description:
+        Remove a guardian from group
+
+    Response:
+        Response_Success(201):
+            - Guardian & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+POST /member/protected
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Protected UID     : String
+        - Privacy-level     : Int
+        - Date              : Timestamp
+
+    Description:
+        Register or accept a new protected request
+
+    Response:
+        Response_Success(201):
+            - Protected & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+PUT /member/protected
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Protected UID     : String
+        - Privacy-level     : Int
+        - Date              : Timestamp
+
+    Description:
+        Update relationship with a protected
+
+    Response:
+        Response_Success(201):
+            - Protected & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+GET /member/protected
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+    Description:
+        Get all protecteds of the user
+
+    Response:
+        Response_Success(201):
+            - Protected & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+DELETE /member/protected
+{
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+        - Protected UID     : String
+        - Date              : Timestamp
+
+    Description:
+        Remove a protected from group
+
+    Response:
+        Response_Success(201):
+            - Protected & Privacy List     : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+/**************************************************************
+
+Emergency System Management
+
+# Common parameters:
+        Member (Both new/existing) personal information
+        Members' emergency correspondence information
+
+**************************************************************/
+
+!!!!!! Important !!!!!!!!!!
+
+POST /emergency/rescue-request
+{
+    Param:
+        - UID                   : Int
+        - Latitude              : Float
+        - Longitude             : Float
+        - Urgency               : Int
+
+    Description:
+        Request for rescue.
+        Used for users to report their emergency.
+
+    Response:
+        Response_Success(201):
+            - Acknowledgemet    : String
+            - Emergency ID      : String
+            - Emergency Token   : String
+
+        Response_Error(400):
+            - Error Message     : String
+
+}
+
+
+
+
+PUT /emergency/rescue-request
+{
+    Content:
+        - UID                   : Int
+        - Emergency ID          : String
+        - Emergency Token       : String
+
+    Description:
+        Request for rescue.
+        Used for users to report their emergency.
+
+    Response:
+        Response_Success(201):
+            - Acknowledgemet    : String
+            - Emergency ID      : String
+            - Emergency Token   : String
+
+        Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+GET /emergency/user-status
+{
+    Content:
+        - UID-Protected                : INT
+
+    Description:
+        Request for rescue.
+        Used for users to report their emergency.
+        Returns status info when you are requested user's guardian.
+
+    Response_Success(201):
+        - UID                : Int
+        - Status             : ENUM String
+        - Latitude           : Float
+        - Longitude          : Float
+
+    Response_Error(400):
+            - Error Message     : String
+}
+
+
+
+
+GET /emergency/stream-key
+{
+    Param:
+        - UID-Protected       : Int
+
+    Description:
+        Request credentials to view requested user's
+        Returns stream/geolocation credential when you are requested user's guardian.
+        Returns error code when you are not.
+
+    Response_Success(201):
+        - UID-Protected         : Int
+        - Stream Address        : String
+        - Stream Key            : String
+
+    Response_Error(400):
+        - Error Message         : String
+}
+
+
+
+GET /emergency/proxy-report
+{
+    Content:
+        - UID                : Int
+
+    Description:
+        Get danger reports near your area
+        Returns list of users and their emergency info in JSON array
+
+    Response_Success(201):
+        ARRAY(
+            - UID-Protected     : Int
+            - Latitude          : Float
+            - Longitude         : Float
+            - Stream Address    : String
+            - Stream Key        : String
+        )
+
+    Response_Error(400):
+        - Error Message         : String
+}
+
+
+
+
+
+/**************************************************************
+
+Website Resource Management
+
+# Common parameters:
+        Member (Both new/existing) personal information
+        Members' emergency correspondence information
+
+**************************************************************/
+
+
+POST /forum/{Forum Name}/post
+{
+    {forum_name} = 'General Discussion' OR 'Technical Discussion'
+
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+        - Post ID           : Int
+        - Title             : String
+        - Content           : Text
+
+    Description:
+        Write a post to the specified forum
+
+    Response_Success(201):
+        - Post ID               : Int
+
+    Response_Error(400):
+        - Error Message         : String
+}
+
+
+
+
+PUT /forum/{forum_name}/post/{post_id}
+{
+    {forum_name} = 'General Discussion' OR 'Technical Discussion'
+
+    Param:
+        - Session ID        : Int
+        - Access Token      : String
+
+        - Post ID           : Int
+        - Title             : String
+        - Content           : Text
+
+    Description:
+        Update a post in the specified forum
+
+    Response_Success(201):
+        - Post ID               : Int
+
+    Response_Error(400):
+        - Error Message         : String
+}
+
+
+
+
+GET /forum/{forum_name}/post/{post_id}
+{
+    {forum_name} = 'General Discussion' OR 'Technical Discussion'
+
+    Param:
+        - Post ID       : Int
+
+    Description:
+        Read a post from the specified forum
+
+    Response_Success(201):
+        - Post ID       : Int
+        - Title         : String
+        - Content       : Text
+        - Username      : String
+        - Date          : TimeStamp
+
+    Response_Error(400):
+        - Error Message         : String
+}
+
+
+
+
+GET /forums/{forum_name}/post/{post_id}
+{
+    {forum_name} = 'general' OR 'tech'
+
+    Content:
+        - Post ID
+
+    Description:
+        Read a post to a forum
+
+    Response_Success(201):
+        - Title         : String
+        - Content       : Text
+        - Username      : String
+        - Date          : TimeStamp
+
+    Response_Error(400):
+        - Error Message         : String
+}
+
+
+
+
+
+GET /forum/{forum_name}/matching-posts
+{
+    {Forum Name} = 'General Discussion' OR 'Technical Discussion'
+
+    Param:
+        - Method        : Enum String ("ID" or "Title" or "Username" or "Date")
+        - Post ID       : Int
+        - Title         : String
+        - Username      : String
+        - Date          : TimeStamp
+
+    Description:
+        Read a post from forum
+
+    Response_Success(201):
+        - Array (
+            Post ID       : Int
+            Title         : String
+            Content       : Text
+            Username      : String
+            Date          : TimeStamp
+        )
+
+    Response_Error(400):
+        - Error Message         : String
+}

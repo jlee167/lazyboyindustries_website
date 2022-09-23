@@ -1,0 +1,68 @@
+#footer-contact {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+#footer-register {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-signBtn {
+    width: 130px;
+    height: 45px;
+    line-height: 30px;
+}
+
+
+.footer-column-header {
+    color: white;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+
+.footer-contanct-icon {
+    display: inline;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.footer-contact-label {
+    display: inline;
+    white-space: nowrap;
+    color: white;
+}
+
+
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #181818;
+    vertical-align: bottom;
+    border-top: 1px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#footer-contents {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+@media only screen and (max-width: 920px) {
+    #footer-register {
+        display: none;
+    }
+
+    #footer-contact {
+        padding-right: 0px;
+    }
+}

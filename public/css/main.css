@@ -1,0 +1,293 @@
+.front-label {
+    font-family: 'Anton', sans-serif !important;
+    color: rgb(247, 190, 4);
+    font-weight: 500 !important;
+    font-size: 100px;
+    margin-top: 10vh;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 70px;
+}
+
+.preface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 150px;
+}
+
+.header-preface {
+    color:white;
+    margin-bottom: 40px;
+}
+
+.img-logo {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 2px solid rgb(160, 159, 159);
+    margin-left: 2px;
+    margin-right: 30px;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    max-width: 600px;
+    opacity: 0.0;
+}
+
+.img-skills {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /*border: 3px solid rgb(255, 60, 0);*/
+    margin-left: 2px;
+    margin-right: 30px;
+    image-rendering: -webkit-optimize-contrast;
+    box-shadow: 0px 0px 10px 5px rgba(0, 247, 255, 0.3);
+}
+
+.overlay-box-page3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.skill-desc-header {
+    font-family: 'Anton', sans-serif !important;
+    color: rgb(247, 0, 41);
+    font-weight: 500 !important;
+    font-size: 50px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.skill-desc-details {
+    text-align: left;
+    vertical-align: center;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.skill-desc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.fade-1s {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.fade-2s {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.fade-3s {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.section-center {
+    font-family: "Open Sans";
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scrollable-page {
+    font-family: "Open Sans";
+    font-style: normal;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button {
+    background-color: #f2cf66;
+    border-bottom: 5px solid #d1b358;
+    text-shadow: 0px -2px #d1b358;
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.overlay-dark {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.offlineGroupHeader {
+    font-family: 'Anton', sans-serif !important;
+    color: rgb(252, 252, 252);
+    font-weight: 500 !important;
+    font-size: 35px;
+}
+
+.offlineGroupDesc {
+    color: white;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.flex-center-vh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .img-skills {
+        width: 200px;
+        height: 200px;
+    }
+    .header-skills {
+        font-size: 30px;
+        font-weight: 400 !important;
+    }
+    .img-logo {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 768px), only screen and (max-height:880px) {
+    .img-skills {
+        width: 150px;
+        height: 150px;
+    }
+    .header-skills {
+        font-size: 25px;
+        font-weight: 400 !important;
+    }
+    .skill-desc-header {
+        font-size: 25px;
+    }
+    .skill-desc-header {
+        font-size: 40px;
+    }
+    .front-label {
+        font-weight: 400 !important;
+        font-size: 80px;
+    }
+    .skill-desc-details {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 660px), only screen and (max-height:800px) {
+    .img-skills {
+        width: 100px;
+        height: 100px;
+    }
+    .header-skills {
+        font-size: 17px;
+        font-weight: 300 !important;
+    }
+    .skill-desc-header {
+        font-size: 25px;
+    }
+    .contents {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contents {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .container-skills {
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+    .front-label {
+        font-weight: 400 !important;
+        font-size: 70px;
+    }
+    .skill-desc-details {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 960px), only screen and (max-height:768px) {
+    .preface {
+        display: none;
+
+    }
+}

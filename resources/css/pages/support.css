@@ -1,0 +1,95 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: 0px !important;
+    overflow-y: scroll;
+}
+
+#main::-webkit-scrollbar {
+    width: 5px;
+}
+
+#main::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+}
+
+#main::-webkit-scrollbar-track {
+    background-color: grey;
+}
+
+#FAQ {
+    padding-top: 70px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.support-headers {
+    display: inline-block;
+    color: #343032;
+    cursor: pointer;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.sidebar-text {
+    margin: auto;
+    color: white;
+    line-height: 12px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sidebar-image {
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    -webkit-transition: width 0.2s, height 0.2s;
+    transition: width 0.2s, height 0.2s;
+}
+
+.sidebar-item:hover .sidebar-image {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+label {
+    width: 100%;
+    font-family: 'Nunito' !important;
+    font-weight: 650 !important;
+}
+
+.contents-support {
+    width: 100%;
+    /*height: calc(100% - 70px);*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+
+.input-small {
+    width: 100%;
+}
+
+.btn-form-submit {
+    float: right;
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+.bottom-indicator {
+    border-bottom: 3px blue solid;
+    padding-bottom: 3px;
+}

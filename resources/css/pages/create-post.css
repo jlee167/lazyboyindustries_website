@@ -1,0 +1,51 @@
+.h-40px {
+    height: 40px !important;
+}
+
+.background-createpost {
+    background-color: #d6eaf8;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.form-container {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.forum-select {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    height: 30px;
+    vertical-align: center;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.create-post-form {
+    margin: auto;
+    margin-top: 100px;
+    width: 60%;
+    height: 60%;
+}
+
+.create-post-input {
+    width: 100%;
+    min-width: 300px;
+}
+
+.create-post-btn {
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 100px;
+}
+
+.content-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 20;
+}

@@ -1,0 +1,42 @@
+#background {
+    background-color: #d6eaf8;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#container {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+#updatePostForm {
+    margin: auto;
+    margin-top: 100px;
+    width: 60%;
+    height: 60%;
+}
+
+#postContent {
+    height:60%;
+}
+
+#submitBtn {
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 100px !important;
+}
+
+input {
+    width: 100%;
+    min-width: 300px;
+}
+
+.update-post-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 20;
+}
+

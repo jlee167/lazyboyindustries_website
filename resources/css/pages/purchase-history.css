@@ -1,0 +1,123 @@
+#cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(241, 241, 241);
+    min-height: 80vh;
+}
+
+#cartItems {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    width: 700px;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgb(190, 190, 190);
+}
+
+#itemsTopBar {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-bottom: 2px solid rgb(252, 44, 44);
+}
+
+.item-info {}
+
+.purchased-item {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.divider {
+    border-top: 1px solid rgb(211, 211, 211);
+}
+
+.item-image {
+    height: 100px;
+    width: 100px;
+}
+
+.topBarText {
+    color: black;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#paymentView {
+    width: 500px;
+    height: 800px;
+}
+
+input.no-highlight:focus {
+    outline-width: 0;
+}
+
+.img-product {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.comment {
+    width: auto;
+    height: auto;
+    word-break: break-all;
+    text-align: left;
+    font-size: 12px;
+    float: left;
+}
+
+.activate-review {
+    cursor: pointer;
+    color: rgb(224, 57, 57);
+}
+
+.item-container {
+    width: 170px;
+}
+
+.date {
+    width: 100px;
+    text-align: center;
+}
+
+.credits-container {
+    width: 100px;
+}
+
+.credits {
+    color: rgb(187, 187, 187);
+    text-align: center;
+}
+
+.comment-write {
+    width: 400px;
+    height: 150px;
+}
+
+
+.quantity {
+    display: inline;
+    text-align: center;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+
+.price {
+    color:rgb(187, 187, 187);
+}
+
+.item-title {
+    margin-bottom: 0px;
+}
+
+.quantity-container {
+    width: 40px;
+}

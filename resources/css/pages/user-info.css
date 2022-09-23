@@ -1,0 +1,144 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 70px);
+    min-height: calc(100vh - 70px);
+    margin-left: 70px;
+}
+
+#profilePicture {
+    width: 200px;
+    height: 200px;
+}
+
+#QR-Code {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+#QRimage {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.label {
+    width: 80px;
+    text-align: right;
+}
+
+.content {
+    width: 300px;
+    overflow: hidden;
+}
+
+.lsection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+#passwordChange {
+    margin-top: 100px;
+}
+
+#accountInfo {
+    width: 80% !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+#newUserImage {
+    width: 80% !important;
+}
+
+.btn-password-submit {
+    background-color: rgb(235, 199, 0) !important;
+    border-color: rgb(235, 199, 0) !important;
+    border-radius: 20px;
+    width: 200px;
+    color: white;
+}
+
+.form-control {
+    width: 300px;
+}
+
+.card {
+    width: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input {
+    width: 100% !important;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+
+.menubar-text {
+    margin: auto;
+    color: white;
+    line-height: 12px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+#menuBar {
+    position: fixed;
+    background-color: #2e2e2e;
+    min-width: 70px;
+    width: 70px;
+    min-height: 100vh;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 70px;
+    margin-right: 0px;
+}
+
+
+.menubar-image {
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    -webkit-transition: width 0.2s, height 0.2s;
+    transition: width 0.2s, height 0.2s;
+}
+
+
+.menubar-item:hover .menubar-image {
+    width: 40px;
+    height: 40px;
+}
+
+
+.menubar-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 490px) {
+    .card {
+        width: 250px;
+    }
+}

@@ -1,0 +1,4 @@
+const PAGINATION_CAPACITY = 10;
+
+
+export default PAGINATION_CAPACITY;

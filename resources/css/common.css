@@ -1,0 +1,124 @@
+@import url("./components/navbar.css");
+@import url("./components/resume.css");
+@import url("./pages/layout_common.css");
+@import url("./pages/footer.css");
+
+
+
+[v-cloak] {
+    display: none !important;
+}
+
+
+#googleAuthBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #444;
+    width: 100%;
+    height: 50px;
+    border: thin solid rgb(180, 178, 178);
+    white-space: nowrap;
+}
+
+#googleAuthBtn:hover {
+    cursor: pointer;
+}
+
+#kakaoBtnBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #FEE500;
+}
+
+.h-50px {
+    height: 50px;
+}
+
+.mt-90px {
+    margin-top: 90px;
+}
+
+.form-login {
+    border: 1.5px solid rgb(218, 218, 218);
+    padding-left: 10px;
+}
+
+.form-login:focus {
+    outline: 0px;
+    outline-width:0;
+    box-shadow: none !important;
+    border: 1.5px solid rgb(235, 74, 0);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.no-outline {
+    box-shadow: none !important;
+    outline: 0px;
+}
+
+.no-outline:focus {
+    box-shadow: none !important;
+    outline: 0px;
+}
+
+#copyright {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#tech-stacks {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    width: 300px;
+}
+
+.tech-stack-item {
+    display: flex;
+    flex-direction: row;
+    padding-right: 50px;
+}
+
+.tech-stack-label {
+    color: white;
+    padding-left: 15px;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.tech-stack-imgsize {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+.white {
+    color: white;
+}
+
+
+.margin-right-2rem {
+    margin-right: 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #tech-stacks {
+        display: none;
+    }
+}
+
