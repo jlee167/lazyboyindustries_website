@@ -78,7 +78,7 @@ window.broadcastApp = new Vue({
         console.log(this.stream);
 
         // Initialize Components
-        window.onload = () => {
+        window.onload((event) => {
             this.initDOMrefs();
             this.initWebSocket();
             const setupChatWorker = setInterval(() => {
@@ -90,7 +90,7 @@ window.broadcastApp = new Vue({
             }, 50);
             this.initMediaPlayer();
             this.initMap();
-        };
+        })
     },
 
     beforeUpdate: function () {
