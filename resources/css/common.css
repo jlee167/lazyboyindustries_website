@@ -39,9 +39,23 @@
     height: 50px;
 }
 
+.mt-20px {
+    margin-top: 20px;
+}
+
 .mt-90px {
     margin-top: 90px;
 }
+
+
+.mb-10px {
+    margin-bottom: 10px;
+}
+
+.mb-20px {
+    margin-bottom: 20px;
+}
+
 
 .form-login {
     border: 1.5px solid rgb(218, 218, 218);

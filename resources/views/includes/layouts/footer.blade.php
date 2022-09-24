@@ -26,20 +26,20 @@
 
         <div id="footer-contact">
             <p class="footer-column-header">Contact</p>
-            <section style="margin-bottom:10px;">
+            <section class="mb-10px">
                 <img class="footer-contanct-icon" src="/images/icon-building.svg" />
                 <p class="footer-contact-label">LazyBoy Co.Ltd</p>
             </section>
-            <section style="margin-bottom:10px;">
+            <section class="mb-10px">
                 <img class="footer-contanct-icon" src="/images/icon-mail.svg" />
                 <p class="footer-contact-label">lazyboyindustries.main@gmail.com</p>
             </section>
-            <section style="margin-bottom:10px;">
+            <section class="mb-10px">
                 <img class="footer-contanct-icon" src="/images/icon-phone.svg" />
                 <p class="footer-contact-label">010-xxxx-xxxx</p>
             </section>
 
-            <div style="margin-top:20px;">
+            <div class="mt-20px">
                 <a href="https://github.com/jlee167" style="width:25px; height:25px;">
                     <img class="footer-contanct-icon" src="{{asset('/images/GitHub-Mark-Light-32px.png')}}" />
                 </a>

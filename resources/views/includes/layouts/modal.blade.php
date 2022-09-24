@@ -15,7 +15,7 @@
                                         scrollApp.addEvents();
                                 },
                                 200
-                            )" class="btn btn-danger" @click="showModal=false" style="margin-bottom:20px;"> Close
+                            )" class="btn btn-danger mb-20px" @click="showModal=false"> Close
                         </div>
                     </div>
 
