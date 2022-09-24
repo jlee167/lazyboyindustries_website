@@ -88,7 +88,7 @@ window.broadcastApp = new Vue({
         this.webToken = await this.getStreamToken();
         const streamInfo = await this.getStreamInfo(this.webToken);
 
-        this.videoFormat = streamInfo.protocol;
+        this.videoFormat = streamInfo.videoFormat;
         this.videoUrl = streamInfo.videoUrl;
         if (this.videoFormat == VideoFormat.MJPEG)
             this.audioUrl = streamInfo.audioUrl;
