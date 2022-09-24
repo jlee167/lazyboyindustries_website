@@ -24,7 +24,6 @@ const Chat = {
 
     PRIVATE_KEY: "PRIVATEKEY",
     ID_TEST_CHANNEL: "TEST",
-    VideoFormat: Object.freeze({"MJPEG":1, "RTMP":2})
 };
 
 export default Chat;
