@@ -1,18 +1,12 @@
 import MjpegPlayer from "../../utils/media/mjpeg-player.js";
 import WebSocketHeaders from "../../configs/stream/websocket-headers.js";
-import NotFound from '../../exceptions/generic/not-found';
 import { KakaoMap } from "../../utils/media/kakao-map.js";
-import PcmPlayer from "../../utils/media/pcm-player";
 import User from '../../models/user/user';
 import UserDTO from '../../models/user/user-dto';
 import Stream from "../../models/stream/stream.js";
 import StreamDTO from "../../models/stream/stream-dto.js";
-import StreamNotFound from '../../exceptions/http/stream/stream-not-found';
-import TokenNotFound from '../../exceptions/http/auth/token-not-found';
 import { getLocation, getStream, getToken } from "../../data/net/http/stream/stream.js";
 import { getSelfProfile } from "../../data/net/http/user/user.js";
-
-
 
 
 videojs.Hls.xhr.beforeRequest = function (options) {
@@ -45,7 +39,7 @@ window.broadcastApp = new Vue({
         guardians: new Array(),
 
         joined: false,
-        viewMode: window.env.MOBILE_MODE_ENABLED ? Stream.ViewModes.MOBILE : Stream.ViewModes.DESKTOP,
+        viewMode: null,
         loginState: false,
 
         socket: null,
@@ -68,6 +62,10 @@ window.broadcastApp = new Vue({
         msgID: 0,
     },
 
+    created: function () {
+        this.viewMode = window.env.MOBILE_MODE_ENABLED ?
+                            Stream.ViewModes.MOBILE : Stream.ViewModes.DESKTOP;
+    },
 
     mounted: async function () {
 
@@ -88,7 +86,7 @@ window.broadcastApp = new Vue({
             }
         }, 50);
 
-        this.$nextTick(()=>{
+        this.$nextTick(() => {
             this.initMediaPlayer();
             this.initMap();
         });
@@ -173,9 +171,7 @@ function initMediaPlayer() {
 function __initMjpegVideoPlayer(app) {
     app.mjpegView = document.getElementById("mjpegView");
     app.mjpegPlayer.setCanvas(app.mjpegView);
-    app.mjpegPlayer.setSrc(app.stream.videoUrl
-        //`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}/mjpeg.jpg`
-    );
+    app.mjpegPlayer.setSrc(app.stream.videoUrl);
 
     app.mjpegView.addEventListener('click', () => {
         if (app.mjpegPlayer.isRunning()) {
@@ -292,36 +288,21 @@ async function getStreamToken() {
 
 
 async function getStreamInfo(token) {
-    // return fetch(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}`, {
-    //         method: 'get',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'webToken': token
-    //         },
-    //     })
-    //         .then(response => {
-    //             if (response.status == 200) {
-    //                 return response.json();
-    //             } else {
-    //                 throw new StreamNotFound();
-    //             }
-    //         })
-
-            return await getStream(
-                window.env.STREAM_URL,
-                window.env.STREAM_PORT,
-                streamID,
-                token,
-            )
-            .then(json => {
-                const stream = new Stream(new StreamDTO(json));
-                return Promise.resolve(stream);
-            })
-            .catch(err => {
-                window.alert(`${err.name}: ${err.message}`);
-                window.history.back();
-                return Promise.reject();
-            });
+    return await getStream(
+        window.env.STREAM_URL,
+        window.env.STREAM_PORT,
+        streamID,
+        token,
+    )
+        .then(json => {
+            const stream = new Stream(new StreamDTO(json));
+            return Promise.resolve(stream);
+        })
+        .catch(err => {
+            window.alert(`${err.name}: ${err.message}`);
+            window.history.back();
+            return Promise.reject();
+        });
 }
 
 
@@ -334,7 +315,7 @@ function joinChatting() {
         webToken: this.webToken,
     });
     this.socket.emit(WebSocketHeaders.HEADER_USER_JOIN, packet);
-    this.chatMsgInput.value = '';
+    this.chatMsgInput.value = new String();
 }
 
 
@@ -376,7 +357,7 @@ function setupChatting() {
                 webToken: this.webToken,
             });
             this.socket.emit(WebSocketHeaders.HEADER_CHAT_MESSAGE, packet);
-            this.chatMsgInput.value = '';
+            this.chatMsgInput.value = new String();
         }
     });
 
@@ -451,18 +432,6 @@ function setupChatting() {
 
 
 function updateLocation() {
-    // fetch(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}/geo`, {
-    //     method: 'get'
-    // })
-    //     .then((res) => {
-    //         if (res.status != 200) {
-    //             let err = new NotFound();
-    //             err.setMessage("Location data request returned 404");
-    //             throw err;
-    //         }
-    //         else
-    //             return res.json();
-    //     })
     getLocation({
         streamURL: window.env.STREAM_URL,
         streamPort: window.env.STREAM_PORT,
