@@ -73,6 +73,7 @@ window.broadcastApp = new Vue({
         this.user = await this.getUser();
         this.webToken = await this.getStreamToken();
         this.stream = await this.getStreamInfo(this.webToken);
+        console.log(this.stream);
 
         // Initialize Components
         this.initDOMrefs();
