@@ -328,11 +328,8 @@ async function getStreamInfo(token) {
                 }
             })
             .then(json => {
-                return Promise.resolve(new Stream(new StreamDTO({
-                    protocol: json.protocol,
-                    videoUrl: json.videoUrl,
-                    audioUrl: json.audioUrl,
-                })));
+                const stream = new Stream(new StreamDTO(json));
+                return Promise.resolve(stream);
             })
             .catch(err => {
                 window.alert(`${err.name}: ${err.message}`);
