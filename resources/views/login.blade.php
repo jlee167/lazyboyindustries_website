@@ -30,7 +30,6 @@
       id="mainView" v-cloak>
       <div class="login-prompt-container">
         <article id="login-manual" class="login-prompt card rounded-0">
-          <!--h4>Login</h4-->
           <form class="login-form">
             <div style="margin:0 auto; float:center;">
               <input class="form-login login-form-input mb-2 rounded-0"
@@ -82,12 +81,6 @@
               </td>
             </tr>
           </table>
-          <!--div class="w-100 d-flex justify-content-center mt-5">
-            <p>Not registered yet?</p>
-          </div>
-          <button id="signUpBtn" type="button"
-            class="btn rounded-0 no-outline" onclick="window.location.href='/views/register'"> Sign Up
-          </button-->
 
           <hr class="mt-90px">
           <section class="d-flex flex-row justify-content-center">
