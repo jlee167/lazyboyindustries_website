@@ -87,8 +87,11 @@ window.broadcastApp = new Vue({
                 clearInterval(setupChatWorker);
             }
         }, 50);
-        this.initMediaPlayer();
-        this.initMap();
+
+        this.$nextTick(()=>{
+            this.initMediaPlayer();
+            this.initMap();
+        });
     },
 
     beforeUpdate: function () {
