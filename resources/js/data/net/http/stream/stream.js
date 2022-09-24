@@ -44,7 +44,7 @@ async function getLocation(streamURL, streamPort, streamID) {
 
 
 
-async function getStream(streamURL, streamPort, streamID){
+async function getStream(streamURL, streamPort, streamID, token){
     return fetch(`${streamURL}:${streamPort}/stream/${streamID}`, {
         method: 'get',
         headers: {

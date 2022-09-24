@@ -308,6 +308,7 @@ async function getStreamInfo(token) {
                 streamURL: window.env.STREAM_URL,
                 streamPort: window.env.STREAM_PORT,
                 streamID: streamID,
+                token: token,
             })
             .then(json => {
                 const stream = new Stream(new StreamDTO(json));
