@@ -9,6 +9,8 @@ import Stream from "../../models/stream/stream.js";
 import StreamDTO from "../../models/stream/stream-dto.js";
 import StreamNotFound from '../../exceptions/http/stream/stream-not-found';
 import TokenNotFound from '../../exceptions/http/auth/token-not-found';
+import { getLocation, getStream, getToken } from "../../data/net/http/stream/stream.js";
+import { getSelfProfile } from "../../data/net/http/user/user.js";
 
 
 
@@ -258,20 +260,7 @@ function runTestMode() {
 
 
 async function getUser() {
-    return fetch('/self', {
-        method: 'get',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': window.env.CSRF_TOKEN
-        }
-    })
-        .then(response => {
-            if (response.status === 200) {
-                return response.json();
-            } else {
-                throw "ERROR: RESPONSE CODE " + String(response.status);
-            }
-        })
+    getSelfProfile()
         .then(json => {
             return Promise.resolve(new User(new UserDTO(json)));
         })
@@ -287,20 +276,7 @@ async function getStreamToken() {
     }
 
 
-    return fetch(`/${streamID}/webtoken`, {
-        method: 'get',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': window.env.CSRF_TOKEN
-        }
-    })
-        .then(response => {
-            if (response.status == 200) {
-                return response.json();
-            } else {
-                throw new TokenNotFound();
-            }
-        })
+    return getToken(streamID)
         .then((json) => {
             return Promise.resolve(json.token);
         })
@@ -313,19 +289,25 @@ async function getStreamToken() {
 
 
 async function getStreamInfo(token) {
-    return fetch(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}`, {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json',
-                'webToken': token
-            },
-        })
-            .then(response => {
-                if (response.status == 200) {
-                    return response.json();
-                } else {
-                    throw new StreamNotFound();
-                }
+    // return fetch(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}`, {
+    //         method: 'get',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'webToken': token
+    //         },
+    //     })
+    //         .then(response => {
+    //             if (response.status == 200) {
+    //                 return response.json();
+    //             } else {
+    //                 throw new StreamNotFound();
+    //             }
+    //         })
+
+            return getStream({
+                streamURL: window.env.STREAM_URL,
+                streamPort: window.env.STREAM_PORT,
+                streamID: streamID,
             })
             .then(json => {
                 const stream = new Stream(new StreamDTO(json));
@@ -465,18 +447,23 @@ function setupChatting() {
 
 
 function updateLocation() {
-    fetch(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}/geo`, {
-        method: 'get'
+    // fetch(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}/geo`, {
+    //     method: 'get'
+    // })
+    //     .then((res) => {
+    //         if (res.status != 200) {
+    //             let err = new NotFound();
+    //             err.setMessage("Location data request returned 404");
+    //             throw err;
+    //         }
+    //         else
+    //             return res.json();
+    //     })
+    getLocation({
+        streamURL: window.env.STREAM_URL,
+        streamPort: window.env.STREAM_PORT,
+        streamID: streamID,
     })
-        .then((res) => {
-            if (res.status != 200) {
-                let err = new NotFound();
-                err.setMessage("Location data request returned 404");
-                throw err;
-            }
-            else
-                return res.json();
-        })
         .then((data) => {
             this.map.setPosition(data.latitude, data, longitude);
         })

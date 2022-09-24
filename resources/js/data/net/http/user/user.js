@@ -30,6 +30,30 @@ async function getSelfImage() {
 
 
 /**
+ * Return current user's profile
+ *
+ * @url         /self
+ * @returns     {Promise}
+ */
+async function getSelfProfile() {
+    return fetch('/self', {
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': window.env.CSRF_TOKEN
+        }
+    })
+        .then(response => {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw "ERROR: RESPONSE CODE " + String(response.status);
+            }
+        });
+}
+
+
+/**
  * Send new user registration request
  *
  * @url         /members/{username}
@@ -72,4 +96,4 @@ async function registerUser(user) {
         });
 }
 
-export { getSelfImage, registerUser };
+export { getSelfProfile, getSelfImage, registerUser };
