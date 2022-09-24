@@ -5,6 +5,8 @@ import { KakaoMap } from "../../utils/media/kakao-map.js";
 import PcmPlayer from "../../utils/media/pcm-player";
 import User from '../../models/user/user';
 import UserDTO from '../../models/user/user-dto';
+import Stream from "../../models/stream/stream.js";
+import StreamDTO from "../../models/stream/stream-dto.js";
 import StreamNotFound from '../../exceptions/http/stream/stream-not-found';
 import TokenNotFound from '../../exceptions/http/auth/token-not-found';
 
@@ -64,7 +66,6 @@ window.broadcastApp = new Vue({
         videoUrl: null,
         audioUrl: null,
         videoFormat: VideoFormat.MJPEG,
-        videoActive: false,
 
         /* Map */
         map: null,
@@ -346,11 +347,11 @@ async function getStreamInfo(token) {
                 }
             })
             .then(json => {
-                return Promise.resolve({
+                return Promise.resolve(new Stream(new StreamDTO({
                     protocol: json.protocol,
                     videoUrl: json.videoUrl,
                     audioUrl: json.audioUrl,
-                });
+                })));
             })
             .catch(err => {
                 window.alert(`${err.name}: ${err.message}`);

@@ -1,7 +1,7 @@
 
 /*  WebSocket headers for comm between the browser
     and streaming server */
-const Chat = {
+const WebsocketHeaders = {
     HEADER_CONNECTION: 'connection',
     HEADER_DISCONNECTION: 'disconnect',
     HEADER_CURRENT_USERS: "current users",
@@ -26,4 +26,4 @@ const Chat = {
     ID_TEST_CHANNEL: "TEST",
 };
 
-export default Chat;
+export default WebsocketHeaders;
