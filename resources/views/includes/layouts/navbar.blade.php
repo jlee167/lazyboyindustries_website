@@ -29,45 +29,47 @@ use App\Models\User;
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#"
-            id="navbarDarkDropdownMenuLink" role="button" data-toggle="dropdown"
-            data-target="productsDropdown" aria-expanded="false">
+            id="navbarDarkDropdownMenuLink" role="button"
+            data-toggle="dropdown" data-target="productsDropdown"
+            aria-expanded="false">
             Shop
           </a>
           <ul id="productsDropdown" class="dropdown-hover">
-            <li><a class="dropdown-item" href="/views/sales/1">USB Camera</a>
+            <li>
+              <a class="dropdown-item" href="/views/sales/1">USB Camera</a>
             </li>
-            <li><a class="dropdown-item" href="/views/sales/2">LTE Camera</a>
+            <li>
+              <a class="dropdown-item" href="/views/sales/2">LTE Camera</a>
             </li>
-            <li><a class="dropdown-item" href="/views/sales/3">Wifi Camera</a>
+            <li>
+              <a class="dropdown-item" href="/views/sales/3">Wifi Camera</a>
             </li>
-            <li><a class="dropdown-item" href="/views/sales/4">FPGA Camera</a>
+            <li>
+              <a class="dropdown-item" href="/views/sales/4">FPGA Camera</a>
             </li>
           </ul>
         </li>
         <li class="nav-item"> <a class="nav-link"
             href="/views/dashboard?page=1"> Forum</a></li>
-        <li class="nav-item"> <a class="nav-link"
-            href="/views/support"> Support</a></li>
+        <li class="nav-item"> <a class="nav-link" href="/views/support">
+            Support</a></li>
         <li class="nav-item">
-          <a class="nav-link"
-            href="/views/peers">Broadcast</a>
+          <a class="nav-link" href="/views/peers">Broadcast</a>
         </li>
       </ul>
 
-      <div class="my-2 my-lg-0 d-flex flex-row align-items-center justify-content-center">
+      <div
+        class="my-2 my-lg-0 d-flex flex-row align-items-center justify-content-center">
 
-
+        {{-- For Authorized Users --}}
         @auth
-          {{-- For Authorized Users --}}
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button"
               id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
-              <a class="dropdown" href="/views/user-info"
-                style="margin:0 0 0 0; margin-right:5px; padding: 0 0 0 0;">
-                <img id="profileImage"
-                  style="box-shadow: 0px 0px 4px 2px rgba(0, 174, 255, 0.753);"
-                  src="{{ User::getDefaultImageUrl() }}"></a>
+              <a class="dropdown" id="profileImgContainer"
+                href="/views/user-info">
+                <img id="profileImage" src="{{ User::getDefaultImageUrl() }}"></a>
             </button>
             <div class="dropdown-menu dropdown-menu-right"
               aria-labelledby="dropdownMenuButton">
@@ -90,8 +92,8 @@ use App\Models\User;
           </div>
         @endauth
 
+        {{-- For guests --}}
         @guest
-          {{-- For guests --}}
           <a id="signBtn" href="/login/redirect" role="button">
             Sign In
           </a>
