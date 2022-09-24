@@ -78,19 +78,17 @@ window.broadcastApp = new Vue({
         console.log(this.stream);
 
         // Initialize Components
-        window.onload((event) => {
-            this.initDOMrefs();
-            this.initWebSocket();
-            const setupChatWorker = setInterval(() => {
-                if (this.socket.connected) {
-                    this.setupChatting();
-                    this.joinChatting();
-                    clearInterval(setupChatWorker);
-                }
-            }, 50);
-            this.initMediaPlayer();
-            this.initMap();
-        })
+        this.initDOMrefs();
+        this.initWebSocket();
+        const setupChatWorker = setInterval(() => {
+            if (this.socket.connected) {
+                this.setupChatting();
+                this.joinChatting();
+                clearInterval(setupChatWorker);
+            }
+        }, 50);
+        this.initMediaPlayer();
+        this.initMap();
     },
 
     beforeUpdate: function () {
