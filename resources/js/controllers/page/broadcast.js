@@ -196,7 +196,6 @@ function __initMjpegVideoPlayer(app) {
 function __initHLSAudioPlayer(app) {
     app.audioPlayer = videojs('audioPlayer');
     app.audioPlayer.src(app.stream.audioUrl);
-    console.log(app.stream.audioUrl);
     document.getElementById("audioPlayer").style.display = "none";
 }
 
