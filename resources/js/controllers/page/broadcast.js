@@ -194,13 +194,10 @@ function __initMjpegVideoPlayer(app) {
  * @param {Vue} app
  */
 function __initHLSAudioPlayer(app) {
-    document.addEventListener('DOMContentLoaded', (event) => {
-        app.audioPlayer = videojs('audioPlayer');
-        app.audioPlayer.src(app.stream.audioUrl);
-        console.log(app.stream.audioUrl);
-        document.getElementById("audioPlayer").style.display = "none";
-    })
-
+    app.audioPlayer = videojs('audioPlayer');
+    app.audioPlayer.src(app.stream.audioUrl);
+    console.log(app.stream.audioUrl);
+    document.getElementById("audioPlayer").style.display = "none";
 }
 
 
