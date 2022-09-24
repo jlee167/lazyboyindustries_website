@@ -72,19 +72,20 @@ window.broadcastApp = new Vue({
 
         // Initialize Components
         this.initDOMrefs();
-        this.initWebSocket();
-        const setupChatWorker = setInterval(() => {
-            if (this.socket.connected) {
-                this.setupChatting();
-                this.joinChatting();
-                clearInterval(setupChatWorker);
-            }
-        }, 50);
-
         this.$nextTick(() => {
             this.initMediaPlayer();
             this.initMap();
         });
+
+        //Setup Websocket
+        this.initWebSocket();
+        const chatSetupWorker = setInterval(() => {
+            if (this.socket.connected) {
+                this.addChatListeners();
+                this.joinChatting();
+                clearInterval(chatSetupWorker);
+            }
+        }, 50);
     },
 
     beforeUpdate: function () {
@@ -130,7 +131,7 @@ window.broadcastApp = new Vue({
         initWebSocket: initWebSocket,
         initMap: initMap,
         initMediaPlayer: initMediaPlayer,
-        setupChatting: setupChatting,
+        addChatListeners: addChatListeners,
         runTestMode: runTestMode,
         joinChatting: joinChatting,
         updateLocation: updateLocation,
@@ -334,7 +335,7 @@ function __handleSockError(res) {
 }
 
 
-function setupChatting() {
+function addChatListeners() {
 
     /*
         @DOM Event
