@@ -117,11 +117,11 @@ window.broadcastApp = new Vue({
         },
 
         rtmpMode: function () {
-            return this.videoFormat == Stream.VideoFormats.RTMP;
+            return this.stream.videoFormat == Stream.VideoFormats.RTMP;
         },
 
         mjpegMode: function () {
-            return this.videoFormat == Stream.VideoFormats.MJPEG;
+            return this.stream.videoFormat == Stream.VideoFormats.MJPEG;
         },
     },
 
@@ -143,7 +143,7 @@ window.broadcastApp = new Vue({
 
 /* Bring-up video players */
 function initMediaPlayer() {
-    switch (this.videoFormat) {
+    switch (this.stream.videoFormat) {
         case Stream.VideoFormats.MJPEG:
             console.log("Video Format: MJPEG")
             __initHLSAudioPlayer(this);
