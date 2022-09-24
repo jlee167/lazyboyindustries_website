@@ -49,9 +49,9 @@
           </div>
         </article>
         <article class="media" id="mediaContainer">
-          <video v-if="rtmpMode" id="hlsPlayer" class="video-js"
+          <video v-if="rtmpMode()" id="hlsPlayer" class="video-js"
             controls></video>
-          <canvas v-if="mjpegMode" id="mjpegView"></canvas>
+          <canvas v-if="mjpegMode()" id="mjpegView"></canvas>
           <div v-if="mjpegMode" class="frame-counter">
             (KOR)클릭하시면 비디오가 시작됩니다.<br>
             Format: MJPEG<br>
