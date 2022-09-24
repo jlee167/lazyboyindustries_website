@@ -115,14 +115,6 @@ window.broadcastApp = new Vue({
         mobileMode: function () {
             return this.viewMode === Stream.ViewModes.MOBILE;
         },
-
-        rtmpMode: function () {
-            return this.stream.videoFormat == Stream.VideoFormats.RTMP;
-        },
-
-        mjpegMode: function () {
-            return this.stream.videoFormat == Stream.VideoFormats.MJPEG;
-        },
     },
 
     methods: {
@@ -137,6 +129,13 @@ window.broadcastApp = new Vue({
         runTestMode: runTestMode,
         joinChatting: joinChatting,
         updateLocation: updateLocation,
+        rtmpMode: function () {
+            return this.stream.videoFormat == Stream.VideoFormats.RTMP;
+        },
+
+        mjpegMode: function () {
+            return this.stream.videoFormat == Stream.VideoFormats.MJPEG;
+        },
     },
 });
 
