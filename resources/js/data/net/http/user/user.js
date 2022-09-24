@@ -36,7 +36,7 @@ async function getSelfImage() {
  * @returns     {Promise}
  */
 async function getSelfProfile() {
-    return await fetch('/self', {
+    return fetch('/self', {
         method: 'get',
         headers: {
             'Content-Type': 'application/json',

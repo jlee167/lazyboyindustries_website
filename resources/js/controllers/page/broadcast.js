@@ -260,7 +260,7 @@ function runTestMode() {
 
 
 async function getUser() {
-    await getSelfProfile()
+    return await getSelfProfile()
         .then(json => {
             return Promise.resolve(new User(new UserDTO(json)));
         })
