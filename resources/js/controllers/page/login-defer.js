@@ -1,4 +1,4 @@
-import * as OAuthUI from "../../libs/oauth/view-setup";
+import * as OAuthUI from "../../utils/view/oauth-widgets";
 import {authWithOauth, authWithUsername} from "../../data/net/http/auth/auth";
 
 

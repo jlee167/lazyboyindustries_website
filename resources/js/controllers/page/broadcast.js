@@ -1,8 +1,8 @@
-import MjpegPlayer from "../../libs/media/MjpegPlayer.js";
+import MjpegPlayer from "../../utils/media/MjpegPlayer.js";
 import WebSocketHeaders from "../../configs/websocket/WebSocketHeaders.js";
 import NotFound from '../../exceptions/generic/NotFound';
-import { KakaoMap } from "../../libs/media/KakaoMap.js";
-import PcmPlayer from "../../libs/media/PcmPlayer";
+import { KakaoMap } from "../../utils/media/KakaoMap.js";
+import PcmPlayer from "../../utils/media/PcmPlayer";
 import User from '../../models/user/User';
 import UserDTO from '../../models/user/UserDTO';
 import StreamNotFound from '../../exceptions/http/stream/StreamNotFound';

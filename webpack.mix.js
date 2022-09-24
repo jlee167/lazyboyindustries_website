@@ -24,7 +24,7 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/jwt.js', 'public/js');
 mix.js('resources/js/tests/sql-injection.js', 'public/js');
 
-mix.js('resources/js/libs/ui/full-page-scroll.js', 'public/js');
+mix.js('resources/js/utils/view/full-page-scroll.js', 'public/js');
 
 mix.js('resources/js/controllers/page/main.js', 'public/js');
 mix.js('resources/js/controllers/page/forum.js', 'public/js');
