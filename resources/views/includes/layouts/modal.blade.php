@@ -21,11 +21,10 @@
 
                     <div class="resume-body">
                         <!-- Personal Info -->
-                        <div style="overflow:hidden; height:80vh;">
-                            <div style="width:100%; height:100%; display:flex; overflow:hidden;">
+                        <div class="overflow-hidden h-80vh">
+                            <div class="overflow-hidden d-flex w-100 h-100">
                                 <article class="resume-sidebar">
-                                    <div
-                                        style="display:flex; flex-direction:row; justify-content:center; overflow:hidden;">
+                                    <div class="d-flex flex-row justify-content-center overflow-hidden">
                                         <img id="resumeFaceshot" src="{{asset('/images/GitHub-Mark-Light-32px.png')}}">
                                     </div>
                                     <h2 class="title-font"> LazyBoy </h2>
