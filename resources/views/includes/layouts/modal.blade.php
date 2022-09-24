@@ -47,7 +47,7 @@
                                 <article class="resume-contents">
                                     <div class="contents-padding">
                                         <section id="profile" class="no-overflow-x">
-                                            <h2 class="mb-6" style="color:#343032;"> <b> Profile </b></h2>
+                                            <h2 class="mb-6 header-resume-paragraph"> <b> Profile </b></h2>
                                             <p>
                                                 {!! ResumeStrings::$intro !!}
                                             </p>
@@ -56,7 +56,7 @@
 
                                         <section id="rtl" class="section-margin no-overflow-x">
                                             <header>
-                                                <h2 class="mb-3" style="color:#343032;"> <b> RTL / Digital Logics </b></h2>
+                                                <h2 class="mb-3 header-resume-paragraph"> <b> RTL / Digital Logics </b></h2>
                                             </header>
                                             <div class="resume-section-contents">
                                                 <div class="resume-section-text pr-5">
@@ -94,7 +94,7 @@
 
 
                                         <section id="hardware" class="section-margin no-overflow-x">
-                                            <h2 class="mb-3" style="color:#343032;"> <b> Hardware </b></h2>
+                                            <h2 class="mb-3 header-resume-paragraph"> <b> Hardware </b></h2>
                                             <div class="resume-section-contents">
                                                 <div class="resume-section-text pr-5">
                                                     {!! ResumeStrings::$rtlSkills !!}
@@ -118,7 +118,7 @@
                                         </section>
 
                                         <section id="software" class="section-margin no-overflow-x mb-md-10">
-                                            <h2 class="mb-3" style="color:#343032;"> <b> Software </b></h2>
+                                            <h2 class="mb-3 header-resume-paragraph"> <b> Software </b></h2>
                                             <div class="resume-section-contents">
                                                 <div class="resume-section-text pr-5">
                                                     {!! ResumeStrings::$rtlSkills !!}
