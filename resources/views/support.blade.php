@@ -29,8 +29,8 @@
         <div>
           <h4 class="support-headers" @click="showFAQ()"
             :class="{ 'bottom-indicator': FAQview }"> F.A.Q </h4>
-          <h4 class="support-headers" style="margin-left: 1.5em;"
-            @click="showRequest()" :class="{ 'bottom-indicator': reqView }">
+          <h4 class="support-headers" @click="showRequest()"
+            :class="{ 'bottom-indicator': reqView }">
             Make Requests </h4>
 
           <qna-dropdown v-show="FAQview" :qna-arr="qnaArr" max-width=600>
@@ -42,15 +42,16 @@
                 enctype="multipart/form-data" method="POST">
                 @csrf
                 <input type="hidden" id="postToken" name="postToken">
-                <select class="form-control no-outline w-100 mb-3" id="type"
-                  name="type" style="width: 150px;">
+                <select id="requestType"
+                  class="form-control no-outline w-100 mb-3" name="type">
                   <option value="REPAIR"> Repair </option>
                   <option value="TECH_SUPPORT"> Tech Support </option>
                   <option value="REFUND"> Refund </option>
                   <option value="LEGAL"> Legal </option>
                 </select>
-                <input class="input-small form-control no-outline mb-3" type="text"
-                  id="email" name="email" placeholder="Email">
+                <input class="input-small form-control no-outline mb-3"
+                  type="text" id="email" name="email"
+                  placeholder="Email">
                 <summer-note ref="summernote" :height="200">
                 </summer-note>
                 <input class="btn btn-info btn-form-submit no-outline mt-4"

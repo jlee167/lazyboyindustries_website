@@ -25,12 +25,17 @@
     width: 100%;
 }
 
+#requestType {
+    width: 150px;
+}
+
 .support-headers {
     display: inline-block;
     color: #343032;
     cursor: pointer;
     margin-bottom: 50px;
     font-weight: 700;
+    margin-left: 1.5em;
 }
 
 .sidebar-text {
