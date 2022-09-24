@@ -304,12 +304,12 @@ async function getStreamInfo(token) {
     //             }
     //         })
 
-            return await getStream({
-                streamURL: window.env.STREAM_URL,
-                streamPort: window.env.STREAM_PORT,
-                streamID: streamID,
-                token: token,
-            })
+            return await getStream(
+                window.env.STREAM_URL,
+                window.env.STREAM_PORT,
+                streamID,
+                token,
+            )
             .then(json => {
                 const stream = new Stream(new StreamDTO(json));
                 return Promise.resolve(stream);
