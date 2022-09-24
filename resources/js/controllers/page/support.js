@@ -1,4 +1,4 @@
-import UnknownException from '../../exceptions/generic/UnknownException';
+import UnknownException from '../../exceptions/generic/unknown';
 
 
 /**

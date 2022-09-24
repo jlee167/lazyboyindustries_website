@@ -1,10 +1,10 @@
 import * as forumAPI from "../../data/net/http/forum/forum";
-import ForumPost from "../../models/forum/ForumPost";
-import ForumPostDTO from '../../models/forum/ForumPostDTO';
-import EmailNotVerified from './../../exceptions/http/auth/EmailNotVerified';
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
-import ListItem from './../../models/forum/ListItem';
-import ListItemDTO from './../../models/forum/ListItemDTO';
+import ForumPost from "../../models/forum/post";
+import ForumPostDTO from '../../models/forum/post-dto';
+import EmailNotVerified from '../../exceptions/http/auth/email-not-verified';
+import AuthFailure from '../../exceptions/http/auth/auth-failure';
+import ListItem from '../../models/forum/list-item';
+import ListItemDTO from '../../models/forum/list-item-dto';
 
 
 /*------ Page Settings -------*/

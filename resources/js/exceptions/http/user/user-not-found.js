@@ -1,5 +1,5 @@
 /* Exception thrown when specified user does not exist */
-class UserSearchException extends Error {
+class UserNotFound extends Error {
     constructor() {
         super();
         this.name = "User search exception";
@@ -7,4 +7,4 @@ class UserSearchException extends Error {
     }
 };
 
-export default UserSearchException;
+export default UserNotFound;

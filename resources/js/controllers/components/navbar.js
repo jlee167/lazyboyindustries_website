@@ -1,5 +1,5 @@
 
-import AuthFailure from '../../exceptions/http/auth/AuthFailure';
+import AuthFailure from '../../exceptions/http/auth/auth-failure';
 import * as AuthAPI from '../../data/net/http/auth/auth';
 import * as UserAPI from '../../data/net/http/user/user';
 

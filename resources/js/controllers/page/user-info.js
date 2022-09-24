@@ -1,6 +1,6 @@
 import * as Google2FaAPI from '../../data/net/http/auth/google2fa';
-import User from './../../models/user/User';
-import UserDTO from './../../models/user/UserDTO';
+import User from '../../models/user/user';
+import UserDTO from '../../models/user/user-dto';
 
 
 const URI_MYINFO = '/self'

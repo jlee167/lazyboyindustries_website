@@ -1,12 +1,12 @@
-import MjpegPlayer from "../../utils/media/MjpegPlayer.js";
-import WebSocketHeaders from "../../configs/websocket/WebSocketHeaders.js";
-import NotFound from '../../exceptions/generic/NotFound';
-import { KakaoMap } from "../../utils/media/KakaoMap.js";
-import PcmPlayer from "../../utils/media/PcmPlayer";
-import User from '../../models/user/User';
-import UserDTO from '../../models/user/UserDTO';
-import StreamNotFound from '../../exceptions/http/stream/StreamNotFound';
-import TokenNotFound from '../../exceptions/http/auth/TokenNotFound';
+import MjpegPlayer from "../../utils/media/mjpeg-player.js";
+import WebSocketHeaders from "../../configs/stream/websocket-headers.js";
+import NotFound from '../../exceptions/generic/not-found';
+import { KakaoMap } from "../../utils/media/kakao-map.js";
+import PcmPlayer from "../../utils/media/pcm-player";
+import User from '../../models/user/user';
+import UserDTO from '../../models/user/user-dto';
+import StreamNotFound from '../../exceptions/http/stream/stream-not-found';
+import TokenNotFound from '../../exceptions/http/auth/token-not-found';
 
 
 

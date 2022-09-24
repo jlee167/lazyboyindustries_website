@@ -1,5 +1,5 @@
 /* Exception thrown when current user is not a guardian of the streamer */
-class NotGuardian extends Error {
+class InvalidGuardianship extends Error {
     constructor() {
         super();
         this.name = "Not Guaridan";
@@ -7,4 +7,4 @@ class NotGuardian extends Error {
     }
 };
 
-export default NotGuardian;
+export default InvalidGuardianship;

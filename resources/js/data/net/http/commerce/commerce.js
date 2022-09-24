@@ -1,8 +1,8 @@
-import UnknownException from '../../../../exceptions/generic/UnknownException';
-import InvalidQuantity from '../../../../exceptions/http/commerce/InvalidQuantity';
-import DuplicateItem from '../../../../exceptions/http/commerce/DuplicateItem';
-import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
-import InsufficientStock from '../../../../exceptions/http/commerce/InsufficientStock';
+import UnknownException from '../../../../exceptions/generic/unknown';
+import InvalidQuantity from '../../../../exceptions/http/commerce/invalid-quantity';
+import DuplicateItem from '../../../../exceptions/http/commerce/duplicate-item';
+import AuthFailure from '../../../../exceptions/http/auth/auth-failure';
+import InsufficientStock from '../../../../exceptions/http/commerce/insufficient-stock';
 
 
 

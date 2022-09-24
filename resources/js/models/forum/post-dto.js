@@ -1,4 +1,4 @@
-import DataTransferModel from "../base/DataTransferModel";
+import DataTransferModel from "../../libs/model/dto-base";
 
 class ForumPostDTO extends DataTransferModel {
 

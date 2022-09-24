@@ -1,4 +1,4 @@
-import ProductReview from "./ProductReview";
+import ProductReview from "./product-review";
 
 class PurchaseRecord{
 

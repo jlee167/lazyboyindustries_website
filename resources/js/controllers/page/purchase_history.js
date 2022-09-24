@@ -1,6 +1,6 @@
-import PurchaseRecord from '../../models/commerce/PurchaseRecord';
+import PurchaseRecord from '../../models/commerce/purchase-record';
 import {postReview as postReviewAPI, getRecords as getRecordsAPI} from "../../data/net/http/commerce/commerce";
-import PurchaseRecordDTO from '../../models/commerce/PurchaseRecordDTO';
+import PurchaseRecordDTO from '../../models/commerce/purchase-record-dto';
 
 
 const commerceAPI = {

@@ -1,4 +1,4 @@
-import ModelMismatch from '../../exceptions/generic/ModelMismatch';
+import ModelMismatch from '../../exceptions/generic/model-mismatch';
 
 
 /* Base class for DTOs */
@@ -10,11 +10,11 @@ class DataTransferModel {
      * Throw error if the client-side model is not identical
      * to server-side model
      *
-     * @param {*} clientModel   - Client side model
-     * @param {*} serverModel   - Server side model
+     * @param {*} clientModel
+     * @param {*} transferedObject
      */
-    verifyDTO(clientModel, serverModel){
-        for (const[key, value] of Object.entries(serverModel)) {
+    verifyDTO(clientModel, transferedObject){
+        for (const[key, value] of Object.entries(transferedObject)) {
             if (clientModel.hasOwnProperty(key))
                 clientModel[key] = value;
             else

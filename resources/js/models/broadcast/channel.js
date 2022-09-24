@@ -1,4 +1,4 @@
-import DataTransferModel from "../base/DataTransferModel";
+import DataTransferModel from "../../libs/model/dto-base";
 
 /* Broadcast stream metadata container class */
 class BroadcastChannel extends DataTransferModel{

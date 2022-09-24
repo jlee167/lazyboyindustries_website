@@ -1,9 +1,9 @@
 /* ----------------------------- Login / Logout ----------------------------- */
-import UnknownException from '../../../../exceptions/generic/UnknownException';
-import InvalidCredentials from '../../../../exceptions/http/auth/InvalidCredentials';
-import LogoutFailure from '../../../../exceptions/http/auth/LogoutFailure';
-import UserSearchException from '../../../../exceptions/http/user/UserSearchException';
-import AuthFailure from '../../../../exceptions/http/auth/AuthFailure';
+import UnknownException from '../../../../exceptions/generic/unknown';
+import InvalidCredentials from '../../../../exceptions/http/auth/invalid-credentials';
+import LogoutFailure from '../../../../exceptions/http/auth/logout-failure';
+import UserNotFound from '../../../../exceptions/http/user/user-not-found';
+import AuthFailure from '../../../../exceptions/http/auth/auth-failure';
 
 
 /**
@@ -36,7 +36,7 @@ async function authWithOauth (accessToken, provider) {
             case 401:
                 throw new InvalidCredentials();
             case 404:
-                throw new UserSearchException();
+                throw new UserNotFound();
             default:
                 throw new UnknownException();
         };

@@ -1,5 +1,5 @@
 import { getProduct as getProductAPI} from "../../data/net/http/commerce/commerce";
-import AuthFailure from "../../exceptions/http/auth/AuthFailure";
+import AuthFailure from "../../exceptions/http/auth/auth-failure";
 
 /* URL parts */
 const uriArr = window.location.href.split('/');
