@@ -20,21 +20,9 @@ videojs.Hls.xhr.beforeRequest = function (options) {
 }
 
 
-/* Enum Variables */
-const VideoFormat = Object.freeze({
-    MJPEG: "MJPEG",
-    RTMP: "RTMP"
-});
-
-const ViewMode = Object.freeze({
-    DESKTOP: "Desktop",
-    MOBILE: "Mobile",
-});
-
 /* Page/Stream info */
 const urlParts = window.location.href.split('/');
 const streamID = Number(urlParts[urlParts.length - 1]);
-
 
 
 
@@ -55,7 +43,7 @@ window.broadcastApp = new Vue({
         guardians: new Array(),
 
         joined: false,
-        viewMode: window.env.MOBILE_MODE_ENABLED ? ViewMode.MOBILE : ViewMode.DESKTOP,
+        viewMode: window.env.MOBILE_MODE_ENABLED ? Stream.ViewModes.MOBILE : Stream.ViewModes.DESKTOP,
         loginState: false,
 
         socket: null,
@@ -65,7 +53,7 @@ window.broadcastApp = new Vue({
         audioPlayer: null,
         videoUrl: null,
         audioUrl: null,
-        videoFormat: VideoFormat.MJPEG,
+        videoFormat: Stream.VideoFormats.MJPEG,
 
         /* Map */
         map: null,
@@ -90,7 +78,7 @@ window.broadcastApp = new Vue({
 
         this.videoFormat = streamInfo.videoFormat;
         this.videoUrl = streamInfo.videoUrl;
-        if (this.videoFormat == VideoFormat.MJPEG)
+        if (this.videoFormat == Stream.VideoFormats.MJPEG)
             this.audioUrl = streamInfo.audioUrl;
 
         // Initialize Components
@@ -127,19 +115,19 @@ window.broadcastApp = new Vue({
         },
 
         desktopMode: function () {
-            return this.viewMode === ViewMode.DESKTOP;
+            return this.viewMode === Stream.ViewModes.DESKTOP;
         },
 
         mobileMode: function () {
-            return this.viewMode === ViewMode.MOBILE;
+            return this.viewMode === Stream.ViewModes.MOBILE;
         },
 
         rtmpMode: function () {
-            return this.videoFormat == VideoFormat.RTMP;
+            return this.videoFormat == Stream.VideoFormats.RTMP;
         },
 
         mjpegMode: function () {
-            return this.videoFormat == VideoFormat.MJPEG;
+            return this.videoFormat == Stream.VideoFormats.MJPEG;
         },
     },
 
@@ -162,13 +150,13 @@ window.broadcastApp = new Vue({
 /* Bring-up video players */
 function initMediaPlayer() {
     switch (this.videoFormat) {
-        case VideoFormat.MJPEG:
+        case Stream.VideoFormats.MJPEG:
             console.log("Video Format: MJPEG")
             __initHLSAudioPlayer(this);
             __initMjpegVideoPlayer(this);
             break;
 
-        case VideoFormat.RTMP:
+        case Stream.VideoFormats.RTMP:
             console.log("Video Format: HLS");
             __initHLSVideoPlayer(this);
             break;
@@ -301,7 +289,7 @@ async function getUser() {
 
 
 async function getStreamToken() {
-    if (this.viewMode == ViewMode.MOBILE) {
+    if (this.viewMode == Stream.ViewModes.MOBILE) {
         return window.env.JWT_FROM_MOBILE_DEVICE;
     }
 
