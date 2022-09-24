@@ -260,7 +260,7 @@ function runTestMode() {
 
 
 async function getUser() {
-    getSelfProfile()
+    await getSelfProfile()
         .then(json => {
             return Promise.resolve(new User(new UserDTO(json)));
         })
@@ -276,7 +276,7 @@ async function getStreamToken() {
     }
 
 
-    return getToken(streamID)
+    return await getToken(streamID)
         .then((json) => {
             return Promise.resolve(json.token);
         })
@@ -304,7 +304,7 @@ async function getStreamInfo(token) {
     //             }
     //         })
 
-            return getStream({
+            return await getStream({
                 streamURL: window.env.STREAM_URL,
                 streamPort: window.env.STREAM_PORT,
                 streamID: streamID,
