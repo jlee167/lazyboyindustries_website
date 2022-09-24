@@ -31,11 +31,6 @@ window.broadcastApp = new Vue({
     data: {
         user: null,
         webToken: null,
-        operators: [{
-            imageUrl: '/images/GitHub-Mark-Light-32px.png',
-            username: "lazyboy",
-            status: 'AWAY'
-        }],
         guardians: new Array(),
 
         joined: false,
