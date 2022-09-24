@@ -41,9 +41,6 @@
       <div id="contents">
         <article v-if="desktopMode" class="user-list">
           <div class="mt-3">
-            <!--p class="user-type"> Admin </p>
-            <user-list-display :users="operators"></user-list-display-->
-
             <p class="user-type"> Guardians </p>
             <user-list-display :users="guardians"></user-list-display>
           </div>
