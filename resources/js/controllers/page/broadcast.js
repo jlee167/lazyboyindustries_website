@@ -87,11 +87,11 @@ window.broadcastApp = new Vue({
                 clearInterval(setupChatWorker);
             }
         }, 50);
-
-        this.$nextTick(function() {
+        document.addEventListener('DOMContentLoaded', (event) => {
             this.initMediaPlayer();
             this.initMap();
-        });
+        })
+
     },
 
     beforeUpdate: function () {
