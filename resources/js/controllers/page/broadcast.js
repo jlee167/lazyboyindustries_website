@@ -51,9 +51,7 @@ window.broadcastApp = new Vue({
         /* Video & Audio */
         mjpegPlayer: new MjpegPlayer(),
         audioPlayer: null,
-        videoUrl: null,
-        audioUrl: null,
-        videoFormat: Stream.VideoFormats.MJPEG,
+        stream: null,
 
         /* Map */
         map: null,
@@ -74,12 +72,7 @@ window.broadcastApp = new Vue({
         // Get data from REST API
         this.user = await this.getUser();
         this.webToken = await this.getStreamToken();
-        const streamInfo = await this.getStreamInfo(this.webToken);
-
-        this.videoFormat = streamInfo.videoFormat;
-        this.videoUrl = streamInfo.videoUrl;
-        if (this.videoFormat == Stream.VideoFormats.MJPEG)
-            this.audioUrl = streamInfo.audioUrl;
+        this.stream = await this.getStreamInfo(this.webToken);
 
         // Initialize Components
         this.initDOMrefs();
@@ -175,7 +168,7 @@ function initMediaPlayer() {
 function __initMjpegVideoPlayer(app) {
     app.mjpegView = document.getElementById("mjpegView");
     app.mjpegPlayer.setCanvas(app.mjpegView);
-    app.mjpegPlayer.setSrc(app.videoUrl
+    app.mjpegPlayer.setSrc(app.stream.videoUrl
         //`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}/mjpeg.jpg`
     );
 
@@ -200,7 +193,7 @@ function __initMjpegVideoPlayer(app) {
  */
 function __initHLSAudioPlayer(app) {
     app.audioPlayer = videojs('audioPlayer');
-    app.audioPlayer.src(app.audioUrl);
+    app.audioPlayer.src(app.stream.audioUrl);
     document.getElementById("audioPlayer").style.display = "none";
 }
 
@@ -213,7 +206,7 @@ function __initHLSAudioPlayer(app) {
 function __initHLSVideoPlayer(app) {
     setTimeout(() => {
         let player = videojs('hlsPlayer');
-        player.src(app.videoUrl);
+        player.src(app.stream.videoUrl);
         player.play();
     }, 500);
 }
