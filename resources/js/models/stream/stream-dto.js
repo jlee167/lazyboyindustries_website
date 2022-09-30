@@ -4,6 +4,7 @@ class StreamDTO extends DataTransferModel {
 
     videoUrl;
     audioUrl;
+    geoLocationUrl;
     protocol;
 
     constructor(initData){
