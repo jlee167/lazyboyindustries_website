@@ -29,7 +29,8 @@ class PeerRepository
             ->join('users', 'users.id', '=', 'guardianship.uid_guardian')
             ->where('uid_protected', '=', $userID)
             ->where('signed_protected', '=', 'ACCEPTED')
-            ->where('signed_guardian', '=', 'ACCEPTED');
+            ->where('signed_guardian', '=', 'ACCEPTED')
+            ->whereNotNull('username');
 
         if ($cursor) {
             $qeury = $query->where('guardianship.id', '>', $cursor);
@@ -102,7 +103,8 @@ class PeerRepository
             ->leftJoin('streams', 'streams.uid', '=', 'guardianship.uid_protected')
             ->where('uid_guardian', '=', $userID)
             ->where('signed_protected', '=', 'ACCEPTED')
-            ->where('signed_guardian', '=', 'ACCEPTED');
+            ->where('signed_guardian', '=', 'ACCEPTED')
+            ->whereNotNull('username');
 
         if ($cursor) {
             $qeury = $query->where('guardianship.id', '>', $cursor);
