@@ -2,6 +2,7 @@ class Stream{
 
     videoUrl;
     audioUrl;
+    geoLocationUrl;
     videoFormat;
 
     static VideoFormats = Object.freeze({
@@ -18,6 +19,7 @@ class Stream{
     constructor(DTO){
         this.videoUrl = DTO.videoUrl;
         this.audioUrl = DTO.audioUrl;
+        this.geoLocationUrl = DTO.geoLocationUrl;
         this.videoFormat = DTO.protocol;
     }
 }
