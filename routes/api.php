@@ -24,9 +24,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/auth_state', function (Request $request) {
     if (Auth::check())
-        return response(200, []);
+        return response([], 200);
     else
-        return response(401, []);
+        return response([], 401);
 });
 
 
