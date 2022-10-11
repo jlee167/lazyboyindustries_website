@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Routh::middleware('auth')->get('/auth_state', function (Request $request) {
+Route::middleware('auth')->get('/auth_state', function (Request $request) {
     return response(200, []);
 });
 
