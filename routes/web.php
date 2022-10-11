@@ -89,6 +89,12 @@ Route::post(
     [LoginController::class, 'authenticate']
 )->middleware('xss');
 
+
+Route::get('/auth_state', function (Request $request) {
+    return response([], 200);
+})->middleware(['auth']);
+
+
 Route::post(
     '/auth/kakao',
     [LoginController::class, 'authWithKakao']

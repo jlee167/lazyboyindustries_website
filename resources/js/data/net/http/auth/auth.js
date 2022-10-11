@@ -84,7 +84,7 @@ async function authWithUsername (credentials) {
  *  Throws error if current user is not authenticated yet.
  */
 async function getAuthState() {
-    return fetch('/api/auth_state', {
+    return fetch('/auth_state', {
         method: 'get',
         headers: {
             'Content-Type': 'application/json',
