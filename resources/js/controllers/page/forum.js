@@ -96,7 +96,6 @@ window.forumApp = new Vue({
 
         /* Get current page contents from server and render */
         this.getCurrentPage();
-        //this.forumName = document.getElementById('forumName').value.trim();
         this.searchKeyword = '';
         await this.getPage();
         this.loaded = true;
@@ -109,25 +108,31 @@ window.forumApp = new Vue({
     },
 
     methods: {
+        /* App functionalities */
+        watchForum: watchForum,
+        watchPost: watchPost,
+        changeForum: changeForum,
+        pagenate: pagenate,
+
+        /* Functionalities of individual posts */
+        toggleLike: toggleLike,
+        removeKeyword: removeKeyword,
+        postComment: postComment,
+        updatePost: updatePost,
+        deletePost: deletePost,
+
+        /* Forum page getters */
         getPage: getPage,
         getNewPage: getNewPage,
         getPageWithTag: getPageWithTag,
         getOldestPage: getOldestPage,
         getNewestPage: getNewestPage,
         getCurrentPage: getCurrentPage,
-        isCurrentPage: isCurrentPage,
-        watchForum: watchForum,
-        watchPost: watchPost,
-        toggleLike: toggleLike,
-        changeForum: changeForum,
-        pagenate: pagenate,
-        handleSearchEvent: handleSearchEvent,
         searchPosts: searchPosts,
-        postComment: postComment,
-        removeKeyword: removeKeyword,
 
-        updatePost: updatePost,
-        deletePost: deletePost,
+        /* Helpers */
+        handleSearchEvent: handleSearchEvent,
+        isCurrentPage: isCurrentPage,
     }
 });
 
