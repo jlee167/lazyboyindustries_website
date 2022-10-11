@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SupportController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::middleware('auth')->get('/auth_state', function (Request $request) {
-    return response(200, []);
+Route::get('/auth_state', function (Request $request) {
+    if (Auth::check())
+        return response(200, []);
+    else
+        return response(401, []);
 });
 
 
