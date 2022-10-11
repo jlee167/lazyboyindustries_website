@@ -98,7 +98,8 @@
 
             <p v-if="hasComments" class="content-label mt-5">Comments</p>
             <div v-for="comment in comments" :key="comment.id">
-              <forum-post :post="comment"></forum-post>
+              <forum-post :update-post="updatePost"
+              :delete-post="deletePost" :post="comment"></forum-post>
             </div>
           </div>
         </transition>
