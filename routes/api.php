@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-// Route::post(
-//     '/support_request',
-//     [SupportController::class, 'requestSupport']
-// );
+Route::post(
+    '/support_request',
+    [SupportController::class, 'requestSupport']
+);
