@@ -427,30 +427,24 @@ Route::post(
     [PeerController::class, 'addGuardian']
 )->middleware(FULL_SECURITY_CHECK);
 
-// Route::put(
-//     '/members/guardian/{uid}',
-//     [UserController::class, 'acceptGuardian']
-// )->middleware(FULL_SECURITY_CHECK);
 
 Route::delete(
     '/members/guardian/{uid}',
     [PeerController::class, 'deleteGuardian']
 )->middleware(FULL_SECURITY_CHECK);
 
+
 Route::get(
     '/members/protected/all',
     [PeerController::class, 'getProtecteds']
 )->middleware(FULL_SECURITY_CHECK);
+
 
 Route::post(
     '/members/protected/{username}',
     [PeerController::class, 'addProtected']
 )->middleware(FULL_SECURITY_CHECK);
 
-// Route::put(
-//     '/members/protected/{uid}',
-//     [UserController::class, 'acceptProtected']
-// )->middleware(FULL_SECURITY_CHECK);
 
 Route::delete(
     '/members/protected/{uid}',
