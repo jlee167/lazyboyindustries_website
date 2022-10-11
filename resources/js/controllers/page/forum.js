@@ -1,4 +1,5 @@
 import * as forumAPI from "../../data/net/http/forum/forum";
+import * as authAPI from "../../data/net/http/auth/auth";
 import ForumPost from "../../models/forum/post";
 import ForumPostDTO from '../../models/forum/post-dto';
 import EmailNotVerified from '../../exceptions/http/auth/email-not-verified';
@@ -325,6 +326,7 @@ function postComment() {
 
 async function updatePost(post) {
     try {
+        await authAPI.getAuthState();
         await forumAPI.verifyAuthor(post);
         const category = post.hasOwnProperty("title") ? "post" : "comment";
 
@@ -337,6 +339,10 @@ async function updatePost(post) {
           "&post_type=" +
           String(category);
     } catch (err) {
+        if (err instanceof AuthFailure) {
+            window.alert("Please Login First");
+            return;
+        }
         window.alert(err.message);
         return;
     }
@@ -345,12 +351,17 @@ async function updatePost(post) {
 
 async function deletePost(post) {
     try {
+        await authAPI.getAuthState();
         await forumAPI.verifyAuthor(post);
         await forumAPI.deletePost(post);
         window.alert("Your post has been deleted!");
         window.location.href =
             "http://www.lazyboyindustries.com/views/dashboard?page=1";
     } catch (err) {
+        if (err instanceof AuthFailure) {
+            window.alert("Please Login First");
+            return;
+        }
         window.alert(err.message);
         return;
     }
