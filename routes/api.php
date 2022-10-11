@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+/* ---------------------------- Support requests ---------------------------- */
 Route::post(
     '/support_request',
     [SupportController::class, 'requestSupport']
