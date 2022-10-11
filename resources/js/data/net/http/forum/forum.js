@@ -74,7 +74,7 @@ async function updatePost(post) {
 
 /* @Todo Separate comment and post func */
 async function deletePost(post) {
-    const url = this.post.hasOwnProperty("title") ?
+    const url = post.hasOwnProperty("title") ?
                 `/forum/${post.forum}/post/${post.id}` :
                 `/forum/comment/${post.id}`;
 
