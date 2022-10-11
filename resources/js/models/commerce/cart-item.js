@@ -3,17 +3,16 @@ class CartItem{
     title;
     imgUrl;
     price;
-    unit;
     quantity;
 
     constructor(DTO){
-        this.productID = DTO.productID;
+        this.productID = DTO.product_id;
         this.title = DTO.title;
-        this.imgUrl = DTO.imgUrl;
-        this.price = DTO.price;
-        this.unit = DTO.unit;
+        this.imgUrl = DTO.img_url;
+        this.price = DTO.price_credits;
         this.quantity = DTO.quantity;
     }
 }
+
 
 export default CartItem;

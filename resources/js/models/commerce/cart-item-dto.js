@@ -1,15 +1,19 @@
 import DataTransferModel from "../../libs/model/dto-base";
 
-class CartItemDTO extends DataTransferModel{
+class CartItemDTO extends DataTransferModel {
 
-    productID;
+    id;
+    uid;
+    product_id;
     title;
-    imgUrl;
-    price;
-    unit;
+    img_url;
+    price_credits;
     quantity;
+    last_updated;
+    description;
+    active;
 
-    constructor(json){
+    constructor(json) {
         super();
         super.verifyDTO(this, json);
     }

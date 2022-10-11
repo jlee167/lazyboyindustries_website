@@ -1,3 +1,6 @@
+import CartItemDTO from './../../models/commerce/cart-item-dto';
+import CartItem from '../../models/commerce/cart-item';
+
 window.purchase = (productID, quantity) => {
     fetch('/product/order', {
         method: 'post',
@@ -27,18 +30,6 @@ window.purchase = (productID, quantity) => {
         .catch(err => {
             window.alert(err);
         })
-}
-
-class CartItem {
-    /* public */
-    productID = Number();
-    title = String();
-    imgUrl = String();
-    price = Number();
-    unit = String();
-    quantity = Number();
-
-    constructor() { };
 }
 
 
@@ -104,13 +95,14 @@ function getCart() {
         .then(jsonData => {
             if (jsonData.result) {
                 jsonData.cart.forEach(function (value, index, array) {
-                    let newItem = new CartItem();
-                    newItem.productID = value.product_id;
-                    newItem.title = value.title;
-                    newItem.imgUrl = value.img_url;
-                    newItem.price = value.price_credits;
-                    newItem.quantity = value.quantity;
-                    cartApp.items.push(newItem);
+                    // let newItem = new CartItem();
+                    // newItem.productID = value.product_id;
+                    // newItem.title = value.title;
+                    // newItem.imgUrl = value.img_url;
+                    // newItem.price = value.price_credits;
+                    // newItem.quantity = value.quantity;
+                    const item = new CartItem(new CartItemDTO(value));
+                    cartApp.items.push(item);
                 })
             } else {
                 window.alert(jsonData.error);
