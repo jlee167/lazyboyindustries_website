@@ -42,7 +42,7 @@ class CartItem {
 }
 
 
-cartApp = new Vue({
+window.cartApp = new Vue({
     el: "#cart",
     data: {
         title: String("My Cart"),
