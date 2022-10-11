@@ -125,9 +125,11 @@ window.forumApp = new Vue({
         searchPosts: searchPosts,
         postComment: postComment,
         removeKeyword: removeKeyword,
+
+        updatePost: updatePost,
+        deletePost: deletePost,
     }
 });
-
 
 
 
@@ -313,6 +315,40 @@ function postComment() {
                 window.alert(`${err.name}: ${err.message}`);
             }
         });
+}
+
+
+async function updatePost(post) {
+    try {
+        await forumAPI.verifyAuthor(post);
+        const category = post.hasOwnProperty("title") ? "post" : "comment";
+
+        window.location.href =
+          /* @Todo: remove hardcoded url */
+          "http://www.lazyboyindustries.com/views/updatepost?forum=" +
+          String(post.forum) +
+          "&post_id=" +
+          String(post.id) +
+          "&post_type=" +
+          String(category);
+    } catch (err) {
+        window.alert(err.message);
+        return;
+    }
+}
+
+
+async function deletePost(post) {
+    try {
+        await forumAPI.verifyAuthor(post);
+        await forumAPI.deletePost(post);
+        window.alert("Your post has been deleted!");
+        window.location.href =
+            "http://www.lazyboyindustries.com/views/dashboard?page=1";
+    } catch (err) {
+        window.alert(err.message);
+        return;
+    }
 }
 
 
