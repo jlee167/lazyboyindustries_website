@@ -37,9 +37,7 @@ async function verifyAuthor(post) {
             throw new UserNotAuthor();
         }
         else {
-            return new Promise(function (resolve){
-                resolve();
-            });
+            return Promise.resolve();
         }
     });
 }
@@ -62,7 +60,7 @@ async function updatePost(post) {
     .then((res) => {
         switch (res.status) {
             case 200:
-                resolve();
+                return Promise.resolve();
             case 401:
                 throw new AuthFailure();
             default:
@@ -87,7 +85,7 @@ async function deletePost(post) {
     .then((res) => {
         switch (res.status) {
             case 200:
-                Promise.resolve();
+                return Promise.resolve();
             case 401:
                 throw new AuthFailure();
             default:
