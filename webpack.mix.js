@@ -40,6 +40,7 @@ mix.js('resources/js/controllers/page/purchase_history.js', 'public/js');
 mix.js('resources/js/controllers/page/broadcast.js', 'public/js');
 mix.js('resources/js/controllers/page/verify-email.js', 'public/js');
 mix.js('resources/js/controllers/page/user-info.js', 'public/js');
+mix.js('resources/js/controllers/page/cart-defer.js', 'public/js');
 
 mix.js('resources/js/controllers/components/navbar.js', 'public/js');
 
