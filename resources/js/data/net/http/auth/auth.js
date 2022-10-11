@@ -87,7 +87,9 @@ async function getAuthState() {
     return fetch('/api/auth_state', {
         method: 'get',
         headers: {
-            'X-CSRF-TOKEN': window.env.CSRF_TOKEN
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': window.env.CSRF_TOKEN,
+            'Accept': 'application/json',
         }
     })
     .then(res => {
