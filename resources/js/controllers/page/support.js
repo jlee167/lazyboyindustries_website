@@ -15,7 +15,7 @@ window.submitRequest = function() {
     const contact = document.getElementById("email").value;
 
 
-    fetch('/support_request', {
+    fetch('/api/support_request', {
         method: 'POST',
 
         headers: {

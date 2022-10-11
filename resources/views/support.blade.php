@@ -38,7 +38,7 @@
 
           <section v-show="reqView">
             <div>
-              <form class="w-100" action="/support_request"
+              <form class="w-100" action="/api/support_request"
                 enctype="multipart/form-data" method="POST">
                 @csrf
                 <input type="hidden" id="postToken" name="postToken">

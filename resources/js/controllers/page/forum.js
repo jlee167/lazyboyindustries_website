@@ -1,4 +1,5 @@
 import * as forumAPI from "../../data/net/http/forum/forum";
+import * as authAPI from "../../data/net/http/auth/auth";
 import ForumPost from "../../models/forum/post";
 import ForumPostDTO from '../../models/forum/post-dto';
 import EmailNotVerified from '../../exceptions/http/auth/email-not-verified';
@@ -96,7 +97,6 @@ window.forumApp = new Vue({
 
         /* Get current page contents from server and render */
         this.getCurrentPage();
-        //this.forumName = document.getElementById('forumName').value.trim();
         this.searchKeyword = '';
         await this.getPage();
         this.loaded = true;
@@ -109,25 +109,33 @@ window.forumApp = new Vue({
     },
 
     methods: {
+        /* App functionalities */
+        watchForum: watchForum,
+        watchPost: watchPost,
+        changeForum: changeForum,
+        pagenate: pagenate,
+
+        /* Functionalities of individual posts */
+        toggleLike: toggleLike,
+        removeKeyword: removeKeyword,
+        postComment: postComment,
+        updatePost: updatePost,
+        deletePost: deletePost,
+
+        /* Forum page getters */
         getPage: getPage,
         getNewPage: getNewPage,
         getPageWithTag: getPageWithTag,
         getOldestPage: getOldestPage,
         getNewestPage: getNewestPage,
         getCurrentPage: getCurrentPage,
-        isCurrentPage: isCurrentPage,
-        watchForum: watchForum,
-        watchPost: watchPost,
-        toggleLike: toggleLike,
-        changeForum: changeForum,
-        pagenate: pagenate,
-        handleSearchEvent: handleSearchEvent,
         searchPosts: searchPosts,
-        postComment: postComment,
-        removeKeyword: removeKeyword,
+
+        /* Helpers */
+        handleSearchEvent: handleSearchEvent,
+        isCurrentPage: isCurrentPage,
     }
 });
-
 
 
 
@@ -313,6 +321,50 @@ function postComment() {
                 window.alert(`${err.name}: ${err.message}`);
             }
         });
+}
+
+
+async function updatePost(post) {
+    try {
+        await authAPI.getAuthState();
+        await forumAPI.verifyAuthor(post);
+        const category = post.hasOwnProperty("title") ? "post" : "comment";
+
+        window.location.href =
+          /* @Todo: remove hardcoded url */
+          "http://www.lazyboyindustries.com/views/updatepost?forum=" +
+          String(post.forum) +
+          "&post_id=" +
+          String(post.id) +
+          "&post_type=" +
+          String(category);
+    } catch (err) {
+        if (err instanceof AuthFailure) {
+            window.alert("Please Login First");
+            return;
+        }
+        window.alert(err.message);
+        return;
+    }
+}
+
+
+async function deletePost(post) {
+    try {
+        await authAPI.getAuthState();
+        await forumAPI.verifyAuthor(post);
+        await forumAPI.deletePost(post);
+        window.alert("Your post has been deleted!");
+        window.location.href =
+            "http://www.lazyboyindustries.com/views/dashboard?page=1";
+    } catch (err) {
+        if (err instanceof AuthFailure) {
+            window.alert("Please Login First");
+            return;
+        }
+        window.alert(err.message);
+        return;
+    }
 }
 
 

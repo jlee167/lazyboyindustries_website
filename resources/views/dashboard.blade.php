@@ -71,6 +71,8 @@
             </span>
 
             <forum-post :post="currentPost" :likes="likes" :my-like="myLike"
+                :update-post="updatePost"
+                :delete-post="deletePost"
               :toggle-like="toggleLike">
             </forum-post>
 

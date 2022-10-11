@@ -416,13 +416,6 @@ Route::get(
 );
 
 
-/* ---------------------------- Support requests ---------------------------- */
-Route::post(
-    '/support_request',
-    [SupportController::class, 'requestSupport']
-);
-
-
 /* ------------------------- Guardianship Management ------------------------ */
 Route::get(
     '/members/guardian/all',

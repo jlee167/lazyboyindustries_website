@@ -83,86 +83,8 @@ export default {
     likes: Number,
     myLike: Boolean,
     toggleLike: Function,
-  },
-
-  data: function () {
-    return {
-      //category: post.hasOwnProperty('title') ? "post" : "comment",
-    };
-  },
-
-  methods: {
-    verifyAuthor: function (post, callback) {
-      let authorCheckRequest = new XMLHttpRequest();
-      authorCheckRequest.open("GET", "/self", true);
-      authorCheckRequest.setRequestHeader("Content-Type", "application/json");
-      authorCheckRequest.setRequestHeader(
-        "X-CSRF-TOKEN",
-        window.env.CSRF_TOKEN
-      );
-      authorCheckRequest.onload = function () {
-        let user;
-        try {
-          user = JSON.parse(authorCheckRequest.responseText);
-        } catch {
-          window.alert("Only the author has access to this function");
-          return;
-        }
-
-        if (user.username !== post.author) {
-          window.alert("Only the author has access to this function");
-        } else {
-          callback();
-        }
-      };
-
-      authorCheckRequest.send();
-    },
-
-    updatePost: function (post) {
-      let category = post.hasOwnProperty("title") ? "post" : "comment";
-      this.verifyAuthor(post, function () {
-        window.location.href =
-          /* @Todo: remove hardcoded url */
-          "http://www.lazyboyindustries.com/views/updatepost?forum=" +
-          String(post.forum) +
-          "&post_id=" +
-          String(post.id) +
-          "&post_type=" +
-          String(category);
-      });
-    },
-
-    deletePost: function (post) {
-      let category = this.post.hasOwnProperty("title") ? "post" : "comment";
-      let deleteRequest = new XMLHttpRequest();
-      let url = null;
-      if (category === "post")
-        url = "/forum/" + `${this.post.forum}` + "/post/" + `${this.post.id}`;
-      else if (category === "comment")
-        url = "/forum/comment/" + `${this.post.id}`;
-
-      deleteRequest.open("DELETE", url, true);
-      deleteRequest.setRequestHeader("Content-Type", "application/json");
-      deleteRequest.setRequestHeader("X-CSRF-TOKEN", window.env.CSRF_TOKEN);
-
-      deleteRequest.onload = function () {
-        let result = JSON.parse(deleteRequest.responseText);
-
-        if (Boolean(result.result) == true) {
-          window.alert("Your post has been deleted!");
-          window.location.href =
-            "http://www.lazyboyindustries.com/views/dashboard?page=1";
-        } else {
-          window.alert(
-            "Post deletion failed. Please try again and seek support if this issue persists."
-          );
-        }
-      };
-      this.verifyAuthor(post, function () {
-        deleteRequest.send();
-      });
-    },
+    updatePost: Function,
+    deletePost: Function,
   },
 };
 </script>

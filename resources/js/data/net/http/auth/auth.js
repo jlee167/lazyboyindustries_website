@@ -80,6 +80,30 @@ async function authWithUsername (credentials) {
 
 
 /**
+ *  Get authentication state.
+ *  Throws error if current user is not authenticated yet.
+ */
+async function getAuthState() {
+    return fetch('/api/auth_state', {
+        method: 'get',
+        headers: {
+            'X-CSRF-TOKEN': window.env.CSRF_TOKEN
+        }
+    })
+    .then(res => {
+        switch (res.status) {
+            case 200:
+                return Promise.resolve();
+            case 401:
+                throw new AuthFailure();
+            default:
+                throw new UnknownException();
+        }
+    });
+}
+
+
+/**
  * Logout current user
  *
  * @returns
@@ -146,4 +170,4 @@ async function sendRegisterRequest (user) {
 
 
 
-export {authWithOauth, authWithUsername, logout, sendRegisterRequest};
+export {authWithOauth, authWithUsername, logout, sendRegisterRequest, getAuthState};
