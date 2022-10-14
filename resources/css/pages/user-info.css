@@ -63,9 +63,9 @@
 }
 
 .btn-password-submit {
-    background-color: rgb(128, 0, 202) !important;
-    border-color: rgb(128, 0, 202) !important;
-    border-radius: 20px;
+    background-color: rgb(148, 8, 230) !important;
+    border-color: rgb(148, 8, 230) !important;
+    border-radius: 5px;
     width: 200px;
     color: white;
 }
@@ -73,6 +73,7 @@
 .btn-password-submit:hover {
     background-color: rgb(158, 11, 243) !important;
     border-color: rgb(158, 11, 243) !important;
+    color: white;
 }
 
 
