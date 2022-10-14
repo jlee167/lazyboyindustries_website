@@ -265,6 +265,8 @@ class UserController extends BaseController
      */
     public function updateUser(Request $request)
     {
+
+
         DB::beginTransaction();
         try {
             $this->userRepository->updateImage(Auth::id());
@@ -275,10 +277,7 @@ class UserController extends BaseController
             return response(null, 500);
         }
 
-        return response([
-            'file' => $_FILES['imgFile']['tmp_name'],
-            'name' => $request->input('username'),
-        ], 200);
+        return response([], 200);
     }
 
 
