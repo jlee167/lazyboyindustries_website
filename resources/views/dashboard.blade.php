@@ -52,14 +52,14 @@
                 :href="'createpost?forum=' + forumName"> Create Post</a>
             </section>
             <div v-if="searchKeyword" class="mt-5">
-                <span>
+                <div>
                     <h6>Keyword : </h6>
-                </span>
-                <span id="searchKeyword" class="mt-4"
+                </div>
+                <div id="searchKeyword" class="mt-1"
                     @click="removeKeyword">
                     @{{ searchKeyword }}
                     <img src="/images/x-circle.svg" />
-                </span>
+                </div>
             </div>
 
             <forum-post-list :posts="posts" :on-post-click="watchPost"
