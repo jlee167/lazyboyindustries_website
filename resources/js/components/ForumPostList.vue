@@ -9,13 +9,7 @@
         <img src="/images/x-circle.svg" />
       </span>
 
-      <a
-        id="postBtn"
-        class="btn"
-        role="button"
-        :href="'createpost?forum=' + forumName"
-        ><b> Create Post</b></a
-      >
+
     </div>
     <div v-for="post in posts" :key="post.id">
       <forum-list-item
@@ -57,20 +51,6 @@ export default {
 <style scoped>
 #forumTitle {
   text-align: left;
-}
-
-#postBtn {
-  height: 40px;
-  margin-left: auto;
-  white-space: nowrap;
-  background-color: rgb(22, 123, 255);
-  border: 1px rgb(22, 123, 255) solid;
-  color: white;
-}
-
-#postBtn:hover {
-  background-color: white;
-  color: rgb(22, 123, 255);
 }
 
 #topMenu {
