@@ -5,7 +5,7 @@
         {{ forumName.charAt(0).toUpperCase() + forumName.slice(1) }}
       </h1>
       <span v-if="searchKeyword" id="searchKeyword" @click="removeKeyword">
-        Keyword: {{ searchKeyword }}
+        {{ searchKeyword }}
         <img src="/images/x-circle.svg" />
       </span>
 
