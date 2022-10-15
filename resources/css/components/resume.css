@@ -23,8 +23,10 @@
     max-width: 1300px;
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: max(auto, 15px);
-    margin-right: max(auto, 15px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: transparent;
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
