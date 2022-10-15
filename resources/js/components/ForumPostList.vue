@@ -11,7 +11,7 @@
 
       <a
         id="postBtn"
-        class="btn btn-outline-info"
+        class="btn"
         role="button"
         :href="'createpost?forum=' + forumName"
       >
@@ -64,6 +64,7 @@ export default {
   height: 40px;
   margin-left: auto;
   white-space: nowrap;
+  color: purple;
 }
 
 #topMenu {
