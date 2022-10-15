@@ -62,7 +62,7 @@ class ForumController extends Controller
             DB::beginTransaction();
 
             /* Get posts */
-            if (($keyword === "all") || empty($keyword)) {
+            if (empty($keyword)) {
                 $itemCount = $this->postRepository->getPostCount($forum_name, null);
 
                 $posts = $this->postRepository->getPostsInPage(

@@ -400,7 +400,7 @@ Route::delete(
 )->middleware(['auth', 'verified', '2fa']);
 
 Route::get(
-    '/forum/{forum_name}/page/{page}/{keyword}',
+    '/forum/{forum_name}/page/{page}/{keyword?}',
     [ForumController::class, 'getPage']
 )->middleware('xss');
 
