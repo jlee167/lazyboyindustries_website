@@ -26,22 +26,22 @@
   <main id="peer-page-content" class="section-contents">
     <article id="peer-list-section" v-cloak>
       <div class="d-flex flex-row align-items-center mb-5">
-        <h4 :class="{ activetab: tab == 0 }" class="margin-right-2rem pointer white"
+        <h4 :class="{ activetab: tab == 0 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 0; peerApp.activeGroup = peerApp.protecteds;">
           Protected </h4>
 
-        <h4 :class="{ activetab: tab == 1 }" class="margin-right-2rem pointer white"
+        <h4 :class="{ activetab: tab == 1 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 1; peerApp.activeGroup = peerApp.guardians;">
           Guardian </h4>
 
-        <h4 :class="{ activetab: tab == 2 }" class="margin-right-2rem pointer white"
+        <h4 :class="{ activetab: tab == 2 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 2"> Incoming </h4>
 
-        <h4 :class="{ activetab: tab == 3 }" class="pointer white"
+        <h4 :class="{ activetab: tab == 3 }" class="pointer white mb-0px"
           onclick="peerApp.tab = 3">
           Sent </h4>
 
-        <p class="btn btn-primary ml-5 align-middle" onclick="peerApp.tab = 4"> Add</p>
+        <p class="btn btn-primary ml-5 align-middle mb-0px" onclick="peerApp.tab = 4"> Add</p>
       </div>
 
       <peer-list v-if="tab==0" :peers="protecteds"></peer-list>
