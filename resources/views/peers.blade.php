@@ -47,7 +47,7 @@
       <peer-list v-if="tab==0" :peers="protecteds"></peer-list>
 
       <section v-if="tab==1" class="request-container">
-        <small class="white"> *** Shows only up to 20 users now. To be changed</small>
+        <small class="white mb-2"> *** Shows only up to 20 users now. To be updated later </small>
 
         <div v-for="guardian in guardians" :key="guardian.id"
           class="request">
@@ -61,7 +61,7 @@
       </section>
 
       <section v-if="incomingTab" class="request-container">
-        <small class="white"> *** Shows only up to 20 users now. To be changed</small>
+        <small class="white mb-2"> *** Shows only up to 20 users now. To be updated later </small>
 
         <div v-for="request in incomingRequests" :key="request.uid"
           class="request">
@@ -88,7 +88,7 @@
       </section>
 
       <section v-if="sentTab" class="request-container">
-        <small class="white"> *** Shows only up to 20 users now. To be changed</small>
+        <small class="white mb-2"> *** Shows only up to 20 users now. To be updated later </small>
 
         <div v-for="request in sentRequests" :key="request.uid"
           class="request">

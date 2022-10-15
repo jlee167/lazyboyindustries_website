@@ -1,5 +1,7 @@
 <template>
   <div id="top-container">
+    <small class="white mb-2"> *** Shows only up to 20 users now. To be updated later </small>
+
     <article class="list" v-for="(peer) in peers" :key="peer.uid">
       <div class="post-item">
         <img id="userImage" :src="peer.image_url" />
