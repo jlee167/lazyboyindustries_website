@@ -39,21 +39,24 @@
 
             <hr class="w-100">
 
-            <section id="searchForm">
-              <input id="forumSearch" ref="searchInput" type="text"
-                placeholder="Search By Title" aria-describedby="search-btn"
-                @keyup.enter="handleSearchEvent">
-              <img id="searchBtn" src="/images/icon-search.svg"
-                @click="handleSearchEvent" />
+            <section class="d-flex flex-row align-items-center justify-content-between">
+              <div id="searchForm">
+                <input id="forumSearch" ref="searchInput" type="text"
+                  placeholder="Search By Title" aria-describedby="search-btn"
+                  @keyup.enter="handleSearchEvent">
+                <img id="searchBtn" src="/images/icon-search.svg"
+                  @click="handleSearchEvent" />
+              </div>
+
+              <a id="postBtn" class="btn" role="button"
+                :href="'createpost?forum=' + forumName"> Create Post</a>
             </section>
 
-            <a id="postBtn" class="btn" role="button"
-              :href="'createpost?forum=' + forumName"> Create Post</a>
-
-              <span v-if="searchKeyword" id="searchKeyword" @click="removeKeyword">
-                @{{ searchKeyword }}
-                <img src="/images/x-circle.svg" />
-              </span>
+            <span v-if="searchKeyword" id="searchKeyword"
+              @click="removeKeyword">
+              @{{ searchKeyword }}
+              <img src="/images/x-circle.svg" />
+            </span>
 
             <forum-post-list :posts="posts" :on-post-click="watchPost"
               :forum-name="forumName" :search-keyword="searchKeyword"
