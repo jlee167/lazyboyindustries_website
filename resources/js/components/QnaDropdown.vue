@@ -98,6 +98,7 @@ export default {
   width: 100%;
   padding-bottom: 0.7rem;
   padding-left: 48px;
+  margin-bottom: 1rem;
   color: #4e5968;
   font-family: "Nunito Sans", sans-serif !important;
   font-size: 18px;
