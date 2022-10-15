@@ -64,6 +64,13 @@ export default {
   height: 40px;
   margin-left: auto;
   white-space: nowrap;
+  background-color: purple;
+  border: 1px purple solid;
+  color: white;
+}
+
+#postBtn:hover {
+  background-color: white;
   color: purple;
 }
 
