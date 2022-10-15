@@ -55,6 +55,9 @@ window.broadcastApp = new Vue({
         chatMsgFrom: null,
         chatMsgInput: null,
         msgID: 0,
+
+        /* Worker Handles */
+        locationFetcher,
     },
 
     created: function () {
@@ -86,6 +89,8 @@ window.broadcastApp = new Vue({
                 clearInterval(chatSetupWorker);
             }
         }, 50);
+
+        this.startLocationFetcher();
     },
 
     beforeUpdate: function () {
@@ -135,6 +140,8 @@ window.broadcastApp = new Vue({
         runTestMode: runTestMode,
         joinChatting: joinChatting,
         updateLocation: updateLocation,
+        startLocationFetcher: startLocationFetcher,
+        stopLocationFetcher: stopLocationFetcher,
     },
 });
 
@@ -440,3 +447,18 @@ function updateLocation() {
             console.warn(`${err.name}:${err.message}`);
         });
 }
+
+
+function startLocationFetcher() {
+    this.locationFetcher = setInterval(() => {
+        this.updateLocation();
+    }, 5000);
+}
+
+
+function stopLocationFetcher() {
+    clearInterval(this.locationFetcher);
+    this.locationFetcher = null;
+}
+
+
