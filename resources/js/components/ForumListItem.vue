@@ -182,6 +182,7 @@ export default {
   overflow: hidden;
   background-color: white;
   cursor: pointer;
+  border: #ecececb0 0.2px solid;
 }
 
 #container:hover {
