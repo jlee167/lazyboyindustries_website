@@ -14,8 +14,7 @@
         class="btn"
         role="button"
         :href="'createpost?forum=' + forumName"
-      >
-        Create Post</a
+        ><b> Create Post</b></a
       >
     </div>
     <div v-for="post in posts" :key="post.id">
@@ -64,14 +63,14 @@ export default {
   height: 40px;
   margin-left: auto;
   white-space: nowrap;
-  background-color: purple;
-  border: 1px purple solid;
+  background-color: rgb(22, 123, 255);
+  border: 1px rgb(22, 123, 255) solid;
   color: white;
 }
 
 #postBtn:hover {
   background-color: white;
-  color: purple;
+  color: rgb(22, 123, 255);
 }
 
 #topMenu {
