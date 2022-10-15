@@ -80,35 +80,35 @@
                           <h5 class="mt-5 mb-2">Protocols</h5>
                           <div class="d-flex flex-row flex-wrap">
                             <post-tag :append-hash-tag="false" name="UART"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="I2C"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="SPI"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="USB"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Ethernet"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="MIPI"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false"
-                              name="Parallel Camera" class="mb-1"></post-tag>
+                              name="Parallel Camera" class="mb-2"></post-tag>
                           </div>
 
                           <h5 class="mt-5 mb-2">IC</h5>
                           <div class="d-flex flex-row flex-wrap">
                             <post-tag :append-hash-tag="false" name="7-Series"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Zynq 7000"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Ultrascale"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Lattice"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Cortex-A"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Cortex-M"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                           </div>
                         </div>
                       </div>
@@ -138,11 +138,11 @@
                           <h5 class="mb-2">Design Tools</h5>
                           <div class="d-flex flex-row flex-wrap">
                             <post-tag :append-hash-tag="false" name="OrCad"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Eagle CAD"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="KiCAD"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                           </div>
                         </div>
                       </div>
@@ -176,23 +176,23 @@
                           <h5 class="mb-2">Operating System</h5>
                           <div class="d-flex flex-row flex-wrap">
                             <post-tag :append-hash-tag="false" name="Linux"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Android"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="RTOS"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Windows"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                           </div>
 
-                          <h5 class="mb-2">Databases</h5>
+                          <h5 class="mt-5 mb-2">Databases</h5>
                           <div class="d-flex flex-row flex-wrap">
                             <post-tag :append-hash-tag="false" name="MySQL"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="MongoDB"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                             <post-tag :append-hash-tag="false" name="Redis"
-                              class="mb-1"></post-tag>
+                              class="mb-2"></post-tag>
                           </div>
                         </div>
                       </div>
