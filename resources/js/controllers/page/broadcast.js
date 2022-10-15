@@ -435,6 +435,11 @@ function addChatListeners() {
 
 
 function updateLocation() {
+
+    console.log(window.env.STREAM_URL);
+    console.log(window.env.STREAM_PORT);
+    console.log(`${window.env.STREAM_URL}:${window.env.STREAM_PORT}/stream/${streamID}/geo`);
+
     getLocation({
         streamURL: window.env.STREAM_URL,
         streamPort: window.env.STREAM_PORT,
