@@ -439,6 +439,7 @@ function updateLocation() {
         window.env.STREAM_URL,
         window.env.STREAM_PORT,
         streamID,
+        this.webToken
     )
         .then((data) => {
             this.map.setPosition(data.latitude, data, longitude);

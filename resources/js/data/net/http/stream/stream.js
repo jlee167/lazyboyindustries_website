@@ -27,9 +27,13 @@ async function getStreamToken() {
 
 
 
-async function getLocation(streamURL, streamPort, streamID) {
+async function getLocation(streamURL, streamPort, streamID, token) {
     return fetch(`${streamURL}:${streamPort}/stream/${streamID}/geo`, {
-        method: 'get'
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json',
+            'webToken': token
+        },
     })
         .then((res) => {
             if (res.status != 200) {
