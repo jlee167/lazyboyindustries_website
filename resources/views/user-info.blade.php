@@ -49,7 +49,8 @@
     <article v-if="PersonalInfoView"
       class="d-flex flex-column align-items-center">
       <img id="profilePicture" :src="user.imageUrl" />
-      <label><small> Post new picture: </small></label>
+
+      <label class="mt-3"><small> Change profile image </small></label>
       <input type="file" id="newUserImage" />
 
       <div id="accountInfo" class="d-flex flex-column mt-3">
@@ -63,7 +64,7 @@
           <section class="form-group">
             <small class="form-text text-muted">Username</small>
             <input id="username" v-model="user.username"
-              class="form-control  no-outline" />
+              class="form-control  no-outline" disabled  />
           </section>
 
           <section class="form-group">
@@ -80,7 +81,7 @@
         </div>
       </div>
       <button class="btn btn-password-submit mt-3" type="submit"
-        @click="changeUserInfo()">Change</button>
+        @click="changeUserInfo()">Update</button>
     </article>
 
     <article v-if="ChangePasswordView" id="passwordChange"
