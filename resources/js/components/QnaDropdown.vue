@@ -7,7 +7,8 @@
           :direction="qna.active ? 'up' : 'down'"
           :motion-enabled="false"
           :pixelSize="15"
-          color="black"
+          color="#A6ACAF"
+          style="padding-right: 2rem;"
         ></scroll-arrow>
       </section>
       <transition name="answer">
