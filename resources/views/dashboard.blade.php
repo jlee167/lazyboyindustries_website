@@ -67,7 +67,7 @@
 
           {{-- Post Contents View --}}
           <div v-if="showPost" class="posts-and-comments">
-            <span class="bounce content-label back-btn" @click="watchForum" onmouseover=""> &#x2190; BACK
+            <span class="bounce content-label back-btn mb-4" @click="watchForum" onmouseover=""> &#x2190; BACK
             </span>
 
             <forum-post :post="currentPost" :likes="likes" :my-like="myLike"

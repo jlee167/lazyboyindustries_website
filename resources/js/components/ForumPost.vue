@@ -204,7 +204,7 @@ export default {
 }
 
 .post {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .comment {
