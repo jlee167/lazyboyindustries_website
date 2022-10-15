@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <button class="btn btn-password-submit" type="submit"
+      <button class="btn btn-password-submit mt-3" type="submit"
         @click="changePassword()">Submit</button>
     </article>
 
@@ -145,7 +145,7 @@
 
           <article>
             <div class="form-group">
-              <small id="hint" class="form-text text-muted">Enter
+              <small id="hint" class="form-text text-muted mb-2">Enter
                 your 6 digit OTP number.</small>
               <input id="otpSecret" class="form-control" />
             </div>

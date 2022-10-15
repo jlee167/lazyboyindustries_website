@@ -51,7 +51,7 @@
 }
 
 #accountInfo {
-    width: 80% !important;
+    width: 100% !important;
 }
 
 .w-80 {
@@ -59,14 +59,14 @@
 }
 
 #newUserImage {
-    width: 80% !important;
+    width: 100% !important;
 }
 
 .btn-password-submit {
     background-color: rgb(148, 8, 230) !important;
     border-color: rgb(148, 8, 230) !important;
     border-radius: 5px;
-    width: 200px;
+    width: 100%;
     color: white;
 }
 
