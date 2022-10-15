@@ -25,7 +25,7 @@
 
   <main id="peer-page-content" class="section-contents">
     <article id="peer-list-section" v-cloak>
-      <div class="d-flex flex-row align-items-center mb-5">
+      <div id="menu" class="d-flex flex-row align-items-center mb-5">
         <h4 :class="{ activetab: tab == 0 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 0; peerApp.activeGroup = peerApp.protecteds;">
           Protected </h4>
