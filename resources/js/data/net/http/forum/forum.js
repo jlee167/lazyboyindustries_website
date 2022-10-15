@@ -191,6 +191,9 @@ async function postComment(comment) {
  * @returns
  */
 async function getPage(forum, page, keyword) {
+
+    keyword = keyword ? keyword : "";
+
     return fetch(`/forum/${forum}/page/${String(page)}/${keyword}`, {
         method: 'get',
         headers: {
