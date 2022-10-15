@@ -134,12 +134,11 @@ select.forum-select {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background-color: #E9E9E9;
 }
 
 .forum-container {
     padding-top: 0px !important;
-    margin-top: 0px !important;
+    margin-top: 70px !important;
     margin-bottom: 50px;
     display: flex;
     flex-direction: row;

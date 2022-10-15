@@ -50,6 +50,11 @@
             <a id="postBtn" class="btn" role="button"
               :href="'createpost?forum=' + forumName"> Create Post</a>
 
+              <span v-if="searchKeyword" id="searchKeyword" @click="removeKeyword">
+                {{ searchKeyword }}
+                <img src="/images/x-circle.svg" />
+              </span>
+
             <forum-post-list :posts="posts" :on-post-click="watchPost"
               :forum-name="forumName" :search-keyword="searchKeyword"
               :remove-keyword="removeKeyword">
