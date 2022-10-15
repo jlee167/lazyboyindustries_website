@@ -62,7 +62,7 @@
                     <section id="rtl"
                       class="section-margin no-overflow-x">
                       <header>
-                        <h2 class="mb-3 header-resume-paragraph"> <b> RTL /
+                        <h2 class="mb-6 header-resume-paragraph"> <b> RTL /
                             Digital Logics </b></h2>
                       </header>
                       <div class="resume-section-contents">
@@ -117,7 +117,7 @@
 
                     <section id="hardware"
                       class="section-margin no-overflow-x">
-                      <h2 class="mb-3 header-resume-paragraph"> <b> Hardware
+                      <h2 class="mb-6 header-resume-paragraph"> <b> Hardware
                         </b></h2>
                       <div class="resume-section-contents">
                         <div class="resume-section-text pr-5">
@@ -150,7 +150,7 @@
 
                     <section id="software"
                       class="section-margin no-overflow-x mb-md-10">
-                      <h2 class="mb-3 header-resume-paragraph"> <b> Software
+                      <h2 class="mb-6 header-resume-paragraph"> <b> Software
                         </b></h2>
                       <div class="resume-section-contents">
                         <div class="resume-section-text pr-5">
