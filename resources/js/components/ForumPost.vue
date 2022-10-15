@@ -28,7 +28,7 @@
           v-else
           class="like-icon"
           @click="toggleLike()"
-          src="/images/heart.svg"
+          src="/images/heart-gray-small.svg"
         />
         <p>{{ likes }}</p>
       </section>
