@@ -51,7 +51,7 @@
               :href="'createpost?forum=' + forumName"> Create Post</a>
 
               <span v-if="searchKeyword" id="searchKeyword" @click="removeKeyword">
-                {{ searchKeyword }}
+                @{{ searchKeyword }}
                 <img src="/images/x-circle.svg" />
               </span>
 
