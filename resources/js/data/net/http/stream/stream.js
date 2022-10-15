@@ -28,6 +28,9 @@ async function getStreamToken() {
 
 
 async function getLocation(streamURL, streamPort, streamID) {
+
+    console.log(`${streamURL}:${streamPort}/stream/${streamID}/geo`);
+
     return fetch(`${streamURL}:${streamPort}/stream/${streamID}/geo`, {
         method: 'get'
     })
