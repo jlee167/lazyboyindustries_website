@@ -71,8 +71,8 @@
 }
 
 .btn-password-submit:hover {
-    background-color: rgb(158, 11, 243) !important;
-    border-color: rgb(158, 11, 243) !important;
+    background-color: rgb(181, 53, 255)!important;
+    border-color: rgb(181, 53, 255) !important;
     color: white;
 }
 
@@ -85,8 +85,8 @@
     width: 400px;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 input {
