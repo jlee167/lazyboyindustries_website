@@ -52,6 +52,9 @@
                 :href="'createpost?forum=' + forumName"> Create Post</a>
             </section>
             <div>
+                <span>
+                    <h6>Keyword : </h6>
+                </span>
                 <div v-if="searchKeyword" id="searchKeyword" class="mt-4"
                 @click="removeKeyword">
                 @{{ searchKeyword }}
