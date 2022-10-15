@@ -37,7 +37,7 @@
               </button-array>
             </section>
 
-            <hr class="w-100">
+            <hr class="forum-divider">
 
             <section class="d-flex flex-row align-items-center justify-content-between">
               <div id="searchForm">
@@ -51,11 +51,12 @@
               <a id="postBtn" class="btn" role="button"
                 :href="'createpost?forum=' + forumName"> Create Post</a>
             </section>
-
-            <div v-if="searchKeyword" id="searchKeyword" class="mt-4"
-              @click="removeKeyword">
-              @{{ searchKeyword }}
-              <img src="/images/x-circle.svg" />
+            <div>
+                <div v-if="searchKeyword" id="searchKeyword" class="mt-4"
+                @click="removeKeyword">
+                @{{ searchKeyword }}
+                <img src="/images/x-circle.svg" />
+                </div>
             </div>
 
             <forum-post-list :posts="posts" :on-post-click="watchPost"

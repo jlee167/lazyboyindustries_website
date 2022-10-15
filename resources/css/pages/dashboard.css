@@ -156,6 +156,11 @@ select.forum-select {
     width: 100vw;
 }
 
+.forum-divider {
+    width: 100%;
+    color: rgba(78, 78, 78, 0.781);
+}
+
 .post-list {
     display: flex;
     flex-direction: column;
