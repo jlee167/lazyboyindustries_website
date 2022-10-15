@@ -182,8 +182,6 @@ export default {
   overflow: hidden;
   background-color: white;
   cursor: pointer;
-
-  border: 0.2px gray solid;
 }
 
 #container:hover {

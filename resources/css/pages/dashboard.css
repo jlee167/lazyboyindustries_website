@@ -143,6 +143,7 @@ select.forum-select {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
+    background-color: #a6a6a6;
 }
 
 .forum-container {
@@ -221,12 +222,6 @@ select.forum-select {
     .searchbar {
         flex-direction: column;
         height: 130px;
-    }
-
-    #searchForm {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 20px;
     }
 }
 
