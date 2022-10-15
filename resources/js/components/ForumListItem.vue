@@ -8,7 +8,7 @@
     <div class="post-contents">
       <div id="title-container">
         <p id="postID">#{{ post.id }}</p>
-        <text-highlight id="title" :queries="[searchKeyword]">
+        <text-highlight id="title" :queries="[keyword]">
           {{ post.title }}
         </text-highlight>
         <div id="tagContainer" class="d-flex align-content-center mt-2">
@@ -60,6 +60,10 @@ export default {
     author: function () {
       return this.post.author ? this.post.author : "Deleted";
     },
+
+    keyword: function () {
+        return (this.searchKeyword == null) ? "" : this.searchKeyword;
+    }
   },
 };
 </script>
