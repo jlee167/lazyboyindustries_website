@@ -49,8 +49,12 @@ div.button {
   padding-bottom: 8px;
   padding-left: 8px;
   padding-right: 8px;
-  border: 1px orange solid;
+  margin-left: 16px;
+  margin-right: 16px;
+  /*border: 1px orange solid;*/
   vertical-align: middle;
+  border-radius: 0.3rem;
+  font-weight: 250;
 }
 
 div.button:hover {
@@ -58,12 +62,15 @@ div.button:hover {
 }
 
 div.unselected {
-  color: orange;
-  background-color: white;
+  /* color: orange;
+  background-color: white; */
+  color: rgb(43, 43, 43);
 }
 
 div.selected {
-  color: white;
-  background-color: orange;
+  /* color: white;
+  background-color: orange; */
+  color:white;
+  background-color: rgb(22, 123, 255);
 }
 </style>
