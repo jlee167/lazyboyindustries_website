@@ -8,7 +8,7 @@
           :motion-enabled="false"
           :pixelSize="15"
           color="#A6ACAF"
-          style="padding-right: 2rem;"
+          style="padding-right: 1rem;"
         ></scroll-arrow>
       </section>
       <transition name="answer">
