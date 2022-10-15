@@ -142,7 +142,7 @@ select.forum-select {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background-color: #a6a6a6;
+    background-color: #ecececb0;
 }
 
 .forum-container {
