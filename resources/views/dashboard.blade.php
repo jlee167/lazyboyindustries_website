@@ -51,15 +51,15 @@
               <a id="postBtn" class="btn" role="button"
                 :href="'createpost?forum=' + forumName"> Create Post</a>
             </section>
-            <div>
+            <div v-if="searchKeyword" class="mt-5">
                 <span>
                     <h6>Keyword : </h6>
                 </span>
-                <div v-if="searchKeyword" id="searchKeyword" class="mt-4"
-                @click="removeKeyword">
-                @{{ searchKeyword }}
-                <img src="/images/x-circle.svg" />
-                </div>
+                <span id="searchKeyword" class="mt-4"
+                    @click="removeKeyword">
+                    @{{ searchKeyword }}
+                    <img src="/images/x-circle.svg" />
+                </span>
             </div>
 
             <forum-post-list :posts="posts" :on-post-click="watchPost"
