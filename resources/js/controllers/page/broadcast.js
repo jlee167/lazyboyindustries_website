@@ -435,11 +435,11 @@ function addChatListeners() {
 
 
 function updateLocation() {
-    getLocation({
-        streamURL: window.env.STREAM_URL,
-        streamPort: window.env.STREAM_PORT,
-        streamID: streamID,
-    })
+    getLocation(
+        window.env.STREAM_URL,
+        window.env.STREAM_PORT,
+        streamID,
+    )
         .then((data) => {
             this.map.setPosition(data.latitude, data, longitude);
         })
