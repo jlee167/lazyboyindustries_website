@@ -18,11 +18,7 @@
 
   <div id="contents-area" class="w-100" v-if="loaded">
     <article class="searchbar">
-      <section id="forumSelect">
-        <h5 class="vertical-center">Forum</h5>
-        <button-array class="ml-2" :forums="forumList" :default-forum="defaultForum" @forum-select="changeForum">
-        </button-array>
-      </section>
+
 
       <section id="searchForm">
         <input id="forumSearch" ref="searchInput" type="text" placeholder="Search By Title"
@@ -37,6 +33,13 @@
         <transition name="fade">
           {{-- Post List View --}}
           <div v-if="showForum" class="post-list">
+
+            <section id="forumSelect">
+                <h5 class="vertical-center">Forum</h5>
+                <button-array class="ml-2" :forums="forumList" :default-forum="defaultForum" @forum-select="changeForum">
+                </button-array>
+              </section>
+
             <forum-post-list :posts="posts" :on-post-click="watchPost" :forum-name="forumName"
               :search-keyword="searchKeyword" :remove-keyword="removeKeyword">
             </forum-post-list>
