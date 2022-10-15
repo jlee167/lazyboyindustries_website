@@ -57,7 +57,7 @@ window.broadcastApp = new Vue({
         msgID: 0,
 
         /* Worker Handles */
-        locationFetcher,
+        locationFetcher: null,
     },
 
     created: function () {
