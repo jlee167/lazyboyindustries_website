@@ -442,6 +442,7 @@ function updateLocation() {
         this.webToken
     )
         .then((data) => {
+            console.log(data);
             this.map.setPosition(data.latitude, data.longitude);
         })
         .catch((err) => {
