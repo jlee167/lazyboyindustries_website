@@ -28,7 +28,7 @@
           v-else
           class="like-icon"
           @click="toggleLike()"
-          src="/images/heart.svg"
+          src="/images/heart-gray-small.svg"
         />
         <p>{{ likes }}</p>
       </section>
@@ -204,7 +204,7 @@ export default {
 }
 
 .post {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .comment {

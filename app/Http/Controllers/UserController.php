@@ -266,19 +266,18 @@ class UserController extends BaseController
     public function updateUser(Request $request)
     {
         DB::beginTransaction();
+
         try {
-            $this->userRepository->updateImage(Auth::id());
-            DB::commit();
+            if (array_key_exists("imgFile", $_FILES))
+                $this->userRepository->updateImage(Auth::id());
         } catch (Exception $e) {
             DB::rollBack();
             Log::error($e);
             return response(null, 500);
         }
 
-        return response([
-            'file' => $_FILES['imgFile']['tmp_name'],
-            'name' => $request->input('username'),
-        ], 200);
+        DB::commit();
+        return response([], 200);
     }
 
 

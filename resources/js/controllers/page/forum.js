@@ -216,7 +216,7 @@ function watchPost(postID, forum = null) {
 async function getPage() {
     let keyword;
     if (!this.searchKeyword) {
-        keyword = "all";
+        keyword = null;
     } else {
         keyword = this.searchKeyword;
     }
@@ -298,7 +298,7 @@ function pagenate(itemCount) {
 function changeForum(forumName) {
     this.forumName = forumName;
     this.currentPage = 1;
-    this.searchKeyword = 'all';
+    this.searchKeyword = null;
     this.getPage();
 }
 

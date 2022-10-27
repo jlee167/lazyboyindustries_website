@@ -191,7 +191,11 @@ async function postComment(comment) {
  * @returns
  */
 async function getPage(forum, page, keyword) {
-    return fetch(`/forum/${forum}/page/${String(page)}/${keyword}`, {
+
+    /* null & undefined safety check */
+    const keywordUrlPart = keyword ? `/${keyword}` : "";
+
+    return fetch(`/forum/${forum}/page/${String(page)}${keywordUrlPart}`, {
         method: 'get',
         headers: {
             'Content-Type': 'application/json',

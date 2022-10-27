@@ -1,3 +1,12 @@
+small {
+    margin-bottom: 15px !important;
+}
+
+#menu {
+    padding-bottom: 5px;
+    border-bottom: 0.7px white solid;
+}
+
 #peer-list-section {
     overflow-y: visible;
     overflow-x: hidden;
@@ -15,6 +24,7 @@
     padding-top: 70px;
     background-color: #181818;
     border-bottom: 2px dashed white;
+    padding-bottom: 20rem;
 }
 
 .row-padding {

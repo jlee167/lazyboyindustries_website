@@ -25,28 +25,33 @@
 
   <main id="peer-page-content" class="section-contents">
     <article id="peer-list-section" v-cloak>
-      <div class="d-flex flex-row align-items-center mb-5">
-        <h4 :class="{ activetab: tab == 0 }" class="margin-right-2rem pointer white"
+      <div id="menu" class="d-flex flex-row align-items-center mb-5">
+        <h5 :class="{ activetab: tab == 0 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 0; peerApp.activeGroup = peerApp.protecteds;">
           Protected </h4>
 
-        <h4 :class="{ activetab: tab == 1 }" class="margin-right-2rem pointer white"
+        <h5 :class="{ activetab: tab == 1 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 1; peerApp.activeGroup = peerApp.guardians;">
           Guardian </h4>
 
-        <h4 :class="{ activetab: tab == 2 }" class="margin-right-2rem pointer white"
+        <h5 :class="{ activetab: tab == 2 }" class="margin-right-2rem pointer white mb-0px"
           onclick="peerApp.tab = 2"> Incoming </h4>
 
-        <h4 :class="{ activetab: tab == 3 }" class="pointer white"
+        <h5 :class="{ activetab: tab == 3 }" class="pointer white mb-0px"
           onclick="peerApp.tab = 3">
           Sent </h4>
 
-        <p class="btn btn-primary ml-5 align-middle" onclick="peerApp.tab = 4"> Add</p>
+        <p class="btn btn-primary ml-5 align-middle mb-0px" onclick="peerApp.tab = 4"> Add</p>
       </div>
 
+      <small v-if="tab==0" class="white"> *** Shows only up to 20 users now. To be updated later </small>
       <peer-list v-if="tab==0" :peers="protecteds"></peer-list>
 
       <section v-if="tab==1" class="request-container">
+        <div class="mb-2">
+            <small class="white"> *** Shows only up to 20 users now. To be updated later </small>
+        </div>
+
         <div v-for="guardian in guardians" :key="guardian.id"
           class="request">
           <div
@@ -59,6 +64,10 @@
       </section>
 
       <section v-if="incomingTab" class="request-container">
+        <div class="mb-2">
+            <small class="white"> *** Shows only up to 20 users now. To be updated later </small>
+        </div>
+
         <div v-for="request in incomingRequests" :key="request.uid"
           class="request">
           <div
@@ -84,6 +93,10 @@
       </section>
 
       <section v-if="sentTab" class="request-container">
+        <div class="mb-2">
+            <small class="white"> *** Shows only up to 20 users now. To be updated later </small>
+        </div>
+
         <div v-for="request in sentRequests" :key="request.uid"
           class="request">
           <div

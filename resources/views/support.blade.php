@@ -42,7 +42,7 @@
                 enctype="multipart/form-data" method="POST">
                 @csrf
                 <input type="hidden" id="postToken" name="postToken">
-                <select id="requestType"
+                <select id="type"
                   class="form-control no-outline w-100 mb-3" name="type">
                   <option value="REPAIR"> Repair </option>
                   <option value="TECH_SUPPORT"> Tech Support </option>

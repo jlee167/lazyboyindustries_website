@@ -1,22 +1,9 @@
 <template>
   <div id="forum">
     <div id="topMenu">
-      <h1 id="forumTitle">
+      <!--h1 id="forumTitle">
         {{ forumName.charAt(0).toUpperCase() + forumName.slice(1) }}
-      </h1>
-      <span v-if="searchKeyword" id="searchKeyword" @click="removeKeyword">
-        Keyword: {{ searchKeyword }}
-        <img src="/images/x-circle.svg" />
-      </span>
-
-      <a
-        id="postBtn"
-        class="btn btn-outline-info"
-        role="button"
-        :href="'createpost?forum=' + forumName"
-      >
-        Create Post</a
-      >
+      </h1-->
     </div>
     <div v-for="post in posts" :key="post.id">
       <forum-list-item
@@ -60,12 +47,6 @@ export default {
   text-align: left;
 }
 
-#postBtn {
-  height: 40px;
-  margin-left: auto;
-  white-space: nowrap;
-}
-
 #topMenu {
   display: flex;
   align-items: center;
@@ -73,16 +54,6 @@ export default {
 
 #forum {
   display: inline;
-}
-
-#searchKeyword {
-  font-family: "Noto Sans", sans-serif;
-  margin-left: 40px;
-  color: white;
-  background-color: rgb(0, 119, 79);
-  padding: 10px 10px 10px 10px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 @media only screen and (min-width: 1400px) {
