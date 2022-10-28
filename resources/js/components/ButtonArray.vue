@@ -55,6 +55,7 @@ div.button {
   vertical-align: middle;
   border-radius: 0.3rem;
   font-weight: 250;
+  font-family: "Poppins", sans-serif;
 }
 
 div.button:hover {

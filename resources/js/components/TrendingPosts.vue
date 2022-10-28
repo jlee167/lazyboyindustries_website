@@ -1,6 +1,6 @@
 <template>
   <div class="list-container">
-    <div class="list-header bg-gradient-sunny">
+    <div class="list-header">
       {{ title }}
     </div>
     <div class="list" v-for="content in contents" :key="content.id">
@@ -12,9 +12,9 @@
           {{ content.title }}
         </p>
 
-        <p class="text-default">
+        <small class="text-default">
           {{ content.date }}
-        </p>
+        </small>
       </div>
     </div>
   </div>
@@ -66,10 +66,10 @@ export default {
   margin-left: 0px;
   margin-top: 100px;
   text-align: center;
-  border: 0.2px solid;
-  border-color: rgb(133, 133, 133);
   background-color: white;
-  box-shadow: 1px 1px 1px gray;
+  /*border: 0.2px solid;
+  border-color: rgb(133, 133, 133);
+  box-shadow: 1px 1px 1px gray;*/
   overflow: hidden;
 }
 
@@ -83,8 +83,6 @@ export default {
   width: 100%;
   height: 40px;
   align-items: center;
-  border-bottom: 0.5px solid;
-  border-color: #d5d5d5;
 }
 
 .post-item:hover {
@@ -96,7 +94,7 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 80px;
+  height: 3rem;
   align-items: center;
   justify-content: center;
   border-color: #d5d5d5;
