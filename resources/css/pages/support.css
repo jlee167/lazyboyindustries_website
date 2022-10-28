@@ -20,7 +20,8 @@
 }
 
 #FAQ {
-    padding-top: 70px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     max-width: 700px;
     width: 100%;
 }
@@ -78,7 +79,7 @@ label {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 5rem;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 100px;
