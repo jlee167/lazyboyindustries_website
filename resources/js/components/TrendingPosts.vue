@@ -42,18 +42,19 @@ export default {
 
 .font-title {
   margin: auto;
-  margin-left: 10px;
   max-width: 250px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: start;
+  flex-grow: 1;
 }
 
 .text-default {
   margin: auto;
   margin-left: auto;
-  margin-right: 10px;
   min-width: 90px;
+  margin-right: 0;
   overflow: hidden;
 }
 
@@ -67,6 +68,11 @@ export default {
   margin-top: 100px;
   text-align: center;
   background-color: white;
+  padding-left: 0.7rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
+  border-radius: 1rem;
   /*border: 0.2px solid;
   border-color: rgb(133, 133, 133);
   box-shadow: 1px 1px 1px gray;*/
