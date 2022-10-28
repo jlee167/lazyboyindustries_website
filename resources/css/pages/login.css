@@ -44,7 +44,7 @@
 
 
 #loginBtn {
-    background-color: #510fa8;/*#5603ad;*/
+    background-color: rgb(235, 74, 0);/*#5603ad;*/
     color: white;
     width: 100%;
     height: 50px;
@@ -54,8 +54,8 @@
 
 #loginBtn:hover {
     background-color: white;/*#5603ad;*/
-    border-color: #510fa8;
-    color: #510fa8;
+    border-color: rgb(235, 74, 0);
+    color: rgb(235, 74, 0);
 }
 
 
