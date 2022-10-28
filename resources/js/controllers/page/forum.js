@@ -11,7 +11,7 @@ import ListItemDTO from '../../models/forum/list-item-dto';
 /*------ Page Settings -------*/
 const PAGINATION_CAPACITY = 10;
 const HEADER_TOP_POSTS = "MOST VIEWED";
-const HEADER_MOST_LIKED = "MOST_LIKED";
+const HEADER_MOST_LIKED = "MOST LIKED";
 
 
 
