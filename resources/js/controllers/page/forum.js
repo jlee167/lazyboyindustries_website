@@ -11,7 +11,7 @@ import ListItemDTO from '../../models/forum/list-item-dto';
 /*------ Page Settings -------*/
 const PAGINATION_CAPACITY = 10;
 const HEADER_TOP_POSTS = "MOST VIEWED";
-const HEADER_TRENDING_POSTS = "TRENDING POSTS";
+const HEADER_MOST_LIKED = "MOST_LIKED";
 
 
 
@@ -31,7 +31,7 @@ window.forumApp = new Vue({
         /* UI Strings */
         forumName: "General",
         topPostLabel: HEADER_TOP_POSTS,
-        trendingPostLabel: HEADER_TRENDING_POSTS,
+        mostLikedPostsLabel: HEADER_MOST_LIKED,
 
         /* Main UI (Posts) rendering data */
         posts: [],

@@ -143,7 +143,7 @@
         <article id="forumSideItems">
           <trending-posts :title="topPostLabel" :contents="topPosts">
           </trending-posts>
-          <trending-posts :title="trendingPostLabel"
+          <trending-posts :title="mostLikedPostsLabel"
             :contents="trendingPosts"></trending-posts>
         </article>
       </div>
