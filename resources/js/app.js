@@ -23,7 +23,7 @@ window.Vue = require('vue');
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
  *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * Eg. ./vue-components/ExampleComponent.vue -> <example-component></example-component>
  */
 
 // const files = require.context('./', true, /\.vue$/i)
@@ -34,25 +34,25 @@ Vue.component('star-rating', () => import('vue-star-rating'));
 
 Vue.component('pulse-loader', () => import('vue-spinner/src/PulseLoader'));
 
-Vue.component('scroll-arrow', require('./components/ScrollArrow').default);
+Vue.component('scroll-arrow', require('./vue-components/ScrollArrow').default);
 
-Vue.component('user-list-display', () => import('./components/UserListDisplay'));
-Vue.component('skill-bar', () => import('./components/SkillBar'));
-Vue.component('peer-list', () => import('./components/PeerList'));
-Vue.component('product-desc-view', () => import('./components/ProductDescView'));
-Vue.component('product-sales', () => import('./components/ProductSales'));
-Vue.component('video-js', () => import('./components/VideoJs'));
-Vue.component('forum-post-list', () => import('./components/ForumPostList'));
-Vue.component('trending-posts', require('./components/TrendingPosts.vue').default);
-Vue.component('forum-post', () => import('./components/ForumPost'));
-Vue.component('summer-note', () => import('./components/Summernote'));
-Vue.component('product-card', () => import('./components/ProductCard'));
-Vue.component('skill-list', require('./components/SkillList.vue').default);
-Vue.component('skill-level', require('./components/SkillLevel.vue').default);
-Vue.component('post-tag', () => import('./components/PostTag'));
-Vue.component('qna-dropdown', () => import('./components/QnaDropdown'));
-Vue.component('button-array', () => import('./components/ButtonArray'));
-//Vue.component('chat-room', require('./components/ChatRoom.vue').default);
+Vue.component('user-list-display', () => import('./vue-components/UserListDisplay'));
+Vue.component('skill-bar', () => import('./vue-components/SkillBar'));
+Vue.component('peer-list', () => import('./vue-components/PeerList'));
+Vue.component('product-desc-view', () => import('./vue-components/ProductDescView'));
+Vue.component('product-sales', () => import('./vue-components/ProductSales'));
+Vue.component('video-js', () => import('./vue-components/VideoJs'));
+Vue.component('forum-post-list', () => import('./vue-components/ForumPostList'));
+Vue.component('trending-posts', require('./vue-components/TrendingPosts.vue').default);
+Vue.component('forum-post', () => import('./vue-components/ForumPost'));
+Vue.component('summer-note', () => import('./vue-components/Summernote'));
+Vue.component('product-card', () => import('./vue-components/ProductCard'));
+Vue.component('skill-list', require('./vue-components/SkillList.vue').default);
+Vue.component('skill-level', require('./vue-components/SkillLevel.vue').default);
+Vue.component('post-tag', () => import('./vue-components/PostTag'));
+Vue.component('qna-dropdown', () => import('./vue-components/QnaDropdown'));
+Vue.component('button-array', () => import('./vue-components/ButtonArray'));
+//Vue.component('chat-room', require('./vue-components/ChatRoom.vue').default);
 
 
 
