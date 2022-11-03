@@ -146,6 +146,8 @@
           <trending-posts :title="mostLikedPostsLabel"
             :contents="trendingPosts"></trending-posts>
         </article>
+
+        <notifications group="foo" />
       </div>
     </article>
 
