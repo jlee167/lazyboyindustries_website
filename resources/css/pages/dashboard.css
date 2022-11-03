@@ -84,7 +84,7 @@
 }
 
 .notification {
-    margin-top: 150px;
+    margin-top: 150px !important;
     max-width: 600px;
 }
 
