@@ -12,11 +12,12 @@
 //import Vue from 'vue';
 //import InputTag from 'vue-input-tag';
 //import StarRating from 'vue-star-rating';
+import Notifications from 'vue-notification';
 
 
 
 window.Vue = require('vue');
-
+Vue.use(Notifications);
 
 /**
  * The following block of code may be used to automatically register your
@@ -31,7 +32,6 @@ window.Vue = require('vue');
 
 Vue.component('input-tag', () => import('vue-input-tag'));
 Vue.component('star-rating', () => import('vue-star-rating'));
-Vue.component('notifications', () => import('vue-notification'));
 
 Vue.component('pulse-loader', () => import('vue-spinner/src/PulseLoader'));
 
