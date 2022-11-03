@@ -31,7 +31,7 @@ window.Vue = require('vue');
 
 Vue.component('input-tag', () => import('vue-input-tag'));
 Vue.component('star-rating', () => import('vue-star-rating'));
-Vue.component('notification', () => import('vue-notification'));
+Vue.component('notifications', () => import('vue-notification'));
 
 Vue.component('pulse-loader', () => import('vue-spinner/src/PulseLoader'));
 
