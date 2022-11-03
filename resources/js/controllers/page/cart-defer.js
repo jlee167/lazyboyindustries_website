@@ -146,6 +146,8 @@ async function purchaseAll(items) {
                     break;
                 case 400:
                     return response.json();
+                case 412:
+                    throw new Error(`${response.status}: Invalid quantity!`);
                 case 500:
                     throw new Error(`${response.status}: Database error occured!`);
                 default:
