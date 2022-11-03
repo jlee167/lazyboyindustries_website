@@ -63,6 +63,13 @@ window.forumApp = new Vue({
     },
 
     mounted: async function () {
+
+        this.$notify({
+            group: 'foo',
+            title: 'Important message',
+            text: 'Hello user! This is a notification!'
+        });
+
         forumAPI.getTopPosts()
             .then(json => {
                 for (let post of json) {
