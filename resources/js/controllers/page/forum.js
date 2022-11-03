@@ -7,7 +7,7 @@ import AuthFailure from '../../exceptions/http/auth/auth-failure';
 import ListItem from '../../models/forum/list-item';
 import ListItemDTO from '../../models/forum/list-item-dto';
 
-
+import Vue from 'vue';
 
 Vue.notify({
     group: 'foo',
