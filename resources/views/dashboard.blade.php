@@ -149,7 +149,7 @@
 
         <notifications
             group="forum"
-            position="top center"
+            position="bottom right"
             classes="vue-notification notification"
         />
       </div>
