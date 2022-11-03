@@ -161,7 +161,14 @@ function toggleLike() {
             if (err instanceof EmailNotVerified) {
                 window.location.href = "/email/verify";
             } else if (err instanceof AuthFailure) {
-                window.alert(`Please login first!`);
+                this.$notify({
+                    group: 'foo',
+                    type: 'warn',
+                    position: 'top center',
+                    width: '80%',
+                    title: 'Warning',
+                    text: "Please Login First"
+                });
             } else {
                 window.alert(`${err.name}: ${err.message}`);
             }
@@ -340,7 +347,14 @@ async function updatePost(post) {
           String(category);
     } catch (err) {
         if (err instanceof AuthFailure) {
-            window.alert("Please Login First");
+            this.$notify({
+                group: 'foo',
+                type: 'warn',
+                position: 'top center',
+                width: '80%',
+                title: 'Warning',
+                text: "Please Login First"
+            });
             return;
         }
         window.alert(err.message);
@@ -359,7 +373,14 @@ async function deletePost(post) {
             "http://www.lazyboyindustries.com/views/dashboard?page=1";
     } catch (err) {
         if (err instanceof AuthFailure) {
-            window.alert("Please Login First");
+            this.$notify({
+                group: 'foo',
+                type: 'warn',
+                position: 'top center',
+                width: '80%',
+                title: 'Warning',
+                text: "Please Login First"
+            });
             return;
         }
         window.alert(err.message);
