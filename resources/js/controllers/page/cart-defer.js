@@ -16,8 +16,17 @@ window.purchase = (productID, quantity) => {
         }
     })
         .then(res => {
-            if (res.status === 200) {
-                return res.json();
+            switch (res.status) {
+                case 200:
+                    return res.json();
+
+                case 412:
+                    throw new Error(`${response.status}: Invalid quantity!`);
+
+                default:
+                    throw new Error(
+                        `${response.status}: Unknown server error. Please contact admin`
+                    );
             }
         })
         .then(json => {
