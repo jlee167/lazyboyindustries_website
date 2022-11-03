@@ -21,8 +21,7 @@
   @include('includes.layouts.navbar')
 
   <div id="contents-area" class="w-100" v-if="loaded">
-    <!--article class="searchbar">
-    </article-->
+    <notifications group="post" />
 
     <article class="forum-background">
       {{-- Forum Overview Section --}}
