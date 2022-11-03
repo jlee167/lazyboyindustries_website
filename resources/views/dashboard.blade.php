@@ -150,7 +150,7 @@
         <notifications
             group="forum"
             position="top center"
-            classes="notification"
+            classes="vue-notification notification"
         />
       </div>
     </article>
