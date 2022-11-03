@@ -147,7 +147,11 @@
             :contents="trendingPosts"></trending-posts>
         </article>
 
-        <notifications group="forum" />
+        <notifications
+            group="forum"
+            position="top center"
+            width="80%"
+        />
       </div>
     </article>
 

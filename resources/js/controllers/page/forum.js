@@ -164,8 +164,6 @@ function toggleLike() {
                 this.$notify({
                     group: 'forum',
                     type: 'error',
-                    position: 'top center',
-                    width: '80%',
                     title: 'Error',
                     text: "Please Login First"
                 });
@@ -351,8 +349,6 @@ async function updatePost(post) {
             this.$notify({
                 group: 'forum',
                 type: 'error',
-                position: 'top center',
-                width: '80%',
                 title: 'Error',
                 text: "Please Login First"
             });
@@ -378,8 +374,6 @@ async function deletePost(post) {
             this.$notify({
                 group: 'forum',
                 type: 'error',
-                position: 'top center',
-                width: '80%',
                 title: 'Error',
                 text: "Please Login First"
             });
