@@ -347,12 +347,7 @@ async function updatePost(post) {
           String(category);
     } catch (err) {
         if (err instanceof AuthFailure) {
-            this.$notify({
-                group: 'foo',
-                title: 'Error',
-                text: "Please Login First"
-            });
-            //window.alert("Please Login First");
+            window.alert("Please Login First");
             return;
         }
         window.alert(err.message);
