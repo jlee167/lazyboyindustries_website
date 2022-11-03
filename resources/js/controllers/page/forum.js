@@ -34,28 +34,28 @@ window.forumApp = new Vue({
         mostLikedPostsLabel: HEADER_MOST_LIKED,
 
         /* Main UI (Posts) rendering data */
-        posts: [],
+        posts: new Array(),
         postID: null,
-        currentPost: {},
+        currentPost: null,
         likes: null,
         myLike: null,
-        comments: [],
+        comments: new Array(),
         imageUrl: null,
 
         /* Pagnation data */
-        searchKeyword: "",
-        serachTag: "",
+        searchKeyword: new String(),
+        serachTag: new String(),
         pageCount: 0,
         currentPage: 0,
-        pageIndexes: [],
+        pageIndexes: new Array(),
 
         /* Rendering Section Selector */
         showForum: true,
         showPost: false,
 
         /* Side UI rendering data */
-        trendingPosts: [],
-        topPosts: [],
+        trendingPosts: new Array(),
+        topPosts: new Array(),
 
         forumList: ['General', 'Tech'],
         defaultForum: "General"
