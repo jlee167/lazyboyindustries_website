@@ -76,7 +76,12 @@ window.forumApp = new Vue({
                 }
             })
             .catch(err => {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             });
 
         forumAPI.getTrendingPosts()
@@ -92,7 +97,12 @@ window.forumApp = new Vue({
                 }
             })
             .catch(err => {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             });
 
         /* Get current page contents from server and render */
@@ -167,9 +177,13 @@ function toggleLike() {
                     title: 'Error',
                     text: "Please Login First"
                 });
-                //window.alert("Please Login First");
             } else {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             }
         });
 }
@@ -213,7 +227,12 @@ function watchPost(postID, forum = null) {
             }, 500);
         })
         .catch(err => {
-            window.alert(`${err.name}: ${err.message}`);
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: err.name,
+                text: err.message
+            });
             console.trace();
         });
 }
@@ -239,7 +258,12 @@ async function getPage() {
             this.pagenate(json.itemCount);
         })
         .catch(err => {
-            window.alert(`${err.name}: ${err.message}`);
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: err.name,
+                text: err.message
+            });
             console.trace();
         });
 }
@@ -258,7 +282,12 @@ async function getPageWithTag(page, tag) {
             this.pagenate(json.itemCount);
         })
         .catch(err => {
-            window.alert(`${err.name}: ${err.message}`);
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: err.name,
+                text: err.message
+            });
             console.trace();
         });
 }
@@ -324,7 +353,12 @@ function postComment() {
             if (err instanceof EmailNotVerified) {
                 window.location.href = "/email/verify";
             } else {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             }
         });
 }
@@ -352,10 +386,15 @@ async function updatePost(post) {
                 title: 'Error',
                 text: "Please Login First"
             });
-            //window.alert("Please Login First");
             return;
         }
-        window.alert(err.message);
+
+        this.$notify({
+            group: 'forum',
+            type: 'error',
+            title: 'Error',
+            text: err.message
+        });
         return;
     }
 }
@@ -377,10 +416,15 @@ async function deletePost(post) {
                 title: 'Error',
                 text: "Please Login First"
             });
-            //window.alert("Please Login First");
             return;
         }
-        window.alert(err.message);
+
+        this.$notify({
+            group: 'forum',
+            type: 'error',
+            title: 'Error',
+            text: err.message
+        });
         return;
     }
 }
