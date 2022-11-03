@@ -150,7 +150,7 @@
         <notifications
             group="forum"
             position="top center"
-            width="80%"
+            classes="notification"
         />
       </div>
     </article>
