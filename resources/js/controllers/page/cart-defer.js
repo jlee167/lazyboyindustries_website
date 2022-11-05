@@ -21,7 +21,7 @@ window.purchase = (productID, quantity) => {
                     return res.json();
 
                 case 412:
-                    throw new Error(`${response.status}: Invalid quantity!`);
+                    throw new Error(`Status Code ${response.status}: Quantity should be 1 or higher.`);
 
                 default:
                     throw new Error(
