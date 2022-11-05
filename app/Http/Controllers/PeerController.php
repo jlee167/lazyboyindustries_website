@@ -287,4 +287,25 @@ class PeerController extends BaseController
         $result = $this->peerRepository->getPendingRequests(Auth::id());
         return response(['pendingRequests' => $result], 200);
     }
+
+
+    /**
+     * getStatus
+     *
+     * @param  string $uid
+     * @return Illuminate\Http\Response
+     */
+    public function getStatus(string $uid)
+    {
+        if (
+            !empty($this->peerRepository->getStatus((int)$uid))
+            or
+            Auth::id() == $uid
+        ) {
+            return json_encode(DB::table('reports')
+                    ->select('status')
+                    ->where('uid', $uid)
+                    ->get());
+        }
+    }
 }

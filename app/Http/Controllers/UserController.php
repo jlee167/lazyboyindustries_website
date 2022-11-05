@@ -456,28 +456,28 @@ class UserController extends BaseController
 
 
 
-    /**
-     * getStatus
-     *
-     * @param  string $uid
-     * @return Illuminate\Http\Response
-     */
-    public static function getStatus(string $uid)
-    {
-        if (
-            !empty(DB::table('guardianship')
-                ->where('uid_guardian', Auth::id())
-                ->where('uid_protected', $uid)
-                ->get())
-            or
-            Auth::id() == $uid
-        ) {
-            return json_encode(DB::table('reports')
-                    ->select('status')
-                    ->where('uid', $uid)
-                    ->get());
-        }
-    }
+    // /**
+    //  * getStatus
+    //  *
+    //  * @param  string $uid
+    //  * @return Illuminate\Http\Response
+    //  */
+    // public static function getStatus(string $uid)
+    // {
+    //     if (
+    //         !empty(DB::table('guardianship')
+    //             ->where('uid_guardian', Auth::id())
+    //             ->where('uid_protected', $uid)
+    //             ->get())
+    //         or
+    //         Auth::id() == $uid
+    //     ) {
+    //         return json_encode(DB::table('reports')
+    //                 ->select('status')
+    //                 ->where('uid', $uid)
+    //                 ->get());
+    //     }
+    // }
 
 
 

@@ -477,7 +477,7 @@ Route::post(
 )->middleware(FULL_SECURITY_CHECK);
 Route::get(
     '/emergency/{username}/status',
-    [UserController::class,   'getStatus']
+    [PeerController::class,   'getStatus']
 )->middleware(FULL_SECURITY_CHECK);
 
 Route::get(
