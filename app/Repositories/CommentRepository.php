@@ -83,4 +83,21 @@ class CommentRepository
         ForumComment::where('id', '=', $id)
                 ->delete();
     }
+
+
+
+
+    /**
+     * Return username of the author
+     *
+     * @param  int $id
+     * @return void
+     */
+    public function getAuthor(int $id)
+    {
+        $post = ForumComment::where('id', '=', $id)
+            ->select('author')
+            ->first();
+        return $post?->author;
+    }
 }
