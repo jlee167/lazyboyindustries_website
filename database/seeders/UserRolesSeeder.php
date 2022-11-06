@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\Bootstrap;
+namespace Database\Seeders;
 
 //use App\Models\User;
 use Carbon\Carbon;

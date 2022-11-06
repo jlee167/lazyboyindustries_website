@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\Test;
+namespace Database\Seeders;
 
 //use App\Models\User;
 use Carbon\Carbon;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 
-class UsersTableSeeder extends Seeder
+class TestDataSeeder extends Seeder
 {
     /**
      * Run the database seeds.
