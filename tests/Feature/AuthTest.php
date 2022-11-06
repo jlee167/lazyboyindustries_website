@@ -13,9 +13,19 @@ class AuthTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function testLogin()
     {
         $response = $this->postJson('/auth', ['testuser100' => 'password']);
         $response->assertStatus(200);
+    }
+
+    public function testKakaoLogin()
+    {
+        /* Todo */
+    }
+
+    public function testGoogleLogin()
+    {
+        /* Todo */
     }
 }
