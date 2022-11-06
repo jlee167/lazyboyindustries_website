@@ -39,16 +39,16 @@ class UserRolesSeeder extends Seeder
             ]);
         }
 
-        __addPermRole($userRoleIndexes['admin'], $permissionIndexes['ban_user']);
-        __addPermRole($userRoleIndexes['admin'], $permissionIndexes['delete_post']);
-        __addPermRole($userRoleIndexes['admin'], $permissionIndexes['access_statistics']);
-        __addPermRole($userRoleIndexes['admin'], $permissionIndexes['access_accounting']);
+        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['ban_user']);
+        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['delete_post']);
+        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['access_statistics']);
+        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['access_accounting']);
 
-        __addPermRole($userRoleIndexes['superuser'], $permissionIndexes['ban_user']);
-        __addPermRole($userRoleIndexes['superuser'], $permissionIndexes['delete_post']);
-        __addPermRole($userRoleIndexes['superuser'], $permissionIndexes['access_statistics']);
+        $this->__addPermRole($userRoleIndexes['superuser'], $permissionIndexes['ban_user']);
+        $this->__addPermRole($userRoleIndexes['superuser'], $permissionIndexes['delete_post']);
+        $this->__addPermRole($userRoleIndexes['superuser'], $permissionIndexes['access_statistics']);
 
-        __addPermRole($userRoleIndexes['moderator'], $permissionIndexes['delete_post']);
+        $this->__addPermRole($userRoleIndexes['moderator'], $permissionIndexes['delete_post']);
     }
 
 
