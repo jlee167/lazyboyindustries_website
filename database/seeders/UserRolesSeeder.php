@@ -14,15 +14,6 @@ use Illuminate\Support\Facades\Http;
 class UserRolesSeeder extends Seeder
 {
 
-    private function __addPermToRole($roleID, $permissionID)
-    {
-        DB::table('role_has_permission')->insert([
-            'role_id' => $roleID,
-            'permission_id' => $permissionID,
-        ]);
-    }
-
-
     /**
      * Bootstrap user roles and permission settings
      *
@@ -49,18 +40,24 @@ class UserRolesSeeder extends Seeder
             ]);
         }
 
-        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['ban_user']);
-        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['delete_post']);
-        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['access_statistics']);
-        $this->__addPermRole($userRoleIndexes['admin'], $permissionIndexes['access_accounting']);
+        $this->__addPermToRole($userRoleIndexes['admin'], $permissionIndexes['ban_user']);
+        $this->__addPermToRole($userRoleIndexes['admin'], $permissionIndexes['delete_post']);
+        $this->__addPermToRole($userRoleIndexes['admin'], $permissionIndexes['access_statistics']);
+        $this->__addPermToRole($userRoleIndexes['admin'], $permissionIndexes['access_accounting']);
 
-        $this->__addPermRole($userRoleIndexes['superuser'], $permissionIndexes['ban_user']);
-        $this->__addPermRole($userRoleIndexes['superuser'], $permissionIndexes['delete_post']);
-        $this->__addPermRole($userRoleIndexes['superuser'], $permissionIndexes['access_statistics']);
+        $this->__addPermToRole($userRoleIndexes['superuser'], $permissionIndexes['ban_user']);
+        $this->__addPermToRole($userRoleIndexes['superuser'], $permissionIndexes['delete_post']);
+        $this->__addPermToRole($userRoleIndexes['superuser'], $permissionIndexes['access_statistics']);
 
-        $this->__addPermRole($userRoleIndexes['moderator'], $permissionIndexes['delete_post']);
+        $this->__addPermToRole($userRoleIndexes['moderator'], $permissionIndexes['delete_post']);
     }
 
 
-
+    private function __addPermToRole($roleID, $permissionID)
+    {
+        DB::table('role_has_permission')->insert([
+            'role_id' => $roleID,
+            'permission_id' => $permissionID,
+        ]);
+    }
 }
