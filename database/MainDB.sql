@@ -74,20 +74,46 @@ CREATE TABLE users (
 ) ENGINE=INNODB;
 
 
-CREATE TABLE role_types(
-    id    INT PRIMARY KEY AUTO_INCREMENT,
-    name  VARCHAR(20) UNIQUE NOT NULL
-);
 
 
 CREATE TABLE user_roles(
-    user_id INT NOT NULL,
-    role_id INT NOT NULL,
+    id      INT AUTO_INCREMENT PRIMARY KEY,
+    name    VARCHAR(30) NOT NULL UNIQUE
+) ENGINE=INNODB;
+
+
+
+
+CREATE TABLE permissions(
+    id      INT AUTO_INCREMENT PRIMARY KEY,
+    name    VARCHAR(30) NOT NULL UNIQUE
+) ENGINE=INNODB;
+
+
+
+
+CREATE TABLE role_has_permission(
+    role_id         INT NOT NULL,
+    permission_id   INT NOT NULL,
+
+    PRIMARY KEY (role_id, permission_id),
+    FOREIGN KEY role_id REFERENCES user_roles(id) ,
+    FOREIGN KEY permission_id REFERENCES permissions(id)
+) ENGINE=INNODB;
+
+
+
+
+CREATE TABLE user_has_role(
+    user_id     INT NOT NULL,
+    role_id     INT NOT NULL,
 
     PRIMARY KEY (user_id, role_id),
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (role_id) REFERENCES role_tyles(id) ON UPDATE CASCADE
+    FOREIGN KEY user_id REFERENCES users(id),
+    FOREIGN KEY role_id REFERENCES user_roles(id)
 ) ENGINE=INNODB;
+
+
 
 
 CREATE TABLE deleted_users(
@@ -99,6 +125,8 @@ CREATE TABLE deleted_users(
     auth_provider   ENUM('Google', 'Kakao') DEFAULT NULL,
     uid_oauth       VARCHAR(50)
 ) ENGINE=INNODB;
+
+
 
 
 CREATE TABLE password_resets (
