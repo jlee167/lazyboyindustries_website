@@ -212,7 +212,7 @@ class UserController extends BaseController
             $token = $response->json()['token'];
 
             /* Create jwt token for user to access its own stream */
-            $this->jwtRepository->registerToken((int)$user->id, (int)$user->id, $token)
+            $this->jwtRepository->registerToken((int)$user->id, (int)$user->id, $token);
             // DB::table("stream_webtokens")
             //     ->insert([
             //         "uid_protected" => $user->id,
