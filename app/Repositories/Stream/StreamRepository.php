@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Stream;
 
 use Illuminate\Support\Facades\DB;
 

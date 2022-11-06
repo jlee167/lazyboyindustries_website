@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\ECommerce;
 
 use App\Models\Product;
 use App\Models\ProductRating;

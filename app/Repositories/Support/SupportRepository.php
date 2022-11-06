@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Support;
 
 use App\Models\SupportRequest;
 use App\Repositories\Base\SingleModelRepository;

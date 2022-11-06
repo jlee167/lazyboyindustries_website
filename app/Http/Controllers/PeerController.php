@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Repositories\GuardianshipRepository;
-use App\Repositories\JwtRepository;
-use App\Repositories\PeerRepository;
+use App\Repositories\Credentials\JwtRepository;
+use App\Repositories\UserRelations\GuardianshipRepository;
+use App\Repositories\UserRelations\PeerRepository;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;

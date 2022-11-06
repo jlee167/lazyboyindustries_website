@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\WebToken;
-use App\Repositories\JwtRepository;
+use App\Repositories\Credentials\JwtRepository;
 
 class StreamController extends Controller
 {

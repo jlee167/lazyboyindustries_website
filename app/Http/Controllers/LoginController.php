@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use APP\Models\User;
-use App\Repositories\UserRepository;
+use App\Repositories\User\UserRepository;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;

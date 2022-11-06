@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\UserRelations;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;

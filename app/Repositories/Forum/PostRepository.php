@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Forum;
 
 use App\Models\ForumComment;
 use App\Models\ForumPost;

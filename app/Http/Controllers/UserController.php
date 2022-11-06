@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Credit;
-use App\Repositories\CreditRepository;
-use App\Repositories\JwtRepository;
-use App\Repositories\UserRepository;
+use App\Repositories\Credentials\JwtRepository;
+use App\Repositories\User\CreditRepository;
+use App\Repositories\User\UserRepository;
 use Exception;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Database\QueryException;

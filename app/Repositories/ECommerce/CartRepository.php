@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\ECommerce;
 
 use App\Repositories\Base\SingleModelRepository;
 use Illuminate\Support\Facades\DB;

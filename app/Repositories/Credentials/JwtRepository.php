@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Credentials;
 
 use App\Models\WebToken;
 use Illuminate\Support\Facades\DB;

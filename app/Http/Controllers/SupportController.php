@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Redirector;
 use APP\Models\User;
-use App\Repositories\SupportRepository;
+use App\Repositories\Support\SupportRepository;
 
 class SupportController extends BaseController
 {
