@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Http;
 
 class UserRolesSeeder extends Seeder
 {
+
+    private function __addPermToRole($roleID, $permissionID)
+    {
+        DB::table('role_has_permission')->insert([
+            'role_id' => $roleID,
+            'permission_id' => $permissionID,
+        ]);
+    }
+
+
     /**
      * Bootstrap user roles and permission settings
      *
@@ -52,11 +62,5 @@ class UserRolesSeeder extends Seeder
     }
 
 
-    private function __addPermToRole($roleID, $permissionID)
-    {
-        DB::table('role_has_permission')->insert([
-            'role_id' => $roleID,
-            'permission_id' => $permissionID,
-        ]);
-    }
+
 }
