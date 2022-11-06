@@ -430,9 +430,13 @@ class ForumController extends Controller
     public function updateComment(Request $request, string $comment_id)
     {
         try {
+            /* Check if the user is the author of the comment */
+            $username = User::where('id', '=', Auth::id())
+                            ->first()
+                            ->username;
             $author = $this->commentRepository->getAuthor($comment_id);
-            if (Auth::user()->name != $author)
-                return response([], 404);
+            if ($username != $author)
+                return response([], 401);
 
             $result = $this->commentRepository->update(
                 id: (int)$comment_id,
@@ -458,20 +462,19 @@ class ForumController extends Controller
     public function deleteComment(Request $request, string $comment_id)
     {
         try {
+             /* Check if the user is the author of the comment */
             $username = User::where('id', '=', Auth::id())
                             ->first()
                             ->username;
             $author = $this->commentRepository->getAuthor($comment_id);
-            if ($username != $author) {
-                Log::error($username);
-                Log::error($author);
-                return response([], 404);
-            }
+            if ($username != $author)
+                return response([], 401);
 
             $result = $this->commentRepository->delete((int)$comment_id);
             return json_encode(["result" => true]);
         } catch (Exception $e) {
             return $e;
+
         }
     }
 
