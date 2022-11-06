@@ -320,13 +320,6 @@ class CommerceController extends Controller
     }
 
 
-    public function restock(Request $request)
-    {
-        /* @Todo */
-    }
-
-
-
     /**
      * Registers a new product review
      *
