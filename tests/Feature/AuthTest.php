@@ -15,8 +15,7 @@ class AuthTest extends TestCase
      */
     public function test_example()
     {
-        $response = $this->get('/');
-
+        $response = $this->postJson('/auth', ['testuser100' => 'password']);
         $response->assertStatus(200);
     }
 }

@@ -13,9 +13,9 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function testLoginNoOauth()
     {
-        $response = $this->get('/');
+        $response = $this->postJson('/auth', ['testuser100' => 'password']);
 
         $response->assertStatus(200);
     }
