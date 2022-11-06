@@ -23,9 +23,15 @@ class UserRolesSeeder extends Seeder
     {
         $userRoles = ['admin', 'superuser', 'moderator', 'basic'];
         $userRoleIndexes = array_flip($userRoles);
+        foreach ($userRoleIndexes as &$index){
+            $index++;  // Change 0-based index to 1-based index to follow db index
+        }
 
         $permissions = ['ban_user', 'delete_post', 'access_statistics', 'access_accounting'];
         $permissionIndexes = array_flip($permissions);
+        foreach ($permissionIndexes as &$index){
+            $index++;  // Change 0-based index to 1-based index to follow db index
+        }
 
         foreach($userRoles as $role) {
             DB::table('user_roles')->insert([
