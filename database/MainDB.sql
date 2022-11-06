@@ -97,8 +97,8 @@ CREATE TABLE role_has_permission(
     permission_id   INT NOT NULL,
 
     PRIMARY KEY (role_id, permission_id),
-    FOREIGN KEY role_id REFERENCES user_roles(id) ,
-    FOREIGN KEY permission_id REFERENCES permissions(id)
+    FOREIGN KEY (role_id) REFERENCES user_roles(id),
+    FOREIGN KEY (permission_id) REFERENCES permissions(id)
 ) ENGINE=INNODB;
 
 
@@ -109,8 +109,8 @@ CREATE TABLE user_has_role(
     role_id     INT NOT NULL,
 
     PRIMARY KEY (user_id, role_id),
-    FOREIGN KEY user_id REFERENCES users(id),
-    FOREIGN KEY role_id REFERENCES user_roles(id)
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (role_id) REFERENCES user_roles(id)
 ) ENGINE=INNODB;
 
 
