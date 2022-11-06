@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Credit;
 use App\Repositories\CreditRepository;
+use App\Repositories\JwtRepository;
 use App\Repositories\UserRepository;
 use Exception;
 use Illuminate\Auth\Events\Registered;
@@ -25,13 +26,16 @@ class UserController extends BaseController
 
     private $userRepository;
     private $creditRepository;
+    private $jwtRepository;
 
 
     public function __construct(UserRepository $userRepository,
-                                CreditRepository $creditRepository)
+                                CreditRepository $creditRepository,
+                                JwtRepository $jwtRepository)
     {
         $this->userRepository = $userRepository;
         $this->creditRepository = $creditRepository;
+        $this->jwtRepository = $jwtRepository;
     }
 
 
@@ -198,11 +202,6 @@ class UserController extends BaseController
                 userID: $user->id,
                 value: 1000000
             );
-            // $credits = new Credit([
-            //     'uid' => $user->id,
-            //     'credits' => 1000000,
-            // ]);
-            // $credits->save();
 
             /* Generate stream private key and register it in Database */
             $response = Http::get(env('STREAMING_SERVER', null)
@@ -211,12 +210,15 @@ class UserController extends BaseController
                 . "/"
                 . $streamKey);
             $token = $response->json()['token'];
-            DB::table("stream_webtokens")
-                ->insert([
-                    "uid_protected" => $user->id,
-                    "uid_guardian" => $user->id,
-                    "token" => $token,
-                ]);
+
+            /* Create jwt token for user to access its own stream */
+            $this->jwtRepository->registerToken((int)$user->id, (int)$user->id, $token);
+            // DB::table("stream_webtokens")
+            //     ->insert([
+            //         "uid_protected" => $user->id,
+            //         "uid_guardian" => $user->id,
+            //         "token" => $token,
+            //     ]);
 
 
 
@@ -325,12 +327,9 @@ class UserController extends BaseController
         DB::beginTransaction();
 
         $user = $this->userRepository->getByID(Auth::id());
-        if ($user->google2fa_active === 0) {//($user->google2fa_secret === null) {
+        if ($user->google2fa_active === 0) {
             $google2fa = (new \PragmaRX\Google2FAQRCode\Google2FA());
             $secret = $google2fa->generateSecretKey();
-            //$user->google2fa_secret = $google2fa->generateSecretKey();
-            //$user->save();
-
             $this->userRepository->enable2FA(Auth::id(), $secret);
 
             $qrCodeUrl = $google2fa->getQRCodeInline(
@@ -454,34 +453,6 @@ class UserController extends BaseController
     }
 
 
-
-
-    /**
-     * getStatus
-     *
-     * @param  string $uid
-     * @return Illuminate\Http\Response
-     */
-    public static function getStatus(string $uid)
-    {
-        if (
-            !empty(DB::table('guardianship')
-                ->where('uid_guardian', Auth::id())
-                ->where('uid_protected', $uid)
-                ->get())
-            or
-            Auth::id() == $uid
-        ) {
-            return json_encode(DB::table('reports')
-                    ->select('status')
-                    ->where('uid', $uid)
-                    ->get());
-        }
-    }
-
-
-
-
     /**
      * Update current user's profile image.
      * Replace old image file with newer one in profile image repository.
@@ -494,8 +465,6 @@ class UserController extends BaseController
         $filename = 'userimg_' . Auth::id();
         $imgFile = fopen("./images/users/profile/" . $filename, "w");
         $user = $this->userRepository->getByID(Auth::id());
-        // $user = User::where('id', '=', Auth::id())
-        //     ->first();
         $user->image_url = "/images/users/profile/" . $filename;
         $user->save();
         return response(null, 200);

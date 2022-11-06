@@ -16,8 +16,17 @@ window.purchase = (productID, quantity) => {
         }
     })
         .then(res => {
-            if (res.status === 200) {
-                return res.json();
+            switch (res.status) {
+                case 200:
+                    return res.json();
+
+                case 412:
+                    throw new Error(`Status Code ${response.status}: Quantity should be 1 or higher.`);
+
+                default:
+                    throw new Error(
+                        `${response.status}: Unknown server error. Please contact admin`
+                    );
             }
         })
         .then(json => {
@@ -146,6 +155,8 @@ async function purchaseAll(items) {
                     break;
                 case 400:
                     return response.json();
+                case 412:
+                    throw new Error(`${response.status}: Invalid quantity!`);
                 case 500:
                     throw new Error(`${response.status}: Database error occured!`);
                 default:

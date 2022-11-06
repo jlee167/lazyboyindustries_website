@@ -17,6 +17,7 @@
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: fit-content;
 }
 
 #postBtn {
@@ -77,12 +78,15 @@
     justify-content: flex-start;
     align-items: center;
     height: 2.5rem;
-    border: 2px solid gray;
+    border: 1px solid gray;
     border-radius: 0.5rem;
     background-color: white;
 }
 
-
+.notification {
+    margin-top: 150px;
+    max-width: 600px;
+}
 
 input:focus {
     outline-width: 0;

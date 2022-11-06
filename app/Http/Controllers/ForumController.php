@@ -416,10 +416,23 @@ class ForumController extends Controller
         }
     }
 
-    //@todo
+
+
+    /**
+     * Updates forum comment
+     * Return error if current user is not the author of comment.
+     *
+     * @param  mixed $request
+     * @param  mixed $comment_id
+     * @return void
+     */
     public function updateComment(Request $request, string $comment_id)
     {
         try {
+            $author = $this->commentRepository->getAuthor($comment_id);
+            if (Auth::user()->name != $author)
+                return response([], 404);
+
             $result = $this->commentRepository->update(
                 id: (int)$comment_id,
                 author: (string) Auth::user()['username'],
@@ -431,10 +444,23 @@ class ForumController extends Controller
         }
     }
 
-    //@todo
+
+
+    /**
+     * Deletes forum comment.
+     * Return error if current user is not the author of comment.
+     *
+     * @param  mixed $request
+     * @param  mixed $comment_id
+     * @return void
+     */
     public function deleteComment(Request $request, string $comment_id)
     {
         try {
+            $author = $this->commentRepository->getAuthor($comment_id);
+            if (Auth::user()->name != $author)
+                return response([], 404);
+
             $result = $this->commentRepository->delete((int)$comment_id);
             return json_encode(["result" => true]);
         } catch (Exception $e) {

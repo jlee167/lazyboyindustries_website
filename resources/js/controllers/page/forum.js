@@ -11,7 +11,7 @@ import ListItemDTO from '../../models/forum/list-item-dto';
 /*------ Page Settings -------*/
 const PAGINATION_CAPACITY = 10;
 const HEADER_TOP_POSTS = "MOST VIEWED";
-const HEADER_TRENDING_POSTS = "TRENDING POSTS";
+const HEADER_MOST_LIKED = "MOST LIKED";
 
 
 
@@ -31,31 +31,31 @@ window.forumApp = new Vue({
         /* UI Strings */
         forumName: "General",
         topPostLabel: HEADER_TOP_POSTS,
-        trendingPostLabel: HEADER_TRENDING_POSTS,
+        mostLikedPostsLabel: HEADER_MOST_LIKED,
 
         /* Main UI (Posts) rendering data */
-        posts: [],
+        posts: new Array(),
         postID: null,
-        currentPost: {},
+        currentPost: null,
         likes: null,
         myLike: null,
-        comments: [],
+        comments: new Array(),
         imageUrl: null,
 
         /* Pagnation data */
-        searchKeyword: "",
-        serachTag: "",
+        searchKeyword: new String(),
+        serachTag: new String(),
         pageCount: 0,
         currentPage: 0,
-        pageIndexes: [],
+        pageIndexes: new Array(),
 
         /* Rendering Section Selector */
         showForum: true,
         showPost: false,
 
         /* Side UI rendering data */
-        trendingPosts: [],
-        topPosts: [],
+        trendingPosts: new Array(),
+        topPosts: new Array(),
 
         forumList: ['General', 'Tech'],
         defaultForum: "General"
@@ -76,7 +76,12 @@ window.forumApp = new Vue({
                 }
             })
             .catch(err => {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             });
 
         forumAPI.getTrendingPosts()
@@ -92,7 +97,12 @@ window.forumApp = new Vue({
                 }
             })
             .catch(err => {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             });
 
         /* Get current page contents from server and render */
@@ -161,9 +171,19 @@ function toggleLike() {
             if (err instanceof EmailNotVerified) {
                 window.location.href = "/email/verify";
             } else if (err instanceof AuthFailure) {
-                window.alert(`Please login first!`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: 'Error',
+                    text: "Please Login First"
+                });
             } else {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             }
         });
 }
@@ -207,7 +227,12 @@ function watchPost(postID, forum = null) {
             }, 500);
         })
         .catch(err => {
-            window.alert(`${err.name}: ${err.message}`);
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: err.name,
+                text: err.message
+            });
             console.trace();
         });
 }
@@ -233,7 +258,12 @@ async function getPage() {
             this.pagenate(json.itemCount);
         })
         .catch(err => {
-            window.alert(`${err.name}: ${err.message}`);
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: err.name,
+                text: err.message
+            });
             console.trace();
         });
 }
@@ -252,7 +282,12 @@ async function getPageWithTag(page, tag) {
             this.pagenate(json.itemCount);
         })
         .catch(err => {
-            window.alert(`${err.name}: ${err.message}`);
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: err.name,
+                text: err.message
+            });
             console.trace();
         });
 }
@@ -318,7 +353,12 @@ function postComment() {
             if (err instanceof EmailNotVerified) {
                 window.location.href = "/email/verify";
             } else {
-                window.alert(`${err.name}: ${err.message}`);
+                this.$notify({
+                    group: 'forum',
+                    type: 'error',
+                    title: err.name,
+                    text: err.message
+                });
             }
         });
 }
@@ -340,10 +380,21 @@ async function updatePost(post) {
           String(category);
     } catch (err) {
         if (err instanceof AuthFailure) {
-            window.alert("Please Login First");
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: 'Error',
+                text: "Please Login First"
+            });
             return;
         }
-        window.alert(err.message);
+
+        this.$notify({
+            group: 'forum',
+            type: 'error',
+            title: 'Error',
+            text: err.message
+        });
         return;
     }
 }
@@ -359,10 +410,21 @@ async function deletePost(post) {
             "http://www.lazyboyindustries.com/views/dashboard?page=1";
     } catch (err) {
         if (err instanceof AuthFailure) {
-            window.alert("Please Login First");
+            this.$notify({
+                group: 'forum',
+                type: 'error',
+                title: 'Error',
+                text: "Please Login First"
+            });
             return;
         }
-        window.alert(err.message);
+
+        this.$notify({
+            group: 'forum',
+            type: 'error',
+            title: 'Error',
+            text: err.message
+        });
         return;
     }
 }

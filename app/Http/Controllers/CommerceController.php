@@ -85,9 +85,14 @@ class CommerceController extends Controller
     {
         DB::beginTransaction();
         try {
-            $quantity = $request->quantity;
+            $quantity = (int)$request->quantity;
             $uid = Auth::id();
             $productID = $request->productID;
+
+            if ($request->quantity < 1) {
+                DB::rollback();
+                return response(['error' => "Invalid quantity:" . (string)$request->quantity], 412);
+            }
 
             /* @Todo: Timestamp Collision Check */
             $queryResult = $this->productRepository->purchaseProduct($quantity, $uid, $productID);
@@ -199,6 +204,11 @@ class CommerceController extends Controller
                     ->lockForUpdate()
                     ->first()
                     ->quantity_available;
+
+                if ($item->quantity < 1) {
+                    DB::rollback();
+                    return response(['error' => "Invalid quantity:" . (string)$item->quantity], 412);
+                }
             }
 
             $timestamp = Carbon::now('Asia/Seoul');
@@ -308,13 +318,6 @@ class CommerceController extends Controller
             return response([], 500);
         }
     }
-
-
-    public function restock(Request $request)
-    {
-        /* @Todo */
-    }
-
 
 
     /**

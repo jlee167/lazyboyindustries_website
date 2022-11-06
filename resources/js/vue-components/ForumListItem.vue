@@ -186,7 +186,7 @@ export default {
   overflow: hidden;
   background-color: white;
   cursor: pointer;
-  border: #b9b9b9bb 0.2px solid;
+  /*border: #b9b9b9bb 0.2px solid;*/
   border-radius: 0.5rem;
 }
 

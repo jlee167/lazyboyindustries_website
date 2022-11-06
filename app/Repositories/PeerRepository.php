@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -200,5 +201,14 @@ class PeerRepository
                     ->where('guardianship.uid_guardian', '=', $guardianID)
                     ->Where('guardianship.uid_protected', '=', $protectedID)
                     ->first();
+    }
+
+
+    public function getProtectedStatus(int $protectedID)
+    {
+        return DB::table('guardianship')
+            ->where('uid_guardian', Auth::id())
+            ->where('uid_protected', $protectedID)
+            ->get();
     }
 }
