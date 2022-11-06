@@ -7,6 +7,7 @@ use App\Models\ForumComment;
 use App\Models\ForumPost;
 use App\Models\PostTags;
 use App\Models\Tags;
+use App\Models\User;
 use App\Repositories\CommentRepository;
 use App\Repositories\PostLikeRepository;
 use App\Repositories\PostRepository;
@@ -457,9 +458,12 @@ class ForumController extends Controller
     public function deleteComment(Request $request, string $comment_id)
     {
         try {
+            $username = User::where('id', '=', Auth::id())
+                            ->first()
+                            ->username;
             $author = $this->commentRepository->getAuthor($comment_id);
-            if (Auth::user()->name != $author) {
-                Log::error(Auth::user()->name);
+            if ($username != $author) {
+                Log::error($username);
                 Log::error($author);
                 return response([], 404);
             }
