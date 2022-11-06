@@ -458,8 +458,11 @@ class ForumController extends Controller
     {
         try {
             $author = $this->commentRepository->getAuthor($comment_id);
-            if (Auth::user()->name != $author)
+            if (Auth::user()->name != $author) {
+                Log::error(Auth::user()->name);
+                Log::error($author);
                 return response([], 404);
+            }
 
             $result = $this->commentRepository->delete((int)$comment_id);
             return json_encode(["result" => true]);
