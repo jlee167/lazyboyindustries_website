@@ -120,6 +120,8 @@ input.login-form-input {
     height: 40px;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
     background-color: #FEE500;
 }
 
@@ -158,7 +160,8 @@ span.buttonText {
     display: inline-block;
     vertical-align: middle;
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 700;
     color: black;
     /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif;

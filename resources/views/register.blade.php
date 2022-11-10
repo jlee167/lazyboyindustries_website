@@ -54,7 +54,7 @@
           <a id="kakaoAuthBtn" class="hover-no-effect" href="javascript:loginWithKakao()">
             <div id="kakaoBtnBackground" class="btn-hover-shadow">
               <img class="icon-kakao" src="{{asset('/images/kakao_icon.png')}}">
-              <span class="buttonText"> Register with Kakao Account Link</span>
+              <span class="buttonText"> Register (Link Kakao Account)</span>
             </div>
           </a>
 
@@ -63,7 +63,7 @@
           <div id="gSignInWrapper" class="mt-2">
             <div class="btn-hover-shadow" id="googleAuthBtn" class="customGPlusSignIn">
               <img class="icon-google" src="https://developers.google.com/identity/images/g-logo.png">
-              <span class="buttonText"> Register with Google Account Link</span>
+              <span class="buttonText"> Register (Link Google Account)</span>
             </div>
           </div>
           <div id="name"></div>
