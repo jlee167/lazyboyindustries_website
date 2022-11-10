@@ -7,8 +7,6 @@
     height: 100%;
     min-height: 100vh;
     padding-top: 70px;
-    /*background-image: url('/images/pexels-henri-mathieusaintlaurent-5898313.jpg');
-    background-size: cover;*/
     overflow: hidden;
 }
 
@@ -50,12 +48,10 @@
 
 
 #registerPrompt {
-    width: auto;
-    max-width: 600px;
+    width: 100%;
+    max-width: 520px;
     border-radius: 1%;
     overflow: hidden;
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-top: 100px;
     margin-bottom: 200px;
     padding-left: 20px;
@@ -81,18 +77,20 @@ span.buttonText {
 p.login-label {
     font-weight: 80;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 20px;
     margin-bottom: 7px;
 }
 
 #registerBtn {
-    background-color: #8605d1;
+    background-color: #f27935;
     color: white;
     border: none;
     width: 100%;
     height: 50px;
     margin-top: 10px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     font-family: 'Nunito Sans', sans-serif;
     border-width: 1px;
     border-style: solid;
@@ -100,6 +98,6 @@ p.login-label {
 
 #registerBtn:hover {
     background-color: white;
-    border-color: #8605d1;
-    color: #8605d1;
+    border-color: #f27935;
+    color: #f27935;
 }
