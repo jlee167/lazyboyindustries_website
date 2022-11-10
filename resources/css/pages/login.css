@@ -127,14 +127,14 @@ input.login-form-input {
 
 img.icon-kakao {
     display: inline-block;
-    width: 22px;
-    height: 20px;
+    width: 26px;
+    height: 24px;
 }
 
 img.icon-google {
     display: inline-block;
-    width: 17px;
-    height: 17px;
+    width: 21px;
+    height: 21px;
 }
 
 .hover-no-effect:hover {
