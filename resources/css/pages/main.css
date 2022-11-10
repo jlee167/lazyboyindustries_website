@@ -54,7 +54,8 @@
 }
 
 .scroll-section3 {
-    background: linear-gradient(rgb(173, 48, 245), rgb(149, 0, 235));
+    /*background: linear-gradient(rgb(173, 48, 245), rgb(149, 0, 235));*/
+    background-color: black;
     background-size: cover;
     overflow: hidden;
 }

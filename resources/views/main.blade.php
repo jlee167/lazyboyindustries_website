@@ -103,9 +103,15 @@
         class="scroll-section3 section-center">
         <canvas class="bg-particle"></canvas>
         <div class="scrollable-page">
-          <div class="flex-center-vh vh-100 vw-100">
+          <div class="flex-column flex-center-vh vh-100 vw-100">
             <h1 id="section3Header"> Current Projects</h1>
             <div class="flex flex-row justify-content-center">
+                <img src="{{ asset('/images/HARDWARE.png') }}"/>
+                <img src="{{ asset('/images/HARDWARE.png') }}"/>
+            </div>
+            <div class="flex flex-row justify-content-center">
+                <img src="{{ asset('/images/HARDWARE.png') }}"/>
+                <img src="{{ asset('/images/HARDWARE.png') }}"/>
             </div>
           </div>
         </div>
