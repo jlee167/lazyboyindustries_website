@@ -19,10 +19,8 @@
 
 
 <body>
-  @include('includes.layouts.navbar')
-
   <main id="main">
-    <article id="registerPrompt" class="card">
+    <article id="registerPrompt">
       <form id="registerForm">
         <div id="formFrame">
           <div><p class="login-label mt-1">ID</p></div>
@@ -80,8 +78,6 @@
       </form>
     </article>
   </main>
-
-  @include('includes.layouts.footer')
 </body>
 
 <script>
