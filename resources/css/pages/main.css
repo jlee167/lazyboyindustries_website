@@ -39,6 +39,7 @@
 #section3Header {
     font-size: 5rem;
     color: white !important;
+    margin-bottom: 2rem;
 }
 
 .scroll-section1 {
@@ -251,6 +252,10 @@
     z-index: 0;
 }
 
+
+.curr-project-image {
+    margin: 2rem 2rem 2rem 2rem;
+}
 
 
 #section1 {
