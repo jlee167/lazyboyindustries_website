@@ -257,6 +257,10 @@
     margin: 2rem 2rem 2rem 2rem;
 }
 
+.curr-project-items {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
 
 #section1 {
     display: flex;
