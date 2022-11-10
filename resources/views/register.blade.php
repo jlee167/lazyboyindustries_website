@@ -22,6 +22,9 @@
   <main id="main">
     <article id="registerPrompt">
       <form id="registerForm">
+
+        <h3 id="headline"> Register </h3>
+
         <div id="formFrame">
           <div><p class="login-label mt-1">ID</p></div>
           <input class="form-login login-form-input mb-4" id="input_account" type="text"

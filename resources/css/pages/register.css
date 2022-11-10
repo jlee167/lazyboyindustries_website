@@ -10,6 +10,10 @@
     overflow: hidden;
 }
 
+#headline {
+    text-align: center;
+}
+
 #customBtn {
     display: inline-flex;
     justify-content: center;
