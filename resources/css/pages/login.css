@@ -160,8 +160,8 @@ span.buttonText {
     display: inline-block;
     vertical-align: middle;
     padding-left: 10px;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
     color: black;
     /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif;
