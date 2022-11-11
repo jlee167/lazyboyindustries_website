@@ -61,10 +61,10 @@ export default {
       return device;
     },
     isAway: function (user) {
-      return user.status == "Away";
+      return user.status == "AWAY";
     },
     isOnline: function (user) {
-      return user.status == "Online";
+      return user.status == "ONLINE";
     },
     status: function (user) {
       return user.status;
