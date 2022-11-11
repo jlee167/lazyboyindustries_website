@@ -63,14 +63,14 @@
 
         <article v-if="desktopMode" class="chat-container">
           <div class="chat-top-bar">
-            <b class="title-live-chat">Live Chat</b>
+            <p class="title-live-chat">Live Chat</p>
           </div>
           <div id="text-area" class="chat-textarea">
             <div class="w-100 pl-2 pb-3" v-for="message in messages"
               :key="message.id">
               <span class="text-multiline text-light mr-1">
                 <span class="text-success pr-2">
-                    <strong>@{{ message.username }}</strong>
+                    <strong class="chat-username">@{{ message.username }}</strong>
                 </span>
                 @{{ message.content }}
               </span>

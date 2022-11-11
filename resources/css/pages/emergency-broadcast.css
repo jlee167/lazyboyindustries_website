@@ -25,7 +25,7 @@
     margin: auto;
     margin-top: auto;
     margin-bottom: auto;
-    border: 1px white solid;
+    /*border: 1px white solid;*/
 }
 
 
@@ -152,7 +152,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     height: 100%;
-    background-color: #5d31ff;
+    background-color: #1c1c1c;
 }
 
 .media {
@@ -165,7 +165,8 @@
 
 .title-live-chat {
     color: white;
-    font-size: 100%;
+    font-weight: 500;
+    margin: 0 0 0 0;
 }
 
 .btn-send-chat {
@@ -196,10 +197,15 @@
     color: white;
 }
 
+.chat-username {
+    font-weight: 500;
+}
+
 
 @media (min-width: 1920px) or (min-height: 1080px) {
     #container-top {
-        border: 8px skyblue solid;
+        border: 1px white solid;
+        /*border: 8px skyblue solid;*/
     }
 }
 

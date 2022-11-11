@@ -61,10 +61,10 @@ export default {
       return device;
     },
     isAway: function (user) {
-      return user.status == "AWAY";
+      return user.status == "Away";
     },
     isOnline: function (user) {
-      return user.status == "ONLINE";
+      return user.status == "Online";
     },
     status: function (user) {
       return user.status;
@@ -92,7 +92,7 @@ export default {
   display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 3px;
+  margin-right: 1px;
 }
 
 span.online {
@@ -106,6 +106,7 @@ span.away {
 p.online {
   display: inline-block;
   color: rgb(14, 175, 14);
+  font-weight: 500;
 }
 
 p.away {
