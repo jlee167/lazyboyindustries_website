@@ -32,7 +32,7 @@
         <input name="passwordConfirmation" type="text" class="form-control" />
       </div>
       <div class="form-group">
-        <input class="btn btn-primary" type="submit" value="submit">
+        <input class="btn btn-primary" onclick="window.resetPassword()">
       </div>
     </form>
   </main>
