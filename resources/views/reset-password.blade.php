@@ -32,7 +32,7 @@
         <input name="passwordConfirmation" type="text" class="form-control" />
       </div>
       <div class="form-group">
-        <input class="btn btn-primary" type="submit" value="submit">
+        <input class="btn btn-primary" onclick="resetPassword()">
       </div>
     </form>
   </main>
@@ -62,6 +62,7 @@
     .then(response => {
       if (response.status === 200) {
         window.alert("Password Reset Complete");
+        window.location.href = window.location.href.split('/')[2];
       }
     })
     .catch((err) => {
