@@ -156,6 +156,9 @@ Route::get('/forgot-password', function () {
 
 
 Route::post('/forgot-password', function (Request $request) {
+
+    Log::info($request);
+
     $request->validate(['email' => 'required|email']);
 
     $status = Password::sendResetLink(
