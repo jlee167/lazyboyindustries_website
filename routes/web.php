@@ -151,7 +151,7 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
 ->name('verification.verify');
 
 Route::get('/forgot-password', function () {
-    return view('reset-password');
+    return view('recover-password');
 })->middleware('guest')->name('password.request');
 
 
