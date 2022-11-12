@@ -22,8 +22,6 @@
 <body>
   @include('includes.layouts.navbar')
   <main id="container" class="section-contents">
-    <form action="/reset-password" method="POST">
-      @csrf
       <div class="form-group">
         <input name="token" type="hidden" class="form-control" />
         <small class="form-text text-muted">New password</small>
@@ -34,7 +32,6 @@
       <div class="form-group">
         <input class="btn btn-primary" onclick="window.resetPassword()">
       </div>
-    </form>
   </main>
   @include('includes.layouts.footer')
 </body>
