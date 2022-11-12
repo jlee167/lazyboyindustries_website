@@ -1,15 +1,5 @@
 /****************************************************************************
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
- *      WARNING   WARNING  WARNING  WARNING  WARNING  WARNING  WARNING      *
+ *                       MySql / MariaDb Hard Reset                         *
  * ----------------------------------------------------------------------   *
  *                THIS DATA SCHEME IS HIGHLY EXPERIMENTAL.                  *
  *  IN NORMAL CIRCUMSTANCES, I WILL NOT BE ASKING ANYTHING MORE THAN YOUR   *
@@ -23,22 +13,16 @@
 
 
 
-
-
-
-/* -------------------------------------------------------------------------- */
-/*                         MySql / MariaDb Hard Reset                         */
-/* -------------------------------------------------------------------------- */
-
-
-
-
 DROP DATABASE IF EXISTS LazyboyServer;
 CREATE DATABASE LazyboyServer;
 SHOW DATABASES;
 USE LazyboyServer;
 
 
+
+/* -------------------------------------------------------------------------- */
+/*                                Setup Tables                                */
+/* -------------------------------------------------------------------------- */
 
 
 CREATE TABLE users (
