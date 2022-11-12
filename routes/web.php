@@ -180,6 +180,9 @@ Route::get('/reset-password/{token}', function ($token) {
 
 
 Route::post('/reset-password', function (Request $request) {
+
+    Log::info($request);
+
     $request->validate([
         'token' => 'required',
         'email' => 'required|email',
@@ -198,6 +201,8 @@ Route::post('/reset-password', function (Request $request) {
             event(new PasswordReset($user));
         }
     );
+
+    Log::info($status);
 
     return $status === Password::PASSWORD_RESET
                 ? redirect()->route('login')->with('status', __($status))
