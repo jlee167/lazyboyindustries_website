@@ -27,12 +27,12 @@
       <div class="form-group">
         <input name="token" type="hidden" class="form-control" />
         <small class="form-text text-muted">New password</small>
-        <input id="password" name="password" type="text" class="form-control" />
+        <input id="password" name="password" type="password" class="form-control" />
         <small class="form-text text-muted">Confirm new password</small>
-        <input name="passwordConfirmation" type="text" class="form-control" />
+        <input id="passwordConfirmation" type="password" class="form-control" />
       </div>
       <div class="form-group">
-        <input class="btn btn-primary" onclick="resetPassword()">
+        <div class="btn btn-primary" onclick="resetPassword()">Send</div>
       </div>
     </form>
   </main>
