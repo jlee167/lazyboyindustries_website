@@ -61,7 +61,7 @@
     .then(response => {
       if (response.status === 200) {
         window.alert("Password Reset Complete");
-        window.location.href = window.location.href.split('/')[2];
+        window.location.href = '/views/login';//window.location.href.split('/')[2];
       }
     })
     .catch((err) => {
