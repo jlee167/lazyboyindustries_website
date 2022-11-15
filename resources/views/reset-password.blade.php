@@ -52,12 +52,12 @@
         'Content-Type': 'application/json',
         'X-CSRF-TOKEN': window.env.CSRF_TOKEN
       },
-      body: {
+      body: JSON.stringify({
         token: token,
         email: email,
         password: document.getElementById('password').value,
         password_confirmation: document.getElementById('passwordConfirmation').value,
-      }
+      })
     })
     .then(response => {
       if (response.status === 200) {
