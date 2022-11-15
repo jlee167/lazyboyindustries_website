@@ -43,7 +43,6 @@
   const url = new URL(window.location.href);
   const email = url.searchParams.get('email');
   const token = window.location.href.split("/").pop().split("?").shift();
-  window.alert('token='+token+'\n'+'email='+email);
 
   window.resetPassword = () => {
     fetch('/reset-password', {
