@@ -46,7 +46,7 @@
           'X-CSRF-TOKEN': window.env.CSRF_TOKEN
         },
         body: JSON.stringify({
-          email: document.getElementById("email")
+          email: document.getElementById("email").value
         })
       })
       .then(response => {
