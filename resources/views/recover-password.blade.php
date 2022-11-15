@@ -29,7 +29,7 @@
                 <input id="email" name="email" type="text" class="form-control" />
             </div>
             <div class="form-group">
-                <div class="btn btn-primary" onclick="window.requestPasswordReset()"></div> <!--type="submit" value="submit"-->
+                <div class="btn btn-primary" onclick="window.requestPasswordReset()">Send</div> <!--type="submit" value="submit"-->
             </div>
         </form>
     </main>
@@ -52,7 +52,7 @@
       .then(response => {
         if (response.status === 200) {
           window.alert("Request sent. Please check your email inbox!");
-          window.location.href = window.location.href.split('/')[2];
+          window.location.href = '/';//window.location.href.split('/')[2];
         }
       })
       .catch((err) => {
