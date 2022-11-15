@@ -38,6 +38,10 @@ const FULL_SECURITY_CHECK_SOFT = ['xss-soft', 'auth', 'verified', '2fa'];
 /*                            Authentication Routes                           */
 /* -------------------------------------------------------------------------- */
 
+Route::get('/home', function(Request $request){
+    return view('main');
+});
+
 Route::get('/login/redirect/views/{view}', function (Request $request, $view) {
     $redirectUrl = str_replace('/login/redirect', '', $request->fullUrl());
     return redirect()->intended($redirectUrl);
