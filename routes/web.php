@@ -39,7 +39,7 @@ const FULL_SECURITY_CHECK_SOFT = ['xss-soft', 'auth', 'verified', '2fa'];
 /* -------------------------------------------------------------------------- */
 
 Route::get('/home', function(Request $request){
-    return redirect('main');
+    return redirect('/main');
 });
 
 Route::get('/login/redirect/views/{view}', function (Request $request, $view) {
