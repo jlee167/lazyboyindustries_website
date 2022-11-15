@@ -26,14 +26,39 @@
             @csrf
             <div class="form-group">
                 <small id="hint" class="form-text text-muted">Enter your email.</small>
-                <input id="otpSecret" name="email" type="text" class="form-control" />
+                <input id="email" name="email" type="text" class="form-control" />
             </div>
             <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="submit">
+                <div class="btn btn-primary" onclick="window.requestPasswordReset()">Send</div> <!--type="submit" value="submit"-->
             </div>
         </form>
     </main>
     @include('includes.layouts.footer')
 </body>
+
+
+<script>
+    window.requestPasswordReset = () => {
+      fetch('/forgot-password', {
+        method: "post",
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-TOKEN': window.env.CSRF_TOKEN
+        },
+        body: JSON.stringify({
+          email: document.getElementById("email").value
+        })
+      })
+      .then(response => {
+        if (response.status === 200) {
+          window.alert("Request sent. Please check your email inbox!");
+          window.location.href = '/';//window.location.href.split('/')[2];
+        }
+      })
+      .catch((err) => {
+        window.alert(err);
+      });
+    }
+  </script>
 
 </html>

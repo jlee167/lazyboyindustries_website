@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\PasswordReset;
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -36,6 +37,10 @@ const FULL_SECURITY_CHECK_SOFT = ['xss-soft', 'auth', 'verified', '2fa'];
 /* -------------------------------------------------------------------------- */
 /*                            Authentication Routes                           */
 /* -------------------------------------------------------------------------- */
+
+Route::get('/home', function(Request $request){
+    return redirect('/views/main');
+});
 
 Route::get('/login/redirect/views/{view}', function (Request $request, $view) {
     $redirectUrl = str_replace('/login/redirect', '', $request->fullUrl());
@@ -156,11 +161,17 @@ Route::get('/forgot-password', function () {
 
 
 Route::post('/forgot-password', function (Request $request) {
+
+    Log::info($request);
+
     $request->validate(['email' => 'required|email']);
 
     $status = Password::sendResetLink(
         $request->only('email')
     );
+
+    Log::info(Password::RESET_LINK_SENT);
+    Log::info($status);
 
     return $status === Password::RESET_LINK_SENT
                 ? back()->with(['status' => __($status)])
@@ -174,6 +185,9 @@ Route::get('/reset-password/{token}', function ($token) {
 
 
 Route::post('/reset-password', function (Request $request) {
+
+    Log::info($request);
+
     $request->validate([
         'token' => 'required',
         'email' => 'required|email',
@@ -185,13 +199,15 @@ Route::post('/reset-password', function (Request $request) {
         function ($user, $password) {
             $user->forceFill([
                 'password' => Hash::make($password)
-            ])->setRememberToken(Str::random(60));
+            ]);//->setRememberToken(Str::random(60));
 
             $user->save();
 
             event(new PasswordReset($user));
         }
     );
+
+    Log::info($status);
 
     return $status === Password::PASSWORD_RESET
                 ? redirect()->route('login')->with('status', __($status))

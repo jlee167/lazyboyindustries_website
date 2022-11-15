@@ -27,12 +27,12 @@
       <div class="form-group">
         <input name="token" type="hidden" class="form-control" />
         <small class="form-text text-muted">New password</small>
-        <input id="password" name="password" type="text" class="form-control" />
+        <input id="password" name="password" type="password" class="form-control" />
         <small class="form-text text-muted">Confirm new password</small>
-        <input name="passwordConfirmation" type="text" class="form-control" />
+        <input id="passwordConfirmation" type="password" class="form-control" />
       </div>
       <div class="form-group">
-        <input class="btn btn-primary" type="submit" value="submit">
+        <div class="btn btn-primary" onclick="resetPassword()">Send</div>
       </div>
     </form>
   </main>
@@ -43,7 +43,6 @@
   const url = new URL(window.location.href);
   const email = url.searchParams.get('email');
   const token = window.location.href.split("/").pop().split("?").shift();
-  window.alert('token='+token+'\n'+'email='+email);
 
   window.resetPassword = () => {
     fetch('/reset-password', {
@@ -52,16 +51,17 @@
         'Content-Type': 'application/json',
         'X-CSRF-TOKEN': window.env.CSRF_TOKEN
       },
-      body: {
+      body: JSON.stringify({
         token: token,
         email: email,
         password: document.getElementById('password').value,
         password_confirmation: document.getElementById('passwordConfirmation').value,
-      }
+      })
     })
     .then(response => {
       if (response.status === 200) {
         window.alert("Password Reset Complete");
+        window.location.href = '/views/login';//window.location.href.split('/')[2];
       }
     })
     .catch((err) => {
