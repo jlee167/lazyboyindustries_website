@@ -28,7 +28,7 @@
             <lottie-player
               src="https://assets7.lottiefiles.com/packages/lf20_47pyyfcf.json"
               background="transparent" speed="1"
-              style="width: 50px; height: 50px;" loop autoplay>
+              style="width: 50px; height: 50px; margin-right: 1rem;" loop autoplay>
             </lottie-player>
             <h2 class="topBarText">@{{ title }}</h2>
           </div>

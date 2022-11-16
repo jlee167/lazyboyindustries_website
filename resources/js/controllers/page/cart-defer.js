@@ -45,7 +45,7 @@ window.purchase = (productID, quantity) => {
 window.cartApp = new Vue({
     el: "#cart",
     data: {
-        title: String("My Cart"),
+        title: String("Cart"),
         items: [],
         discount: Number(0),
         credits: Number(0),
@@ -104,12 +104,6 @@ function getCart() {
         .then(jsonData => {
             if (jsonData.result) {
                 jsonData.cart.forEach(function (value, index, array) {
-                    // let newItem = new CartItem();
-                    // newItem.productID = value.product_id;
-                    // newItem.title = value.title;
-                    // newItem.imgUrl = value.img_url;
-                    // newItem.price = value.price_credits;
-                    // newItem.quantity = value.quantity;
                     const item = new CartItem(new CartItemDTO(value));
                     cartApp.items.push(item);
                 })
