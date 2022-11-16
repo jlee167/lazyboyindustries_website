@@ -49,7 +49,7 @@
               </div>
 
               <a id="postBtn" class="btn" role="button"
-                :href="'createpost?forum=' + forumName"> + </a>
+                :href="'createpost?forum=' + forumName"> Write </a>
             </section>
             <div v-if="searchKeyword" class="mt-5">
                 <div>
