@@ -36,7 +36,6 @@
     justify-content: start;
     align-items: center;
     border-bottom: 2px rgba(148, 148, 148, 0.719) solid;
-    padding-bottom: 0.5rem;
 }
 
 .support-headers {
@@ -108,5 +107,4 @@ label {
 
 .bottom-indicator {
     border-bottom: 2px rgba(36, 36, 36, 0.63) solid;
-    padding-bottom: 3px;
 }
