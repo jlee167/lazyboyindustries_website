@@ -31,7 +31,11 @@
 }
 
 .support-menu {
-    border-bottom: 2px rgba(122, 122, 122, 0.651) solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 2px rgba(148, 148, 148, 0.719) solid;
     padding-bottom: 0.5rem;
 }
 
