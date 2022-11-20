@@ -30,27 +30,13 @@
     width: 150px;
 }
 
-.support-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: ;
-    align-items: top;
-}
-
 .support-headers {
     display: inline-block;
     color: #343032;
     cursor: pointer;
+    margin-bottom: 50px;
     font-weight: 700;
-}
-
-.support-header-container {
-    height: 100%;
-    border-radius: 0.3rem;
-}
-
-.support-header-container:hover {
-    background-color: rgba(136, 135, 135, 0.61);
+    margin-left: 1.5em;
 }
 
 .sidebar-text {
@@ -110,5 +96,6 @@ label {
 }
 
 .bottom-indicator {
-    color: #3182f6;
+    border-bottom: 3px blue solid;
+    padding-bottom: 3px;
 }
