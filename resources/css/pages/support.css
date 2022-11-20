@@ -32,7 +32,7 @@
 
 .support-headers {
     display: inline-block;
-    color: var(--grey500);
+    color: rgb(85, 85, 85);
     cursor: pointer;
     font-weight: 700;
     border-radius: 0.3rem;
