@@ -46,6 +46,10 @@
     font-weight: 700;
 }
 
+.support-header-container {
+    height: 100%;
+}
+
 .sidebar-text {
     margin: auto;
     color: white;

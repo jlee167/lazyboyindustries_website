@@ -28,11 +28,11 @@
       <section id="FAQ">
         <div>
           <div class="support-menu">
-            <div class="support-headers mr-2rem"
+            <div class="support-header-container" class="support-headers mr-2rem"
               :class="{ 'bottom-indicator': FAQview }">
               <h6 class="support-headers" @click="showFAQ()"> F.A.Q </h6>
             </div>
-            <div :class="{ 'bottom-indicator': reqView }">
+            <div class="support-header-container" :class="{ 'bottom-indicator': reqView }">
               <h6 class="support-headers support-headers"
                 @click="showRequest()">
                 Make Requests </h6>
