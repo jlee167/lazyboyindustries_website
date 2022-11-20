@@ -32,10 +32,9 @@
 
 .support-menu {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    border-bottom: 2px rgba(148, 148, 148, 0.719) solid;
+    flex-direction: column;
+    justify-content: ;
+    align-items: top;
 }
 
 .support-headers {
@@ -47,6 +46,11 @@
 
 .support-header-container {
     height: 100%;
+    border-radius: 0.3rem;
+}
+
+.support-header-container:hover {
+    background-color: rgba(136, 135, 135, 0.61);
 }
 
 .sidebar-text {
@@ -106,5 +110,5 @@ label {
 }
 
 .bottom-indicator {
-    border-bottom: 2px rgba(36, 36, 36, 0.63) solid;
+    color: #3182f6;
 }
