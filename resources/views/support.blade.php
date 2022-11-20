@@ -27,11 +27,17 @@
     <article class="contents-support" v-cloak>
       <section id="FAQ">
         <div>
-          <h4 class="support-headers" @click="showFAQ()"
-            :class="{ 'bottom-indicator': FAQview }"> F.A.Q </h4>
-          <h4 class="support-headers" @click="showRequest()"
-            :class="{ 'bottom-indicator': reqView }">
-            Make Requests </h4>
+          <div class="support-menu">
+            <div class="support-headers mr-2rem"
+              :class="{ 'bottom-indicator': FAQview }">
+              <h6 class="support-headers" @click="showFAQ()"> F.A.Q </h6>
+            </div>
+            <div :class="{ 'bottom-indicator': reqView }">
+              <h6 class="support-headers support-headers"
+                @click="showRequest()">
+                Make Requests </h6>
+            </div>
+          </div>
 
           <qna-dropdown v-show="FAQview" :qna-arr="qnaArr" max-width=600>
           </qna-dropdown>

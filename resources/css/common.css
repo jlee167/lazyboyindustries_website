@@ -67,6 +67,10 @@
     margin-bottom: 20px;
 }
 
+.mr-2rem {
+    margin-right: 2rem;
+}
+
 .overflow-hidden {
     overflow:hidden !important;
 }
