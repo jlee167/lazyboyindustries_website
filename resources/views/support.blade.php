@@ -36,7 +36,7 @@
           <qna-dropdown v-show="FAQview" :qna-arr="qnaArr" max-width=600>
           </qna-dropdown>
 
-          <section v-show="reqView">
+          <section v-show="reqView" class="mt-5">
             <div>
               <form class="w-100" action="/api/support_request"
                 enctype="multipart/form-data" method="POST">
