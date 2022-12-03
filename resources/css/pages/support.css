@@ -32,11 +32,15 @@
 
 .support-headers {
     display: inline-block;
-    color: #343032;
+    color: rgb(85, 85, 85);
     cursor: pointer;
-    margin-bottom: 50px;
-    font-weight: 700;
-    margin-left: 1.5em;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    padding: 3px 3px 3px 3px;
+}
+
+.support-headers:hover {
+    background-color: rgba(236, 236, 236, 0.87);
 }
 
 .sidebar-text {
@@ -96,6 +100,5 @@ label {
 }
 
 .bottom-indicator {
-    border-bottom: 3px blue solid;
-    padding-bottom: 3px;
+    color: #3182f6;
 }

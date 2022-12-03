@@ -37,7 +37,8 @@
           <img class="img-logo"
             src="https://img.favpng.com/14/18/5/mustang-pony-cartoon-animation-drawing-png-favpng-eRTaFnQzSSKqTVJNerrQan3dx.jpg">
           <h1 class="front-label"> Lazyboy Industries</h1>
-          <scroll-arrow direction="down" :motion-enabled="true" class="mt-5"></scroll-arrow>
+          <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
+          </scroll-arrow>
         </div>
 
       </section>
@@ -58,8 +59,7 @@
             <div id="skillContainer" ref="skillContainer"
               class="container-skills">
               <div id="skill1" ref="skill1" class="skill-item ">
-                <img class="img-skills"
-                  src="{{ asset('/images/RTL.png') }}">
+                <img class="img-skills" src="{{ asset('/images/RTL.png') }}">
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Digital Logics</h1>
                   <p class="skill-desc-details">
@@ -105,13 +105,15 @@
         <div class="scrollable-page">
           <div class="flex-column flex-center-vh vh-100 vw-100">
             <h1 id="section3Header"> Current Projects</h1>
-            <div class="curr-project-items flex flex-row justify-content-center">
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}"/>
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}"/>
-            </div>
-            <div class="curr-project-items flex flex-row justify-content-center">
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}"/>
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}"/>
+            <div class="flex-column flex-center-vh curr-project-items">
+              <div class="flex flex-row justify-content-center">
+                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
+                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
+              </div>
+              <div class="flex flex-row justify-content-center">
+                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
+                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
+              </div>
             </div>
           </div>
         </div>
