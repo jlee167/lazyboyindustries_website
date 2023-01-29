@@ -35,7 +35,7 @@
         </video>
         <div id="logoView" class="scrollable-page">
           <img class="img-logo"
-            src="https://img.favpng.com/14/18/5/mustang-pony-cartoon-animation-drawing-png-favpng-eRTaFnQzSSKqTVJNerrQan3dx.jpg">
+            src="{{ asset('/images/logo_final_6.jpg') }}">
           <h1 class="front-label"> Lazyboy Industries</h1>
           <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
           </scroll-arrow>
