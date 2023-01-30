@@ -87,6 +87,7 @@ export default {
 #image {
   width: 170px;
   height: 170px;
+  padding: 20px 25px 20px 25px;
   margin-top: 15px;
   border: 2px rgb(255, 66, 97) solid;
   background-color: white;
