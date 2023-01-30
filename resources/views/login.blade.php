@@ -19,8 +19,6 @@
 
 
 <body>
-  @include('includes.layouts.navbar')
-
   <main id="view-login">
     <article v-show="!resourcesLoaded" id="loadingScreen">
       <pulse-loader loading="loading" color="green" size="20px"></pulse-loader>
@@ -94,9 +92,6 @@
           </section>
         </article>
       </div>
-      <article class="w-100">
-        @include('includes.layouts.footer')
-      </article>
     </article>
   </main>
 
