@@ -87,7 +87,7 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 40px;
+  height: 32px;
   align-items: center;
 }
 
