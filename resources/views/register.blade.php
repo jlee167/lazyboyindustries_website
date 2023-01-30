@@ -43,7 +43,7 @@
             placeholder="Confirm password" aria-describedby="search-btn">
 
           <button id="registerBtn" type="button" class="btn rounded-0" onclick="javascript:register(null, null)">
-            Register (No SNS Link)
+            Register
           </button>
 
           <div class="d-flex flex-row justify-content-center align-items-center mt-4 mb-2">
