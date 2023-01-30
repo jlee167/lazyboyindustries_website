@@ -29,7 +29,7 @@
                   <div
                     class="d-flex flex-row justify-content-center overflow-hidden">
                     <img id="resumeFaceshot"
-                      src="{{ asset('/images/GitHub-Mark-Light-32px.png') }}">
+                      src="{{ asset('/images/logo_sitting_small.png') }}">
                   </div>
                   <h2 class="title-font"> LazyBoy </h2>
                   <hr class="divider-sidebar">
