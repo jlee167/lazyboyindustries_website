@@ -35,7 +35,7 @@
         </video>
         <div id="logoView" class="scrollable-page">
           <img class="img-logo"
-            src="{{ asset('/images/logo_final_7.png') }}">
+            src="{{ asset('/images/logo_final_6.jpg') }}">
           <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
           </scroll-arrow>
         </div>
