@@ -36,7 +36,6 @@
         <div id="logoView" class="scrollable-page">
           <img class="img-logo"
             src="{{ asset('/images/logo_final_7.png') }}">
-          <h1 class="front-label"> Lazyboy Industries</h1>
           <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
           </scroll-arrow>
         </div>
