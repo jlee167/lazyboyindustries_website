@@ -89,6 +89,7 @@ export default {
   height: 170px;
   margin-top: 15px;
   border: 2px rgb(255, 66, 97) solid;
+  background-color: white;
 }
 
 #barcode {
