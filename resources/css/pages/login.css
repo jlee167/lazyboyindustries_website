@@ -6,6 +6,7 @@
     margin:auto;
     width: 100%;
     min-height: 100vh;
+    background-color: #05172a !important;
 }
 
 #mainView {
@@ -51,6 +52,7 @@
     font-size: 16px;
     font-weight: 600;
     font-family: 'Nunito Sans', sans-serif;
+    border-radius: 0.8rem;
 }
 
 #loginBtn:hover {
@@ -98,6 +100,7 @@ p.bottom-menu-item {
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 15px;
+    border-radius: 1rem;
 }
 
 .login-form {
@@ -110,9 +113,12 @@ input.login-form-input {
     height: 50px;
     align: center;
     padding-left: 15px;
+    border-radius: 0.8rem;
 }
 
-
+.border-08rem-forced {
+    border-radius: 0.8rem !important;
+}
 
 .btn-container-kakao {
     display: flex;

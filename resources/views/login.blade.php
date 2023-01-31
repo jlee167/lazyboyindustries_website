@@ -27,17 +27,17 @@
     <article v-show="resourcesLoaded" :class="{ flex: resourcesLoaded }"
       id="mainView" v-cloak>
       <div class="login-prompt-container">
-        <article id="login-manual" class="login-prompt card rounded-0">
+        <article id="login-manual" class="login-prompt card">
           <form class="login-form">
             <div style="margin:0 auto; float:center;">
-              <input class="form-login login-form-input mb-2 rounded-0"
+              <input class="form-login login-form-input mb-2"
                 id="input_account" type="text" placeholder="Username"
                 aria-describedby="search-btn" @keyup.enter="nonSocialLogin()">
-              <input class="form-login login-form-input mb-2 rounded-0"
+              <input class="form-login login-form-input mb-2"
                 id="input_password" type="password" placeholder="Password"
                 aria-describedby="search-btn" @keyup.enter="nonSocialLogin()">
               <button id="loginBtn" type="button"
-                class="btn rounded-0 no-outline mb-3" @click="nonSocialLogin()"> Login
+                class="btn no-outline mb-3" @click="nonSocialLogin()"> Login
               </button>
             </div>
           </form>
@@ -54,7 +54,7 @@
               <td class="m-auto w-100">
                 <a id="kakaoAuthBtn" class="hover-no-effect"
                   href="javascript:loginWithKakao()">
-                  <div id="kakaoBtnBackground" class="btn-hover-shadow">
+                  <div id="kakaoBtnBackground" class="btn-hover-shadow border-08rem-forced">
                     <img class="icon"
                       src="{{ asset('/images/kakao_icon.png') }}"
                       style="display:inline-block; width:22px; height:20px;">
@@ -68,7 +68,7 @@
             <tr class="d-flex justify-content-center h-50px mt-2">
               <td class="m-auto w-100">
                 <div id="gSignInWrapper">
-                  <div class="btn-hover-shadow" id="googleAuthBtn"
+                  <div class="btn-hover-shadow border-08rem-forced" id="googleAuthBtn"
                     class="customGPlusSignIn">
                     <img id="googleLogo" class="icon"
                       src="https://developers.google.com/identity/images/g-logo.png">
