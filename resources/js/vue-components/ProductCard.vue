@@ -85,7 +85,7 @@ export default {
 }
 
 #image {
-  width: 170px;
+  width: 140px;
   height: 170px;
   padding: 20px 25px 20px 25px;
   margin-top: 15px;
