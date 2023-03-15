@@ -122,7 +122,7 @@
                         </b></h2>
                       <div class="resume-section-contents">
                         <div class="resume-section-text pr-5">
-                          {!! ResumeStrings::$rtlSkills !!}
+                          TBD
                         </div>
                         <div class="resume-gadget-section">
                           <h5 class="mb-2">Hardware Skills</h5>
@@ -155,7 +155,7 @@
                         </b></h2>
                       <div class="resume-section-contents">
                         <div class="resume-section-text pr-5">
-                          {!! ResumeStrings::$rtlSkills !!}
+                          TBD
                         </div>
                         <div class="resume-gadget-section">
                           <h5 class="mb-2">General</h5>
