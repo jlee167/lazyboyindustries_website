@@ -104,14 +104,18 @@
           <div class="flex-column flex-center-vh vh-100 vw-100">
             <h1 id="section3Header"> References </h1>
             <div class="flex-column flex-center-vh curr-project-items">
-              <div class="flex flex-row justify-content-center">
+
+              <button class="btn btn-secondary">LinkedIn</button>
+              <button class="btn btn-dark">Github</button>
+
+              <!--div class="flex flex-row justify-content-center">
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
               </div>
               <div class="flex flex-row justify-content-center">
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
-              </div>
+              </div-->
             </div>
           </div>
         </div>
