@@ -106,10 +106,10 @@
             <div class="flex-column flex-center-vh">
 
               <div id="linkedinRef" class="ref-link flex-column flex-center-vh">
-                <a href="https://www.linkedin.com/in/jihoon-lee-25467a157/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/jihoon-lee-25467a157/" class="ref-hyperlink">LinkedIn</a>
               </div>
               <div id="githubRef" class="ref-link mt-5">
-                <a href="https://github.com/jlee167">Github</a>
+                <a href="https://github.com/jlee167" class="ref-hyperlink">Github</a>
               </div>
 
               <!--div class="flex flex-row justify-content-center">
