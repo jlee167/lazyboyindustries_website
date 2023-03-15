@@ -35,7 +35,7 @@
         </video>
         <div id="logoView" class="scrollable-page">
           <img class="img-logo"
-            src="{{ asset('/images/logo_safetyhat.jpg') }}">
+            src="{{ asset('/images/logo_safetyhat.png') }}">
             <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
             </scroll-arrow>
         </div>
@@ -102,7 +102,7 @@
         <canvas class="bg-particle"></canvas>
         <div class="scrollable-page">
           <div class="flex-column flex-center-vh vh-100 vw-100">
-            <h1 id="section3Header"> Current Projects</h1>
+            <h1 id="section3Header"> References </h1>
             <div class="flex-column flex-center-vh curr-project-items">
               <div class="flex flex-row justify-content-center">
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
