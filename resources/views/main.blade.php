@@ -108,7 +108,7 @@
               <div id="linkedinRef" class="ref-link flex-column flex-center-vh">
                 <a href="https://www.linkedin.com/in/jihoon-lee-25467a157/" class="ref-hyperlink">LinkedIn</a>
               </div>
-              <div id="githubRef" class="ref-link mt-5">
+              <div id="githubRef" class="ref-link mt-5 flex-column flex-center-vh">
                 <a href="https://github.com/jlee167" class="ref-hyperlink">Github</a>
               </div>
 
