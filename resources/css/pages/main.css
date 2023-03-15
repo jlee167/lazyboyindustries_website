@@ -57,7 +57,7 @@
 
 .scroll-section3 {
     /*background-color: #655eff;*/
-    background-image: "/images/pexels-visit-greenland-360912.jpg";
+    background-image: url('/images/pexels-visit-greenland-360912.jpg');
     background-size: cover;
     overflow: hidden;
 }
