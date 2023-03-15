@@ -105,8 +105,12 @@
             <h2 id="section3Header"> References </h2>
             <div class="flex-column flex-center-vh">
 
-              <a id="linkedinRef" class="ref-link" href="https://www.linkedin.com/in/jihoon-lee-25467a157/">LinkedIn</a>
-              <a id="githubRef" class="ref-link mt-5" href="https://github.com/jlee167">Github</a>
+              <div id="linkedinRef" class="ref-link flex-column flex-center-vh">
+                <a href="https://www.linkedin.com/in/jihoon-lee-25467a157/">LinkedIn</a>
+              </div>
+              <div id="githubRef" class="ref-link mt-5">
+                <a href="https://github.com/jlee167">Github</a>
+              </div>
 
               <!--div class="flex flex-row justify-content-center">
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
