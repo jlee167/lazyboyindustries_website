@@ -141,6 +141,8 @@
 #brand-logo {
     margin: auto;
     margin-right: 5px;
+    height: 45px;
+    width: 70px;
 }
 
 .navbar .navbar-collapse {
