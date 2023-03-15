@@ -36,8 +36,6 @@
         <div id="logoView" class="scrollable-page">
           <img class="img-logo"
             src="{{ asset('/images/logo_safetyhat.png') }}">
-        </div>
-        <div>
             <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
             </scroll-arrow>
         </div>
