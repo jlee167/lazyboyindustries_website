@@ -256,11 +256,22 @@
     margin: 2rem 2rem 2rem 2rem;
 }
 
-.curr-project-items {
-    background-color: #736cffbf;
-    border-radius: 1rem;
+
+.ref-link {
+    width: 150px;
+    height: 45px;
+    border-radius: 3px;
 }
 
+#linkedinRef {
+    background-color: rgb(0, 102, 255);
+    color:white;
+}
+
+#githubRef {
+    background-color: black;
+    color:white;
+}
 
 #section1 {
     display: flex;

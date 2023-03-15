@@ -102,11 +102,11 @@
         <canvas class="bg-particle"></canvas>
         <div class="scrollable-page">
           <div class="flex-column flex-center-vh vh-100 vw-100">
-            <h1 id="section3Header"> References </h1>
-            <div class="flex-column flex-center-vh curr-project-items">
+            <h2 id="section3Header"> References </h2>
+            <div class="flex-column flex-center-vh">
 
-              <button class="btn btn-secondary">LinkedIn</button>
-              <button class="btn btn-dark">Github</button>
+              <a id="linkedinRef" class="ref-link" href="https://www.linkedin.com/in/jihoon-lee-25467a157/">LinkedIn</a>
+              <a id="githubRef" class="ref-link mt-5" href="https://github.com/jlee167">Github</a>
 
               <!--div class="flex flex-row justify-content-center">
                 <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
