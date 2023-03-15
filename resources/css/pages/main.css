@@ -99,8 +99,8 @@
 
 .img-logo {
     display: inline-block;
-    width: 800px;
-    height: 800px;
+    width: 760px;
+    height: 480px;
     margin-left: 2px;
     margin-right: 30px;
     image-rendering: -webkit-optimize-contrast;
@@ -291,11 +291,6 @@
         font-weight: 400 !important;
     }
 
-    .img-logo {
-        width: 250px;
-        height: 250px;
-    }
-
     .preface {
         margin-right: 18px;
     }
@@ -313,6 +308,11 @@
     .img-skills {
         width: 7rem;
         height: 7rem;
+    }
+
+    .img-logo {
+        width: 320px;
+        height: 200px;
     }
 
     .header-skills {
