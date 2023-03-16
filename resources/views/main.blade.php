@@ -101,7 +101,7 @@
         <canvas class="bg-particle"></canvas>
         <div class="scrollable-page">
           <div class="flex-column flex-center-vh vh-100 vw-100">
-            <h2 id="section3Header"> References </h2>
+            <h2 id="section3Header"> Links </h2>
             <div class="flex-column flex-center-vh">
 
               <div id="linkedinRef" class="ref-link flex-row flex-center-vh"
