@@ -54,8 +54,8 @@
 
 
           {{-- Kakao Signin Button --}}
-          <a id="kakaoAuthBtn" class="hover-no-effect border-08rem-forced" href="javascript:loginWithKakao()">
-            <div id="kakaoBtnBackground" class="btn-hover-shadow">
+          <a id="kakaoAuthBtn" class="hover-no-effect" href="javascript:loginWithKakao()">
+            <div id="kakaoBtnBackground" class="btn-hover-shadow border-08rem-forced">
               <img class="icon-kakao" src="{{asset('/images/kakao_icon.png')}}">
               <span class="buttonText"> Register (Link Kakao Account)</span>
             </div>
