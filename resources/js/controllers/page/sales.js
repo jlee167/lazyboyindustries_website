@@ -40,16 +40,16 @@ window.salesApp = new Vue({
         this.getProduct();
         switch(this.productID) {
             case 1:
-                this.imgUrl = "/images/product_usb"
+                this.imgUrl = "/images/product_usb.jpg"
                 break;
             case 2:
-                this.imgUrl = "/images/product_wifi"
+                this.imgUrl = "/images/product_wifi.jpg"
                 break;
             case 3:
-                this.imgUrl = "/images/product_lte"
+                this.imgUrl = "/images/product_lte.jpg"
                 break;
             case 4:
-                this.imgUrl = "/images/product_fpga"
+                this.imgUrl = "/images/product_fpga.jpg"
                 break;
             default:
                 break;
