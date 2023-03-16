@@ -260,7 +260,8 @@
 .ref-link {
     width: 150px;
     height: 45px;
-    border-radius: 3px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .ref-hyperlink{

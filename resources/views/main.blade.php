@@ -105,15 +105,15 @@
             <h2 id="section3Header"> References </h2>
             <div class="flex-column flex-center-vh">
 
-              <div id="linkedinRef" class="ref-link flex-column flex-center-vh"
+              <div id="linkedinRef" class="ref-link flex-row flex-center-vh"
                 onclick="window.location.href='https://www.linkedin.com/in/jihoon-lee-25467a157/'">
                 <img class="footer-contanct-icon" src="{{ asset('/images/linkedin.svg') }}">
-                <a class="ref-hyperlink">LinkedIn</a>
+                <a class="ref-hyperlink ml-2">LinkedIn</a>
               </div>
-              <div id="githubRef" class="ref-link mt-3 flex-column flex-center-vh"
+              <div id="githubRef" class="ref-link mt-3 flex-row flex-center-vh"
                 onclick="window.location.href='https://github.com/jlee167'">
                 <img class="footer-contanct-icon" src="{{ asset('/images/GitHub-Mark-Light-32px.png') }}" />
-                <a class="ref-hyperlink">Github</a>
+                <a class="ref-hyperlink ml-2">Github</a>
               </div>
             </div>
           </div>
