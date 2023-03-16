@@ -64,7 +64,7 @@
 
           {{-- Google Signin Button --}}
           <div id="gSignInWrapper" class="mt-2">
-            <div class="btn-hover-shadow" id="googleAuthBtn" class="customGPlusSignIn border-08rem-forced">
+            <div class="btn-hover-shadow border-08rem-forced" id="googleAuthBtn" class="customGPlusSignIn">
               <img class="icon-google" src="https://developers.google.com/identity/images/g-logo.png">
               <span class="buttonText"> Register (Link Google Account)</span>
             </div>
