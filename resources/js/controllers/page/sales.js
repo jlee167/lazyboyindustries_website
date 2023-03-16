@@ -38,6 +38,22 @@ window.salesApp = new Vue({
     },
     mounted() {
         this.getProduct();
+        switch(this.productID) {
+            case 1:
+                this.imgUrl = "/images/product_usb"
+                break;
+            case 2:
+                this.imgUrl = "/images/product_wifi"
+                break;
+            case 3:
+                this.imgUrl = "/images/product_lte"
+                break;
+            case 4:
+                this.imgUrl = "/images/product_fpga"
+                break;
+            default:
+                break;
+        }
     }
 });
 
