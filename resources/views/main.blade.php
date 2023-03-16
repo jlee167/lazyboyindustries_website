@@ -70,7 +70,7 @@
 
               <div id="skill2" ref="skill2" class="skill-item ">
                 <img class="img-skills"
-                  src="{{ asset('/images/HARDWARE.png') }}">
+                  src="{{ asset('/images/HARDWARE.jpg') }}">
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Hardware</h1>
                   <p class="skill-desc-details">
