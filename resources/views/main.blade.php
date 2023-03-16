@@ -61,9 +61,9 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Digital Logics</h1>
                   <p class="skill-desc-details">
-                    3 Years of experience in FPGA engineering.
-                    I have experience with some time-critical modules and
-                    various protocols.
+                    Years of working experience in FPGA engineering.
+                    First-hand experience with various serial and bus protocols.
+                    Proficient in Xilinx platform, but can adapt to different environments quickly.
                   </p>
                 </div>
               </div>
@@ -74,8 +74,8 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Hardware</h1>
                   <p class="skill-desc-details">
-                    I'm from an Electrical Engineering background (BSEE).
-                    I can design simple digital/analog circuits below 1Ghz.<br>
+                    I can design Analog/Digital circuits with high speed requirements.
+                    PCB design and production service are provided along with schematics.<br>
                   </p>
                 </div>
               </div>
@@ -86,9 +86,8 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Software</h1>
                   <p class="skill-desc-details">
-                    3 Years of experience in FPGA engineering.
-                    I have experience with some time-critical modules and
-                    various protocols.
+                    Able to program in various platforms from low-level MCU environment to
+                    user applications on mobile or desktop platform. Also proficient in web programming (front-end and back-end).
                   </p>
                 </div>
               </div>
