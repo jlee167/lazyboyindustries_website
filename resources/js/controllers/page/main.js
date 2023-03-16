@@ -46,7 +46,7 @@ function onLoad() {
         color: '#ffffff',
         connectParticles: true,
         maxParticles:
-            300
+            150
         ,
 
         // options for breakpoints
@@ -54,21 +54,21 @@ function onLoad() {
             {
                 breakpoint: 768,
                 options: {
-                    maxParticles: 200,
+                    maxParticles: 100,
                     color: '#48F2E3',
-                    connectParticles: false
+                    connectParticles: true
                 }
             }, {
                 breakpoint: 425,
                 options: {
-                    maxParticles: 100,
+                    maxParticles: 45,
                     connectParticles: true
                 }
             }, {
                 breakpoint:320,
                 options: {
-                    maxParticles:
-                        30
+                    maxParticles:30,
+                    connectParticles: true,
                 }
             }
         ],
