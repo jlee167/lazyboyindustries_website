@@ -11,3 +11,4 @@
 | /members/2fa-key         | DELETE  | **TBD | Disable 2FA feature |
 | /members/password         | PUT  | **TBD | Change password |
 | /email/resend | GET | **TBD | Resend account verification email |
+| /email/verify/{id}/{hash} | GET | **TBD | Confirm email verification and return user to main page |
