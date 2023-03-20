@@ -35,6 +35,12 @@ API 리스트 (작성중)</h1>
 | ------------- | ------------- | ------------- |------------- |
 | /forum/{forum_name}/post/{post_id}   | GET  | **TBD | Retrieve a post by id |
 | /forum/{forum_name}/post/   | POST  | **TBD | Register a new post written by current user |
-| /forum/{forum_name}/post/{post_id}   | PUT  | **TBD | Update a post |
+| /forum/{forum_name}/post/{post_id}   | PUT  | **TBD | Update the contents a post |
 | /forum/{forum_name}/post/{post_id}   | DELETE  | **TBD | Delete a post if current user is the author |
 | /forum/{forum_name}/post/{post_id}/like   | POST  | **TBD | Current user likes a post |
+
+| /forum/comment/{comment_id}   | GET  | **TBD | Returns a single comment specified by comment ID |
+| /forum/comment   | POST  | **TBD | Register a new comment |
+| /forum/comment/{comment_id}   | PUT  | **TBD | Update the contents of a comment |
+| /forum/comment/{comment_id}   | DELETE  | **TBD | Deletes a comment by comment ID |
+| /forum/{forum_name}/page/{page}/{keyword?}   | GET  | **TBD | Returns a page of forum posts specified by page and search keyword |
