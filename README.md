@@ -12,3 +12,9 @@
 | /members/password         | PUT  | **TBD | Change password |
 | /email/resend | GET | **TBD | Resend account verification email |
 | /email/verify/{id}/{hash} | GET | **TBD | Confirm email verification and return user to main page |
+| /forgot-password | GET | **TBD | Redirect to password recovery page |
+| /forgot-password | POST | **TBD | Send password recovery email to user |
+| /reset-password | GET | **TBD | Reset password of user in password recovery process |
+| /self/webtoken | GET | **TBD | Get JWT token for current user's own stream |
+| /self/webtoken | POST | **TBD | Renew JWT token for current user's own stream |
+| /{stream_id}/webtoken | GET | **TBD | Get JWT token for specified stream if the user is a protector of streamer |
