@@ -5,8 +5,8 @@ API List (Incomplete)
 | ------------- | ------------- | ------------- |------------- |
 | /ping         | GET  | **TBD | Get ping from the server |
 | /auth         | POST  | **TBD | Normal login with ID and Password|
-| /auth/kakao         | POST  | **TBD | OAuth Login with Kakao account|
-| /auth/google         | POST  | **TBD | OAuth Login with Google account|
+| /auth/kakao         | POST  | **TBD | Request Kakao OAuth authentication |
+| /auth/google         | POST  | **TBD | Request Google OAuth authentication |
 | /auth/2fa | POST | **TBD | Authenticate with Google OTP |
 | /members/2fa-key         | GET  | **TBD | Enable 2FA feature and get 2FA QR Code |
 | /members/2fa-key         | DELETE  | **TBD | Disable 2FA feature |
@@ -16,8 +16,11 @@ API List (Incomplete)
 | /forgot-password | GET | **TBD | Redirect to password recovery page |
 | /forgot-password | POST | **TBD | Send password recovery email to user |
 | /reset-password | GET | **TBD | Reset password of user in password recovery process |
+| /self/ | GET | **TBD | Get current user's information |
 | /self/webtoken | GET | **TBD | Get JWT token for current user's own stream |
 | /self/webtoken | POST | **TBD | Renew JWT token for current user's own stream |
+| /self/profile_image        | GET  | **TBD | Get user's profile image URL |
+| /self/uid        | DELETE  | **TBD | Get current user's ID number |
 | /{stream_id}/webtoken | GET | **TBD | Get JWT token for specified stream if the user is a protector of streamer |
 | /members/{username}        | GET  | **TBD | Get user info from username |
 | /members/{username}        | POST  | **TBD | Register a new user |
