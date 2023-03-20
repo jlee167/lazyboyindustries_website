@@ -29,6 +29,7 @@ API 리스트 (작성중)</h1>
 | /members/        | PUT  | **TBD | Update user information |
 | /members/        | DELETE  | **TBD | Delete a user from database |
 
+
 <h3>Forum</h3>
 
 |    Endpoint   | HTTP Request  | Request Body | Description|
@@ -47,3 +48,13 @@ API 리스트 (작성중)</h1>
 | /forum/comment/{comment_id}   | PUT  | **TBD | Update the contents of a comment |
 | /forum/comment/{comment_id}   | DELETE  | **TBD | Deletes a comment by comment ID |
 
+<h3>Guardianship Management</h3>
+
+|    Endpoint   | HTTP Request  | Request Body | Description|
+| ------------- | ------------- | ------------- |------------- |
+| /members/guardian/all   | GET  | **TBD | Returns the guardians of current user |
+| /members/guardian/{username}   | POST  | **TBD | Request another user to be current user's guardian |
+| /members/guardian/{uid}   | DELETE  | **TBD | Remove a guardian from the guardian list |
+| /members/protected/all   | GET  | **TBD | Returns the protecteds of current user |
+| /members/protected/{username}   | POST  | **TBD | Request another user to be current user's protected |
+| /members/protected/{uid}   | DELETE  | **TBD | Remove a protected from the protecteds list |
