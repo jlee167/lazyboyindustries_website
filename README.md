@@ -28,7 +28,7 @@ API 리스트 (작성중)</h1>
 | /members/{username}        | POST  | **TBD | Register a new user |
 | /members/        | PUT  | **TBD | Update user information |
 | /members/        | DELETE  | **TBD | Delete a user from database |
-
+<br>
 
 <h3>Forum</h3>
 
@@ -47,6 +47,7 @@ API 리스트 (작성중)</h1>
 | /forum/comment   | POST  | **TBD | Register a new comment |
 | /forum/comment/{comment_id}   | PUT  | **TBD | Update the contents of a comment |
 | /forum/comment/{comment_id}   | DELETE  | **TBD | Deletes a comment by comment ID |
+<br>
 
 <h3>Guardianship Management</h3>
 
@@ -58,7 +59,7 @@ API 리스트 (작성중)</h1>
 | /members/protected/all   | GET  | **TBD | Returns the protecteds of current user |
 | /members/protected/{username}   | POST  | **TBD | Request another user to be current user's protected |
 | /members/protected/{uid}   | DELETE  | **TBD | Remove a protected from the protecteds list |
-
+<br>
 
 <h3>Commerce API</h3>
 **TBD
