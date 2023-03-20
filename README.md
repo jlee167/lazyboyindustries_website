@@ -1,6 +1,7 @@
 API List (Incomplete)
 
 <h3>User Management</h3>
+
 |    Endpoint   | HTTP Request  | Request Body | Description|
 | ------------- | ------------- | ------------- |------------- |
 | /ping         | GET  | **TBD | Get ping from the server |
