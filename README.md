@@ -3,6 +3,7 @@ API List (Incomplete)
 
 |    Endpoint   | HTTP Request  | Request Body | Description|
 | ------------- | ------------- | ------------- |------------- |
+| /ping         | GET  | **TBD | Get ping from the server |
 | /auth         | POST  | **TBD | Normal login with ID and Password|
 | /auth/kakao         | POST  | **TBD | OAuth Login with Kakao account|
 | /auth/google         | POST  | **TBD | OAuth Login with Google account|
@@ -18,3 +19,7 @@ API List (Incomplete)
 | /self/webtoken | GET | **TBD | Get JWT token for current user's own stream |
 | /self/webtoken | POST | **TBD | Renew JWT token for current user's own stream |
 | /{stream_id}/webtoken | GET | **TBD | Get JWT token for specified stream if the user is a protector of streamer |
+| /members/{username}        | GET  | **TBD | Get user info from username |
+| /members/{username}        | POST  | **TBD | Register a new user |
+| /members/        | PUT  | **TBD | Update user information |
+| /members/        | DELETE  | **TBD | Delete a user from database |
