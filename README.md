@@ -26,5 +26,8 @@ API List (Incomplete)
 | /members/{username}        | POST  | **TBD | Register a new user |
 | /members/        | PUT  | **TBD | Update user information |
 | /members/        | DELETE  | **TBD | Delete a user from database |
-| : /forum/{forum_name}/post/{post_id} :       | GET  | **TBD | Get user info from username |
-|         | GET  | **TBD | Get user info from username |
+| /forum/{forum_name}/post/{post_id}   | GET  | **TBD | Retrieve a post by id |
+| /forum/{forum_name}/post/   | POST  | **TBD | Register a new post written by current user |
+| /forum/{forum_name}/post/{post_id}   | PUT  | **TBD | Update a post |
+| /forum/{forum_name}/post/{post_id}   | DELETE  | **TBD | Delete a post if current user is the author |
+| /forum/{forum_name}/post/{post_id}/like   | POST  | **TBD | Current user likes a post |
