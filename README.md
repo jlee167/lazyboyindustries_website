@@ -26,5 +26,5 @@ API List (Incomplete)
 | /members/{username}        | POST  | **TBD | Register a new user |
 | /members/        | PUT  | **TBD | Update user information |
 | /members/        | DELETE  | **TBD | Delete a user from database |
-| /forum/{forum_name}/post/{post_id}        | GET  | **TBD | Get user info from username |
+| : /forum/{forum_name}/post/{post_id} :       | GET  | **TBD | Get user info from username |
 |         | GET  | **TBD | Get user info from username |
