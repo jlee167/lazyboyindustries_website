@@ -1,6 +1,6 @@
 API List (Incomplete)
 
-,h3>User Management</h3>
+<h3>User Management</h3>
 |    Endpoint   | HTTP Request  | Request Body | Description|
 | ------------- | ------------- | ------------- |------------- |
 | /ping         | GET  | **TBD | Get ping from the server |
@@ -28,6 +28,7 @@ API List (Incomplete)
 | /members/        | DELETE  | **TBD | Delete a user from database |
 
 <h3>Forum</h3>
+
 |    Endpoint   | HTTP Request  | Request Body | Description|
 | ------------- | ------------- | ------------- |------------- |
 | /forum/{forum_name}/post/{post_id}   | GET  | **TBD | Retrieve a post by id |
