@@ -20,9 +20,11 @@ API List (Incomplete)
 | /self/webtoken | GET | **TBD | Get JWT token for current user's own stream |
 | /self/webtoken | POST | **TBD | Renew JWT token for current user's own stream |
 | /self/profile_image        | GET  | **TBD | Get user's profile image URL |
-| /self/uid        | DELETE  | **TBD | Get current user's ID number |
+| /self/uid        | GET  | **TBD | Get current user's ID number |
 | /{stream_id}/webtoken | GET | **TBD | Get JWT token for specified stream if the user is a protector of streamer |
 | /members/{username}        | GET  | **TBD | Get user info from username |
 | /members/{username}        | POST  | **TBD | Register a new user |
 | /members/        | PUT  | **TBD | Update user information |
 | /members/        | DELETE  | **TBD | Delete a user from database |
+| /forum/{forum_name}/post/{post_id}        | GET  | **TBD | Get user info from username |
+|         | GET  | **TBD | Get user info from username |
