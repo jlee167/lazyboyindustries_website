@@ -1,4 +1,4 @@
-** Work in progress
+** Writing API list.  API 리스트 작성중
 
 
 |    Endpoint   | HTTP Request  | Request Body | Description|
