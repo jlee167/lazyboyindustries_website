@@ -45,6 +45,32 @@ function onLoad() {
         selector: '.bg-particle',
         color: '#ffffff',
         connectParticles: true,
+        maxParticles:
+            100
+        ,
+
+        // options for breakpoints
+        responsive: [
+            {
+                breakpoint: 768,
+                options: {
+                    maxParticles: 60,
+                    connectParticles: true
+                }
+            }, {
+                breakpoint: 425,
+                options: {
+                    maxParticles: 25,
+                    connectParticles: true
+                }
+            }, {
+                breakpoint:320,
+                options: {
+                    maxParticles:10,
+                    connectParticles: true,
+                }
+            }
+        ],
     });
 
     this.observeSkillView();

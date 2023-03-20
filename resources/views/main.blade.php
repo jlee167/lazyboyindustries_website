@@ -36,10 +36,9 @@
         <div id="logoView" class="scrollable-page">
           <img class="img-logo"
             src="{{ asset('/images/logo_safetyhat.png') }}">
-          <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
-          </scroll-arrow>
+            <scroll-arrow direction="down" :motion-enabled="true" class="mt-5">
+            </scroll-arrow>
         </div>
-
       </section>
 
       <section id="section2" ref="section2"
@@ -62,21 +61,21 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Digital Logics</h1>
                   <p class="skill-desc-details">
-                    3 Years of experience in FPGA engineering.
-                    I have experience with some time-critical modules and
-                    various protocols.
+                    Years of working experience in FPGA engineering.
+                    First-hand experience with various serial and bus protocols.
+                    Proficient in Xilinx platform, but can adapt to different environments quickly.
                   </p>
                 </div>
               </div>
 
               <div id="skill2" ref="skill2" class="skill-item ">
                 <img class="img-skills"
-                  src="{{ asset('/images/HARDWARE.png') }}">
+                  src="{{ asset('/images/HARDWARE.jpg') }}">
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Hardware</h1>
                   <p class="skill-desc-details">
-                    I'm from an Electrical Engineering background (BSEE).
-                    I can design simple digital/analog circuits below 1Ghz.<br>
+                    I can design Analog/Digital circuits with high speed requirements.
+                    PCB design and production service are provided along with schematics.<br>
                   </p>
                 </div>
               </div>
@@ -87,9 +86,8 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Software</h1>
                   <p class="skill-desc-details">
-                    3 Years of experience in FPGA engineering.
-                    I have experience with some time-critical modules and
-                    various protocols.
+                    Able to program in various platforms from low-level MCU environment to
+                    user applications on mobile or desktop platform. Also proficient in web programming (front-end and back-end).
                   </p>
                 </div>
               </div>
@@ -103,15 +101,18 @@
         <canvas class="bg-particle"></canvas>
         <div class="scrollable-page">
           <div class="flex-column flex-center-vh vh-100 vw-100">
-            <h1 id="section3Header"> Current Projects</h1>
-            <div class="flex-column flex-center-vh curr-project-items">
-              <div class="flex flex-row justify-content-center">
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
+            <h2 id="section3Header"> Links </h2>
+            <div class="flex-column flex-center-vh">
+
+              <div id="linkedinRef" class="ref-link flex-row flex-center-vh"
+                onclick="window.location.href='https://www.linkedin.com/in/jihoon-lee-25467a157/'">
+                <img class="footer-contanct-icon" src="{{ asset('/images/linkedin.svg') }}">
+                <a class="ref-hyperlink ml-2">LinkedIn</a>
               </div>
-              <div class="flex flex-row justify-content-center">
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
-                <img class="curr-project-image" src="{{ asset('/images/HARDWARE.png') }}" />
+              <div id="githubRef" class="ref-link mt-3 flex-row flex-center-vh"
+                onclick="window.location.href='https://github.com/jlee167'">
+                <img class="footer-contanct-icon" src="{{ asset('/images/GitHub-Mark-Light-32px.png') }}" />
+                <a class="ref-hyperlink ml-2">Github</a>
               </div>
             </div>
           </div>

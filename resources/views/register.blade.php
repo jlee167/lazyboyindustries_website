@@ -42,7 +42,7 @@
           <input class="form-login login-form-input mb-4" id="confirm_password" type="password"
             placeholder="Confirm password" aria-describedby="search-btn">
 
-          <button id="registerBtn" type="button" class="btn rounded-0" onclick="javascript:register(null, null)">
+          <button id="registerBtn" type="button" class="btn rounded-0 border-08rem-forced" onclick="javascript:register(null, null)">
             Register
           </button>
 
@@ -55,7 +55,7 @@
 
           {{-- Kakao Signin Button --}}
           <a id="kakaoAuthBtn" class="hover-no-effect" href="javascript:loginWithKakao()">
-            <div id="kakaoBtnBackground" class="btn-hover-shadow">
+            <div id="kakaoBtnBackground" class="btn-hover-shadow border-08rem-forced">
               <img class="icon-kakao" src="{{asset('/images/kakao_icon.png')}}">
               <span class="buttonText"> Register (Link Kakao Account)</span>
             </div>
@@ -64,7 +64,7 @@
 
           {{-- Google Signin Button --}}
           <div id="gSignInWrapper" class="mt-2">
-            <div class="btn-hover-shadow" id="googleAuthBtn" class="customGPlusSignIn">
+            <div class="btn-hover-shadow border-08rem-forced" id="googleAuthBtn" class="customGPlusSignIn">
               <img class="icon-google" src="https://developers.google.com/identity/images/g-logo.png">
               <span class="buttonText"> Register (Link Google Account)</span>
             </div>

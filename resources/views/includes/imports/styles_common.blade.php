@@ -25,6 +25,9 @@
 ></script>
 
 
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+
 {{-- Common Styles & Fonts --}}
 <link rel="stylesheet" href="/css/common.css">
 

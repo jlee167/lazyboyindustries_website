@@ -30,7 +30,8 @@
                     class="d-flex flex-row justify-content-center overflow-hidden">
                     <!--img id="resumeFaceshot"
                       src="{{ asset('/images/logo_sitting_small.png') }}"-->
-                    <img id="profilePicture" src="{{ asset('/images/logo_sitting_small.png') }}">
+                    <img id="profilePicture"
+                      src="{{ asset('/images/logo_sitting_small.png') }}">
                   </div>
                   <h2 class="title-font"> LazyBoy </h2>
                   <hr class="divider-sidebar">
@@ -122,7 +123,7 @@
                         </b></h2>
                       <div class="resume-section-contents">
                         <div class="resume-section-text pr-5">
-                          {!! ResumeStrings::$rtlSkills !!}
+                          {!! ResumeStrings::$hwSkills !!}
                         </div>
                         <div class="resume-gadget-section">
                           <h5 class="mb-2">Hardware Skills</h5>
@@ -155,7 +156,7 @@
                         </b></h2>
                       <div class="resume-section-contents">
                         <div class="resume-section-text pr-5">
-                          {!! ResumeStrings::$rtlSkills !!}
+                          {!! ResumeStrings::$swSkills !!}
                         </div>
                         <div class="resume-gadget-section">
                           <h5 class="mb-2">General</h5>

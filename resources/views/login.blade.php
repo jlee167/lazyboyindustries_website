@@ -22,7 +22,7 @@
   <main id="view-login">
     <article v-show="!resourcesLoaded" id="loadingScreen">
       <pulse-loader loading="loading" color="green" size="20px"></pulse-loader>
-      <h2>Loading...</h2>
+      <h2 style="color:white;">Loading...</h2>
     </article>
     <article v-show="resourcesLoaded" :class="{ flex: resourcesLoaded }"
       id="mainView" v-cloak>

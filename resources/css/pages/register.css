@@ -107,3 +107,7 @@ p.login-label {
     border-color: #f27935;
     color: #f27935;
 }
+
+.border-08rem-forced {
+    border-radius: 0.8rem !important;
+}
