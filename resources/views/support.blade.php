@@ -33,7 +33,7 @@
             :class="{ 'bottom-indicator': reqView }">
             Request </h4>
 
-          <qna-dropdown v-show="FAQview" :qna-arr="qnaArr" max-width=600>
+          <qna-dropdown v-show="FAQview" :qna-arr="qnaArr" max-width=600 class="mt-3">
           </qna-dropdown>
 
           <section v-show="reqView" class="mt-5">
