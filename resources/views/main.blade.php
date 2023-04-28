@@ -5,7 +5,7 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
-  @include('includes.imports.strings.titles')
+  @include('includes.imports.headers.titles')
 
 
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
