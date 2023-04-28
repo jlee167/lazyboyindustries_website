@@ -19,7 +19,7 @@
   @include('includes.layouts.navbar')
 
   <main id="sales">
-    <article id="contents">
+    <article id="contents" v-cloak>
       <section id="image-container">
         <img id="image" :src="imgUrl" />
       </section>
