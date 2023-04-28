@@ -1,5 +1,5 @@
 <?php
 
 class Titles {
-    static string defaultTitle = "Lazyboy Industries";
+    public static string $defaultTitle = "Lazyboy Industries";
 }
