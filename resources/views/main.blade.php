@@ -6,7 +6,7 @@
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
   @include('includes.imports.strings.titles')
-  <title>{{Titles::defaultTitle}}</title>
+  <title>{{Titles::$defaultTitle}}</title>
 
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <script src="/js/full-page-scroll.js"></script>
