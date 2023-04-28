@@ -5,8 +5,10 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  @include('includes.imports.strings.titles')
+  <title>{{Titles::defaultTitle}}</title>
 
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <script src="/js/full-page-scroll.js"></script>
   <script src="/js/main.js" defer></script>
   <script type="text/javascript"
