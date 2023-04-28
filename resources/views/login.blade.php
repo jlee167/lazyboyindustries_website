@@ -5,6 +5,7 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
+  @include('includes.imports.headers.titles.default')
   <link rel="stylesheet" href="/css/login.css">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />

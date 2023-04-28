@@ -7,6 +7,7 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
+  @include('includes.imports.headers.titles.default')
 
   {{-- Page Specific Stylesheet --}}
   <link rel="stylesheet" href="/css/chatbox.css">

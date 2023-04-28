@@ -5,6 +5,7 @@
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
   @include('includes.imports.headers.cdn.summernote')
+  @include('includes.imports.headers.titles.default')
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

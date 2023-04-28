@@ -6,6 +6,7 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
+  @include('includes.imports.headers.titles.default')
 
   <script src="/js/ecommerce.js"></script>
   <script src="{{ mix('js/sales.js') }}" defer></script>

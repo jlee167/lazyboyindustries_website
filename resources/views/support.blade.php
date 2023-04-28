@@ -4,6 +4,7 @@
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
   @include('includes.imports.strings.qna_strings')
+  @include('includes.imports.headers.titles.default')
 
   <link
     href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-bs4.min.css"

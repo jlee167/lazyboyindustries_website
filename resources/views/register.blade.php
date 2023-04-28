@@ -5,6 +5,8 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
+  @include('includes.imports.headers.titles.default')
+
   <link rel="stylesheet" href="/css/login.css">
   <link rel="stylesheet" href="/css/register.css">
   <link rel="preload" href="/images/pexels-henri-mathieusaintlaurent-5898313.jpg" as="image" />

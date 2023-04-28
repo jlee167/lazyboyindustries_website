@@ -3,6 +3,9 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
+  @include('includes.imports.headers.titles.default')
+
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
   <style>

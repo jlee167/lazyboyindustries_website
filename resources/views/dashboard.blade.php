@@ -3,6 +3,7 @@
 <head>
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
+  @include('includes.imports.headers.titles.default')
 
   <link rel="stylesheet" href="/css/dashboard.css">
 

@@ -7,6 +7,7 @@
   @include('includes.imports.env')
   @include('includes.imports.styles_common')
   @include('includes.imports.headers.cdn.summernote')
+  @include('includes.imports.headers.titles.default')
 
   <link rel="stylesheet" href="/css/cart.css">
   <script
