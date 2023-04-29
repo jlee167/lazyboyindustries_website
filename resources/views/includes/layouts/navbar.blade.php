@@ -10,8 +10,8 @@ use App\Models\User;
 
     <section id="brand-container" class="navbar-brand brand-text">
       <img id="brand-logo"
-        src="{{ asset('/images/logo_letter.png') }}">
-      <!--p id="brand-name">LazyBoy Industries</p-->
+        src="{{ asset('/images/logo_sitting_small.png') }}">
+      <p id="brand-name">LazyBoy</p>
     </section>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse"

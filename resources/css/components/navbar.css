@@ -142,7 +142,7 @@
     margin: auto;
     margin-right: 5px;
     height: 50px;
-    width: 76px;
+    width: 32px;
 }
 
 .navbar .navbar-collapse {
@@ -150,8 +150,11 @@
 }
 
 #brand-name {
-    margin: auto;
-    margin-left: 10px;
+    padding: 0 0 0 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: 0;
     vertical-align: middle;
     color: white;
 }
