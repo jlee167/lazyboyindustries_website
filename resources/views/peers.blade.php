@@ -24,7 +24,7 @@
 <body>
   @include('includes.layouts.navbar')
 
-  <main id="peer-page-content" class="section-contents">
+  <main id="peer-page-content">
     <article id="peer-list-section" v-cloak>
       <div id="menu" class="d-flex flex-row align-items-center mb-5">
         <h5 :class="{ activetab: tab == 0 }" class="margin-right-2rem pointer white mb-0px"
