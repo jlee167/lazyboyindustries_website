@@ -69,7 +69,7 @@
   <div id="copyrightContainer" class="container">
     <hr>
     <p id="copyright">
-      Copyright 2022 Lazyboy Industry CO.Limited All Rights Reserved
+      Copyright 2023 Lazyboy Industries. All Rights Reserved
     </p>
   </div>
 </article>
