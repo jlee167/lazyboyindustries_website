@@ -139,7 +139,6 @@
 
     </article>
   </main>
-  @include('includes.layouts.footer')
 
 </body>
 
