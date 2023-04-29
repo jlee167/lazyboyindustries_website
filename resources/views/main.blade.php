@@ -48,7 +48,6 @@
         <div class="scrollable-page">
           <div class="contents">
             <div class="preface">
-              <h1 class="header-preface"> My expertise </h1>
               <product-card :company="product1.company" :name="product1.name"
                 :description="product1.description" :bg-color="product1.bgColor"
                 :price="product1.price" :availability="product1.availability"
@@ -63,9 +62,9 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Digital Logics</h1>
                   <p class="skill-desc-details">
-                    Years of working experience in FPGA engineering.
+                    4 years of experience in FPGA development.<
                     First-hand experience with various serial and bus protocols.
-                    Proficient in Xilinx platform, but can adapt to different environments quickly.
+                    Proficient in Xilinx platform.
                   </p>
                 </div>
               </div>
@@ -76,7 +75,7 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Hardware</h1>
                   <p class="skill-desc-details">
-                    I can design Analog/Digital circuits with high speed requirements.
+                    I can design analog/digital circuits with high speed requirements.
                     PCB design and production service are provided along with schematics.<br>
                   </p>
                 </div>
@@ -88,8 +87,8 @@
                 <div class="skill-desc-container">
                   <h1 class="skill-desc-header"> Software</h1>
                   <p class="skill-desc-details">
-                    Able to program in various platforms from low-level MCU environment to
-                    user applications on mobile or desktop platform. Also proficient in web programming (front-end and back-end).
+                    I can program in various platforms from low-level MCU environment to
+                    user applications on mobile or desktop platform. Also proficient in web front-end and back-end development.
                   </p>
                 </div>
               </div>
