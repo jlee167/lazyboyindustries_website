@@ -53,7 +53,7 @@
 
           <button class="btn btn-add-cart mt-5 no-outline"
             @click="addToCart(productID, quantity)">
-            Add to Cart</button>
+            Add to Cart (DEMO) </button>
         </div>
       </section>
     </article>
