@@ -43,7 +43,7 @@ function onLoad() {
     this.loaded = true;
     this.particles = Particles.init({
         selector: '.bg-particle',
-        color: '#ffffff',
+        color: '#000000',
         connectParticles: true,
         maxParticles:
             100
