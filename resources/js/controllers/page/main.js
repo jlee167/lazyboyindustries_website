@@ -44,7 +44,7 @@ function onLoad() {
     this.particles = Particles.init({
         selector: '.bg-particle',
         color: '#ffffff',
-        connectParticles: false,
+        connectParticles: true,
         maxParticles:
             100
         ,
@@ -55,19 +55,19 @@ function onLoad() {
                 breakpoint: 768,
                 options: {
                     maxParticles: 60,
-                    connectParticles: false,
+                    connectParticles: true,
                 }
             }, {
                 breakpoint: 425,
                 options: {
                     maxParticles: 25,
-                    connectParticles: false,
+                    connectParticles: true,
                 }
             }, {
                 breakpoint:320,
                 options: {
                     maxParticles:10,
-                    connectParticles: false,
+                    connectParticles: true,
                 }
             }
         ],
