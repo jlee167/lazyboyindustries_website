@@ -29,31 +29,45 @@ class TestDataSeeder extends Seeder
 
         DB::table('products')->insert([
             'title' => "USB Camera",
-            'description' => "Test item.\n Testing E-Commerce Functionality.",
+            'description' => "Portable recording device powered by an STM32F7 MCU.
+                              Records video in MJPEG format and records PCM audio.
+                              You may retrieve recorded data by using it as a USB
+                              storage device. Includes USB battery charger IC.
+                              Optional DSP filters and WAV file encoders.",
             'price_credits' => 30000,
             'active' => true,
         ]);
 
+
         DB::table('products')->insert([
             'title' => "LTE Camera",
-            'description' => "Test item.\n Testing E-Commerce Functionality.",
+            'description' => "Small recording device with 4G LTE connectivity.
+                            Sends recorded video and audio data to the streaming server where
+                            they are broadcasted to the inteded parties.",
             'price_credits' => 50000,
             'active' => true,
         ]);
 
+
         DB::table('products')->insert([
             'title' => "Wifi Camera",
-            'description' => "Test item.\n Testing E-Commerce Functionality.",
+            'description' => "Small recording device made with ESP32 RF microcontroller.
+                                Sends recorded video and audio data to the streaming server where
+                                they are broadcasted to the inteded parties.",
             'price_credits' => 30000,
             'active' => true,
         ]);
 
+
         DB::table('products')->insert([
-            'title' => "FPGA Camera",
-            'description' => "Test item.\n Testing E-Commerce Functionality.",
+            'title' => "Kintex-7 Development Board",
+            'description' => "Xilinx Kintex-7 development board for testing video algorithms.
+                              The board has high-speed connectors such as HDMI 2.0, 10 Gigabit Ethernet, and
+                              Gigabit Ethernet. Supports MIPI CSI and OV5640 DVP camera.",
             'price_credits' => 70000,
             'active' => true,
         ]);
+
 
         DB::table('warehouses')->insert([
             'distributor' => "Lazyboy",
