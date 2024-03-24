@@ -10,6 +10,8 @@ Personal website with demo features for personal projects. <br><br><br>
 
 
 
+<h4> Current PHP version: 8.0 </h4>
+
 
 <h2>API List (Incomplete) </h2>
 
