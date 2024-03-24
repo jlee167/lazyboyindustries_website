@@ -1,4 +1,4 @@
-![php](https://github.com/jlee167/lazyboyindustries_website/assets/8870086/ed7dd7ca-e811-4264-8789-f348a32e306f)Personal website with demo features for personal projects. <br><br><br>
+Personal website with demo features for personal projects. <br><br><br>
 
 
 
